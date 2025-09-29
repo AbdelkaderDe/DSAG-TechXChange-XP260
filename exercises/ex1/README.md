@@ -1,39 +1,31 @@
-# Exercise 1 - Exercise 1 Description
+# Exercise 1 - Broken Access Control
 
-In this exercise, we will create...
+## 📖 Overview :
+Broken Access Control  is the most critical web application security risk, according to the [OWASP Top 10 2021 list (A01)](https://owasp.org/Top10/A01_2021-Broken_Access_Control/). It occurs when an application fails to enforce proper authorization, allowing users to access or modify resources they are not permitted to. When access control is broken, threat actors can act outside of their intended permissions. This can manifest in several ways:
 
-## Exercise 1.1 Sub Exercise 1 Description
+- Horizontal Privilege Escalation.
+- Vertical Privilege Escalation.
+- Insecure Direct Object References (IDOR).
 
-After completing these steps you will have created...
+## ⚠️ Why This Matters
 
-1. Click here.
-<br>![](/exercises/ex1/images/01_01_0010.png)
+* **Business Impact:** Unauthorized modifications could lead to incorrect incident handling, data tampering, and workflow disruption.
+* **Compliance Risk:** Violates OWASP Top 10 A01](https://owasp.org/Top10/A01_2021-Broken_Access_Control/) and the principle of least privilege.
+* **Security Risk:** malicious or careless users could alter other agents' work, close tickets improperly, or delete evidence.
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello World! | ). 
-```
+## 🔐 CAP Security Concept: 
 
+CAP provides a multi-layered security approach:
 
+- Authentication: Verifies user identity (managed by XSUAA/IAS).
 
-## Exercise 1.2 Sub Exercise 2 Description
+- Authorization: Controls what authenticated users can do:
+    - Role-based (@requires annotations).
+    - Instance-based (@restrict annotations).
+    - Programmatic checks (in service handlers).
 
-After completing these steps you will have...
-
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-
-```
-
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
+## [Exercise 1.1 - Horizontal Privilege Escalation](./ex1.1/README.md)
+## [Exercise 1.2 - Vertical Privilege Escalation](./ex1.2/README.md)
 
 
 ## Summary
