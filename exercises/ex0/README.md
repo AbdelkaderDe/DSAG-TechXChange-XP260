@@ -1,6 +1,28 @@
-# Level 1 Heading
+<img width="253" height="28" alt="image" src="https://github.com/user-attachments/assets/7a2c10b4-d78d-43be-aa3c-f8b15356c5cd" /># Getting started
 
-In this exercise, you will...
+In the excercises you will use a BTP subaccount wit a subaccount admin user, which is the same as platform and application user. 
+
+     - xp260-0XX@education.cloud.sap ( with X depending on your seat from 01 - 40,  example xp260-001@education.cloud.sap for seat 1 )
+     - PWD is always :  Acce$$teched25
+     - Identity Provider they reside in is the Identity Authentication tenant akihlqzx8.accounts.ondemand.com
+
+
+Additionally you will make use of some test users to test the application you are working on.
+     - bob.support@company.com (Support user).
+     - alice.support@company.com (Support user).
+     - david.admin@company.com (Admin user).
+
+- Configure User Roles in BTP cockpit
+    - Assign bob.support and alice.support to role collection 'Incident Management Support' (TBD with screenshots).
+    - Assign david.admin to role collection 'Incident Management Admin' (TBD with screenshots).
+ 
+ The BTP Subaccount will have a subscriptions to 
+    - Audit Log Viewer Service
+    - SAP Business Application Studio
+    - SAP Build Work Zone, standard edition
+
+ The environment is the cloud foundry runtime. 
+ 
 
 ## Level 2 Heading
 
