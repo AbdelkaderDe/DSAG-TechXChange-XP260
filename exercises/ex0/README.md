@@ -6,7 +6,7 @@ You can find the access information for your Subaccount on your desk and the lin
 Login and open your subaccount  XP260_0XX, where XX is your seat number.
 
 - xp260-0XX@education.cloud.sap ( with XX depending on your seat from 01 - 40 )
-- PWD is always  Acce$$teched25
+- The password will be given to you as part of the session
 - Identity Provider they reside in is the Identity Authentication tenant akihlqzx8.accounts.ondemand.com
 
  The BTP Subaccount will have a subscriptions to 
