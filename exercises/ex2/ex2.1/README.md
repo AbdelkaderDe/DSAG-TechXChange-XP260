@@ -391,7 +391,7 @@ These files were previously generated using the following command:
 - Action:
   - Open test/http/ProcessorService.http file.
   - Change the @username to 'alice`',@password: [leave empty — no password required]
-  - Go to  Line 119 and click on 'Send Request' to run the 'GET {{server}}/odata/v4/processor/Customers' request.
+  - Scroll to  Line 6 and click on 'Send Request' to run the 'GET {{server}}/odata/v4/processor/Customers' request.
 
 - Results:
   - ✅ Here is a sample audit log event **SensitiveDataRead** for 1 customer entity. In your log, the timestamp matches the current timestamp.
@@ -425,8 +425,8 @@ These files were previously generated using the following command:
 - Action:
   - Open test/http/AdminService.http file.
   - Change the username to 'incident.support@tester.sap.com' (admin role), password : 'initial'.
-  - Go to Line 25 and replace the value of the "creditCardNo" field with "1234567890123456".
-  - Go to Line 12 and and click on 'Send Request' to run 'POST {{server}}/odata/v4/admin/Customers' request.
+  - Scroll to Line 25 and replace the value of the "creditCardNo" field with "1234567890123456".
+  - Scroll to Line 12 and and click on 'Send Request' to run 'POST {{server}}/odata/v4/admin/Customers' request.
  
   Results:
   - ✅ Here is a sample audit log **PersonalDataModified** for one customer entity. In your log, the timestamp matches the current timestamp.
