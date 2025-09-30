@@ -32,8 +32,6 @@ Have some experience with node.js and github.
 
 ## Exercises
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
-
 Every exercise module is a self-contained lab focused on a specific vulnerability. All modules adhere to the following standard structure:
 
 - 📖 **Overview:** A high-level description of the vulnerability, its impact, and why it's a security risk.
@@ -65,4 +63,4 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## License
-Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
