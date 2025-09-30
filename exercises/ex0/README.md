@@ -25,9 +25,9 @@ Check the role collections assigned to the platform user representation. Select 
 Check the role collections assigned to the business user representation. Select the user. On the right frame check if the role collections Business_Application_Studio_Administrator, Business_Application_Studio_Developer, Business_Application_Studio_Extension_Deployer, Launchpad_Admin are assigned.
 
 You will make use of some test users to test the application you are working on.
-- bob.support@company.com (Support user) (PWD: Acce$$teched25 )
-- alice.support@company.com (Support user) (PWD: Acce$$teched25 )
-- david.admin@company.com (Admin user) (PWD: Acce$$teched25 )
+- bob.support@company.com (Support user)
+- alice.support@company.com (Support user)
+- david.admin@company.com (Admin user)
 
 Check User Role Collections in the BTP cockpit for Bob, Alice and David.
 Select a user. On the right frame check the role collections assigned.
