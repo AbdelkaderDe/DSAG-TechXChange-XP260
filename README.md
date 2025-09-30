@@ -46,12 +46,12 @@ Every exercise module is a self-contained lab focused on a specific vulnerabilit
 This structure is designed to help you understand a vulnerability from an attacker's perspective and a defender's, see how it can impact a CAP application, and learn actionable steps to mitigate it with BTP best practices. 
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 1 - Broken Access Control](exercises/ex1/)
+    - [Exercise 1.1 - Horizontal Privilege Escalation](exercises/ex1#exercise-11-sub-exercise-1-description)
+    - [Exercise 1.2 - Vertical Privilege Escalation](exercises/ex1#exercise-12-sub-exercise-2-description)
+- [Exercise 2 - Security Logging and Monitoring Failures](exercises/ex2/)
+    - [Exercise 2.1 - Audit Logging for Sensitive Data Access](exercises/ex2#exercise-21-sub-exercise-1-description)
+    - [Exercise 2.2 - Security Event Monitoring in SAP BTP Production Environment](exercises/ex2#exercise-22-sub-exercise-2-description)
 
   
 
