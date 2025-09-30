@@ -1,13 +1,12 @@
 # Getting started
-In the excercises you will use a BTP subaccount with a subaccount admin user, which is the same as platform and application user.
-You can find the access information for your Subaccount on your desk and the link in the browser.
+In the excercises you will use a BTP subaccount with a subaccount admin user. We use the Identity Authentication Service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
+You can find the access information for your subaccount on your desk and the link in the browser.
 [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
 
 Login and open your subaccount  XP260_0XX, where XX is your seat number.
 
-- xp260-0XX@education.cloud.sap ( with XX depending on your seat from 01 - 40 )
-- The password will be given to you as part of the session
-- Identity Provider they reside in is the Identity Authentication tenant akihlqzx8.accounts.ondemand.com
+- Username: xp260-0XX@education.cloud.sap ( with XX depending on your seat from 01 - 40 )
+- Password: Will be given to you as part of the session
 
  The BTP Subaccount will have a subscriptions to 
     - Audit Log Viewer Service
