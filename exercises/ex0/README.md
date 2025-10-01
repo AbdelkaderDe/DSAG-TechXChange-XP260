@@ -1,21 +1,26 @@
 # Getting started
 In the excercises you will use a BTP subaccount with a subaccount admin user. We use the Identity Authentication Service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
-You can find the access information for your subaccount on your desk and the link in the browser.
-[Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
 
-Login and open your subaccount  XP260_0XX, where XX is your seat number.
+## Access your BTP subaccount
+Access your BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
+
+Login to open your subaccount XP260_0XX, where XX is your seat number.
 
 - Username: xp260-0XX@education.cloud.sap ( with XX depending on your seat from 01 - 40 )
 - Password: Will be given to you as part of the session
 
- The BTP Subaccount will have a subscriptions to 
+## Review the subscribed services
+
+The BTP Subaccount will have a subscriptions to 
     - Audit Log Viewer Service
     - SAP Business Application Studio
     - SAP Build Work Zone, standard edition
 
- The environment is the cloud foundry runtime. 
+You will be using the cloud foundry runtime environment.
 
-Check the subscriptions and the envrionent under Services > Instances and Subscriptions in the BTP Cockpit.
+Check the subscriptions and the environment under Services > Instances and Subscriptions in the BTP Cockpit.
+
+## Review the configured user acess
 
 Check the users under Security > Users
 
@@ -32,10 +37,14 @@ Check User Role Collections in the BTP cockpit for Bob, Alice and David.
 Select a user. On the right frame check the role collections assigned.
     - Check if bob.support and alice.support are assigned to role collection 'Incident Management Support' 
     - Check if david.admin is assigned to role collection 'Incident Management Admin'
+
+## Review the Development Environment
  
 As we are using Cloud Foundry, check under Cloud Fondry > Org Members , if your platform user xp260-0XX@education.cloud.sap has org membership. 
 
 Under Cloud Foundry > Spaces, verify the existience of your Space called xp260-0XX.
+
+## Launch SAP Business Application Studio
 
 Now after these checks, you can open the Business Application Studio. 
 
@@ -48,7 +57,9 @@ If it is running, click on secure_incident_management to open the SAP Business A
 
 Bookmark your SAP Business Application Studio link.
 
-Go back to the BTP cockpit. clikc on the Go to Application tile next to the SAP Build Work Zone, standard edition Application to open the Workzone application. 
+## Launch SAP Build Work Zone
+
+Go back to the BTP cockpit. click on the Go to Application tile next to the SAP Build Work Zone, standard edition Application to open the Workzone application. 
 
 Check if the Secure Incident Management Application is present. Open it in a incognito window or a different browserand login with the alice.support user. Bookmark the application. 
 
