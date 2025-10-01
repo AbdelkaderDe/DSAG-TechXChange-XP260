@@ -11,6 +11,12 @@ In an era where data breaches and cyber threats are constant, building secure so
 
 By completing the exercises, you will gain the practical skills to identify and mitigate common security risks as defined by the [OWASP Top 10 vulnerabilities](https://owasp.org/Top10/). 
 
+<p align="center">
+  <img src="img/top10-owasp.png" alt="Top 10 OWASP Vulnerabilities" width="900"/>
+  <br>
+  <b>Top 10 OWASP Vulnerabilities</b>
+</p>
+
 ### 🎯 Learning Objectives
 
 -	**Identify and Mitigate** a critical OWASP Top 10 vulnerability in a real-world scenario.
@@ -18,11 +24,6 @@ By completing the exercises, you will gain the practical skills to identify and 
 -	**Implement** BTP's comprehensive, built-in security services to protect your data and business logic.
 -	**Validate** the effectiveness of security fixes through practical testing.
 
-<p align="center">
-  <img src="img/top10-owasp.png" alt="Top 10 OWASP Vulnerabilities" width="900"/>
-  <br>
-  <b>Top 10 OWASP Vulnerabilities</b>
-</p>
 
 ## Requirements
 
