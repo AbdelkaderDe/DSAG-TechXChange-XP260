@@ -5,12 +5,14 @@ Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp
 
 ## 1. Overview
 
-In this exercise you will extend the local audit-logging setup from [Exercise 2.1 - Audit Logging for Sensitive Data Access](../ex2.1/README.md) into a production-grade SAP BTP environment. You will:
+In this exercise you will extend the local audit-logging setup from [Exercise 2.1 - Audit Logging for Sensitive Data Access](../ex2.1/README.md) into a production-grade SAP BTP environment. :
 
-  * Deploy the Incident Management service to SAP BTP Cloud Foundry Runtime.
-  * Bind the managed SAP Audit Log Service to your application.
-  * Generate audit events via secured OData calls.
-  * Access, filter and verify end-to-end audit trails using the SAP Audit Log Viewer.
+###🎯 Key Learning Objectives
+
+  * Bind the managed SAP Audit Log Service to your Incident Management application.
+  * Deploy the incident management application  on the SAP BTP Cloud Foundry runtime and configure the managed Audit Log Service.
+  * Generate and validate audit events triggered by authenticated OData requests to sensitive data endpoints.
+  * Use the SAP Audit Log Viewer to access, filter, and analyze audit trails with full context (user, timestamp, action, resource)
 
 ## 2. Prerequisites
 
