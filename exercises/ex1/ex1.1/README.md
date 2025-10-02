@@ -275,7 +275,7 @@ Copy the contents of [services.js](./services.js) into your project’s srv/serv
 
 ### Step 4: Update UI to Show Assignment
 To make the new assignedTo field visible and usable in your Fiori Elements application, you need to
-add the foloowing parts in the code:
+add the following parts in the code:
 
 **annotations.cds file:**
   - **General Information:** Add assignedTo field to UI.FieldGroup #GeneratedGroup
