@@ -16,7 +16,6 @@ Horizontal Privilege Escalation occurs when a user accesses resources belonging 
 - Identify and remediate vulnerabilities that allow support users to perform actions reserved for other support users.  
 - Enforce strict access controls to ensure only authorized users can perform sensitive operations.  
 - Reinforce business logic by preventing unauthorized actions.  
-- Mitigate security risks through proper authorization checks.
 
 ## 🚨 2. Vulnerable Code
 
