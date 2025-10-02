@@ -161,13 +161,15 @@ File: `db/data/sap.capire.incidents-Incidents.csv`
  *   **Note:** Use the actual user IDs from your IdP. For this lab, we'll use their email addresses as a stand-in.
 
 ```
-ID,customer_ID,title,urgency_code,status_code,assignedTo,assignedAt,assignedBy
+ID,customer_ID,title,urgency_code,status_code,assignedTo
 3b23bb4b-4ac7-4a24-ac02-aa10cabd842c,1004155,Inverter not functional,H,C,bob.support@company.com
 3a4ede72-244a-4f5f-8efa-b17e032d01ee,1004161,No current on a sunny day,H,N,bob.support@company.com
 3ccf474c-3881-44b7-99fb-59a2a4668418,1004161,Strange noise when switching off Inverter,M,N,alice.support@company.com
 3583f982-d7df-4aad-ab26-301d4a157cd7,1004100,Solar panel broken,H,I,alice.support@company.com
+3583f982-d7df-4aad-ab45-301d4a157cd7,1004100,Door lock broken,L,N,
+
 ```
-Copy the contents of [sap.capire.incidents-Incidents.csv](./sap.capire.incidents-Incidents.csv) into your project’s db/data/sap.capire.incidents-Incidents.csv file.
+Copy the contents of [sap.capire.incidents-Incidents.csv](./db/data/sap.capire.incidents-Incidents.csv) into your project’s db/data/sap.capire.incidents-Incidents.csv file.
 
 ### Step 3: Implement Service-Level Security
 
@@ -207,7 +209,7 @@ using { sap.capire.incidents as my } from '../db/schema';
 
 ... // Other methods
 ```
-Copy the contents of [services.cds](./services.cds) into your project’s srv/services.cds file.
+Copy the contents of [services.cds](./srv/services.cds) into your project’s srv/services.cds file.
 
 >**Note:**  
 > In SAP CAP, the `@restrict` annotations in `services.cds` are processed **before** the `services.js` logic and generate system-level errors (e.g., `403 Forbidden`) directly at the database query layer.  
@@ -270,7 +272,7 @@ class ProcessorService extends cds.ApplicationService {
 
 module.exports = { ProcessorService }
 ```
-Copy the contents of [services.js](./services.js) into your project’s srv/services.js file.
+Copy the contents of [services.js](./srv/services.js) into your project’s srv/services.js file.
 
 ### Step 4: Update UI to Show Assignment
 To make the new assignedTo field visible and usable in your Fiori Elements application, you need to
@@ -334,7 +336,7 @@ UI.FieldGroup #GeneratedGroup : {
 
 ... // Other methods
 ```
-Copy the contents of [annotations.cds](./annotations.cds) into your project’s app/incidents/annotations.cds file.
+Copy the contents of [annotations.cds](./app/incidents/annotations.cds) into your project’s app/incidents/annotations.cds file.
 
 **File**: app/incidents/webapp/i18n/i18n.properties
 
@@ -345,7 +347,7 @@ Copy the contents of [annotations.cds](./annotations.cds) into your project’s 
 AssignedTo=Assigned To
 
 ```
-Copy the contents of [i18n.properties](./i18n.properties) into your project’s app/incidents/webapp/i18n/i18n.properties file.
+Copy the contents of [i18n.properties](./app/incidents/webapp/i18n/i18n.properties) into your project’s app/incidents/webapp/i18n/i18n.properties file.
 
 ## ✅ 5. Verification:
 This section outlines the steps to confirm that the remediation for the Horizontal Privilege Escalation vulnerability has been successfully implemented. The goal is to verify that support users can only modify or delete incidents assigned to them or unassigned incidents, and that updates or deletions on closed incidents are blocked.
