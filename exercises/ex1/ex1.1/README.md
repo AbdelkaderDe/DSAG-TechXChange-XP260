@@ -361,7 +361,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
 - Enter your credentials, email "XP260***@education.cloud.sap" and the corresponding password
-- As you are only assigned to one Org and one space, these are selected automatically
+- As you are only assigned to one org and one space, these are selected automatically
 - Start the build
   ```
   mbt build
