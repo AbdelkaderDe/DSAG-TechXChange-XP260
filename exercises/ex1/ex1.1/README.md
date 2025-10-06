@@ -355,7 +355,7 @@ This section outlines the steps to confirm that the remediation for the Horizont
 ### Step 1: Deploy the Updated Application to Cloud Foundry
 - Open a terminal window
   - In the explorer pane, right-click on the project name to open the context menu
-  - Select the menu item  "Terminal" and then "New Terminal"
+  - Select the menu item "Open in Integrated Terminal"
 - Login with the cloud foundry command line tool
   ```
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
