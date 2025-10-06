@@ -1,0 +1,59 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+### Customers
+# @name Customers_GET
+GET {{server}}/odata/v4/processor/Customers
+Authorization: Basic {{username}}:{{password}}
+
+
+### Incidents
+# @name Incidents_GET
+GET {{server}}/odata/v4/processor/Incidents
+Authorization: Basic {{username}}:{{password}}
+
+
+### Incidents Drafts GET
+# @name Incidents_Drafts_GET
+GET {{server}}/odata/v4/processor/Incidents?$filter=(IsActiveEntity eq false)
+Authorization: Basic {{username}}:{{password}}
+
+
+### Incidents Draft POST
+# @name Incidents_Draft_POST
+POST {{server}}/odata/v4/processor/Incidents
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "customer": {
+    "ID": "Customers-29324045"
+  },
+  "title": "title-1045868",
+  "urgency": {
+    "code": "H"
+  },
+  "status": {
+    "code": "A"
+  },
+  "assignedTo": "assignedTo-1045868",
+  "conversation": [
+    {
+      "ID": "2430330c-3340-40ec-a8ac-d826609afc23",
+      "timestamp": "2008-06-24T00:00:00.000Z",
+      "author": "author.1g396@example.net",
+      "message": "message-2430330"
+    },
+    {
+      "ID": "24303311-308e-47f3-a566-3fb74b014de2",
+      "timestamp": "2020-01-17T00:00:00.000Z",
+      "author": "author.1g397@example.org",
+      "message": "message-2430331"
+    }
+  ],
+  "createdAt": "2009-08-11T00:00:00.000Z",
+  "createdBy": "createdBy.mezw@example.org",
+  "modifiedAt": "2014-02-12T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.mezw@example.com"
+}
