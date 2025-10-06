@@ -353,6 +353,16 @@ Copy the contents of [i18n.properties](./app/incidents/webapp/i18n/i18n.properti
 This section outlines the steps to confirm that the remediation for the Horizontal Privilege Escalation vulnerability has been successfully implemented. The goal is to verify that support users can only modify or delete incidents assigned to them or unassigned incidents, and that updates or deletions on closed incidents are blocked.
 
 ### Step 1: Deploy the Updated Application to Cloud Foundry
+- Open a terminal window
+  - In the explorer pane, right-click on the project name to open the context menu
+  - Select the menu item  "Terminal" and then "New Terminal"
+- Login with the cloud foundry command line tool
+  ```
+  cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
+  ```
+- Enter your credentials, email "XP260***@education.cloud.sap" and the corresponding password
+- Org and space are automatically selected
+- Start the build
   ```
   mbt build
   cf deploy mta_archives/incident-management_1.0.0.mtar
