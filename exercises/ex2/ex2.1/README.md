@@ -391,7 +391,7 @@ These files were previously generated using the following command:
 #### Step 3: Test Read Access to Customers with Support User
 - Action:
   - Open test/http/ProcessorService.http file.
-  - Change the @username to 'alice`',@password: [leave empty — no password required]
+  - Ensure that the username is 'alice'. The password should be left empty.
   - Scroll to  Line 6 and click on 'Send Request' to run the 'GET {{server}}/odata/v4/processor/Customers' request.
 
 - Results:
