@@ -73,7 +73,7 @@ annotate AdminService with @(requires: 'admin');
 ```
 
 **File**: `srv/services.js`
-```
+```javascript
 const cds = require('@sap/cds')
 
 class ProcessorService extends cds.ApplicationService {
