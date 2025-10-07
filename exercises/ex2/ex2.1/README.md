@@ -358,7 +358,7 @@ These files were previously generated using the following command:
     cds add http --filter AdminService --plan default
  ```
 - Results:
-  - ✅ The AdminService.http and Processor.http  files are generated under test folder with sample GET, POST, and PATCH requests for testing.
+  - ✅ The AdminService.http and Processor.http  files are generated under the test folder with sample GET, POST, and PATCH requests for testing.
   - ✅ These files include pre-configured authentication headers and request bodies for different user roles (alice).
   - ✅ Ready to use with SAP Business Application Studio's REST Client extension.
 
