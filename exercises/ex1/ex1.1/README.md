@@ -224,7 +224,7 @@ Copy the contents of [services.cds](./srv/services.cds) into your project’s sr
 
 File: `srv/services.js`
 
-```
+```javascript
 const cds = require('@sap/cds')
 
 class ProcessorService extends cds.ApplicationService {
