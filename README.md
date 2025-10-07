@@ -48,9 +48,9 @@ This structure is designed to help you understand a vulnerability from an attack
 - [Exercise 1 - Broken Access Control](exercises/ex1#exercise-1---broken-access-control)
     - [Exercise 1.1 - Horizontal Privilege Escalation](exercises/ex1/ex1.1/README.md#exercise-11---horizontal-privilege-escalation)
     - [Exercise 1.2 - Vertical Privilege Escalation](exercises/ex1/ex1.2/README.md#exercise-12---vertical-privilege-escalation)
-- [Exercise 2 - Security Logging and Monitoring Failures](exercises/ex2/)
-    - [Exercise 2.1 - Audit Logging for Sensitive Data Access](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Security Event Monitoring in SAP BTP Production Environment](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 2 - Security Logging and Monitoring Failures](exercises/ex2#exercise-2---security-logging-and-monitoring-failures)
+    - [Exercise 2.1 - Audit Logging for Sensitive Data Access](exercises/ex2/ex2.1/README.md#exercise-21---audit-logging-for-sensitive-data-access)
+    - [Exercise 2.2 - Security Event Monitoring in SAP BTP Production Environment](exercises/ex2/ex2.2/README.md#exercise-22--security-event-monitoring-in-sap-btp-production-environment)
 - [Exercise 3 - SQL injection](exercises/ex3/README.md)
 
 
