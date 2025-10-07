@@ -460,7 +460,7 @@ These files were previously generated using the following command:
 #### Step 5: Test Write Access to Customer Data with Support User
 - Action:
   - Open test/http/AdminService.http file.
-  - Ensure that the username is 'alice' and the password is left empty
+  - Change the username to 'alice'. The password should be empty.
   - Go to Line 12 and and click on 'Send Request' to run 'POST {{server}}/odata/v4/admin/Customers' request.
 
 - Result:
