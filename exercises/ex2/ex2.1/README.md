@@ -171,7 +171,7 @@ Results :
   - Click on Customers under the Service Endpoints: /odata/v4/processor/$metadata section.
   - Use the following credentials if required : Username = 'alice',  Password: [leave empty — no password required]
 - Result:
-
+  - Note: You might want to enable the checkbox "Pretty-print" for better readability.
 ```
 {
   "@odata.context": "$metadata#Customers",
