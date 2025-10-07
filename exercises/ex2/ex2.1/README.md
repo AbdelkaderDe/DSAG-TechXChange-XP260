@@ -366,7 +366,7 @@ These files were previously generated using the following command:
 **Note:** When you run these commands, the mta.yaml file is also updated with several changes:
   - ✅ Audit logging service configuration: The commands automatically add the auditlog service configuration instead of the auditlog-management service.
   
-    -The snippet below (auditlog-management) is already present in the mta.yaml file that ships with this tutorial branch, —no further edit is required
+    - The snippet below (auditlog-management) is already present in the mta.yaml file that ships with this tutorial branch. No further edit is required.
      ```
      - name: incident-management-auditlog
       type: org.cloudfoundry.managed-service
