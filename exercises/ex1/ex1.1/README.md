@@ -338,10 +338,10 @@ UI.FieldGroup #GeneratedGroup : {
 ```
 Copy the contents of [annotations.cds](./app/incidents/annotations.cds) into your project’s app/incidents/annotations.cds file.
 
-**File**: app/incidents/webapp/i18n/i18n.properties
+**File**: /i18n/i18n.properties
 
 ```
-...
+... Other entries
 
 // ✅ ADDED: #XFLD: Label for assigned user field
 AssignedTo=Assigned To
