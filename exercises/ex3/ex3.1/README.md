@@ -25,7 +25,7 @@ This exercise highlights how the absence of audit logging for sensitive data acc
 * Protect sensitive information and mitigate unauthorized data exposure risks.
 
 ## 🚨 2. Vulnerable Code :
-We’ll build upon [Exercise 1.2 - Vertical Privilege Escalation](../../ex1/ex1.2/#%EF%B8%8F-4-remediation) by integrating audit logging—a critical missing piece in the original implementation—to track security-sensitive actions.
+We’ll build upon [Exercise 2 - SQl Injection](../../ex2/README.md#%EF%B8%8F-4-remediation) by integrating audit logging—a critical missing piece in the original implementation—to track security-sensitive actions.
 
 **File**: `db/schema.cds`
 ```
