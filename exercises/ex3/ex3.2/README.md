@@ -5,7 +5,7 @@ Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp
 
 ## 1. Overview
 
-In this exercise you will extend the local audit-logging setup from [Exercise 2.1 - Audit Logging for Sensitive Data Access](../ex2.1/README.md) into a production-grade SAP BTP environment. :
+In this exercise you will extend the local audit-logging setup from [Exercise 3.1 - Audit Logging for Sensitive Data Access](../ex3.1/README.md) into a production-grade SAP BTP environment. :
 
 ### 🎯 Key Learning Objectives
 
