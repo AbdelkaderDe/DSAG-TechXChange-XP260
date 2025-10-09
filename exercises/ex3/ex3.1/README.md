@@ -25,7 +25,7 @@ This exercise highlights how the absence of audit logging for sensitive data acc
 * Protect sensitive information and mitigate unauthorized data exposure risks.
 
 ## 🚨 2. Vulnerable Code :
-We’ll build upon [Exercise 1.2 - Vertical Privilege Escalation](../../ex1/ex1.2/#%EF%B8%8F-4-remediation) by integrating audit logging—a critical missing piece in the original implementation—to track security-sensitive actions.
+We’ll build upon [Exercise 2 - SQl Injection](../../ex2/README.md#%EF%B8%8F-4-remediation) by integrating audit logging—a critical missing piece in the original implementation—to track security-sensitive actions.
 
 **File**: `db/schema.cds`
 ```
@@ -354,28 +354,14 @@ The project already includes pre-configured HTTP request templates for testing y
 
 These files were previously generated using the following command:
    ```
-    cds add http --filter ProcessorService --plan default
-    cds add http --filter AdminService --plan default
+    cds add http --filter ProcessorService
+    cds add http --filter AdminService
  ```
 - Results:
   - ✅ The AdminService.http and Processor.http  files are generated under the test folder with sample GET, POST, and PATCH requests for testing.
   - ✅ These files include pre-configured authentication headers and request bodies for different user roles (alice).
   - ✅ Ready to use with SAP Business Application Studio's REST Client extension.
 
-
-**Note:** When you run these commands, the mta.yaml file is also updated with several changes:
-  - ✅ Audit logging service configuration: The commands automatically add the auditlog service configuration instead of the auditlog-management service.
-  
-    - The snippet below (auditlog-management) is already present in the mta.yaml file that ships with this tutorial branch. No further edit is required.
-     ```
-     - name: incident-management-auditlog
-      type: org.cloudfoundry.managed-service
-      parameters:
-        service: auditlog-management
-        service-plan: default
-     ```
-
-  - ⚠️ Service plan warning: The commands may also add the incident-management-auth-default resource with the 'default' service plan for the xsuaa service. This plan is deprecated and should be changed to 'application' plan to avoid deployment failures.
 
 #### Step 2: Set Up Local Server
 - Action:
