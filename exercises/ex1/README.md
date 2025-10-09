@@ -35,5 +35,5 @@ and then  [Exercise 1.2 - Vertical Privilege Escalation](./ex1.2/README.md)
 
 When you have finished the two excercises related to Broken Access Control
 
-continue to - [Exercise 2 - Security Logging and Monitoring Failures](../ex2/README.md)
+continue to - [Exercise 2 - SQL injection](../ex2/README.md)
 
