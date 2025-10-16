@@ -1,6 +1,14 @@
 # Exercise 3.1 - Audit Logging for Sensitive Data Access
 Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)
 
+## Table of Contents
+- [📖  1. Overview](./README.md#--1-overview-)
+- [🚨 2. Vulnerable Code](#prerequisites)
+- [💥 3. Exploitation](#environment-setup)
+- [🛡️ 4. Remediation](#deployment-steps)
+- [✅ 5. Verification](#configuration)
+- [📌 Summary](#testing)
+
 ## 📖  1. Overview :
 
 This exercise highlights how the absence of audit logging for sensitive data access creates blind spots in enterprise applications. In the Incident Management system, customer records include highly sensitive fields such as credit card numbers. As a result, users can access or exfiltrate regulated data without detection.
