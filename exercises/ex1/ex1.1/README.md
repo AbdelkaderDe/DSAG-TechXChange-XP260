@@ -1,4 +1,5 @@
 # Exercise 1.1 - Horizontal Privilege Escalation
+Vulnerability: [A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
 
 ## 📖  1. Overview
 
