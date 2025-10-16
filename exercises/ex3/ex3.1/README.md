@@ -3,11 +3,11 @@ Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp
 
 ## Table of Contents
 - [📖  1. Overview](./README.md#--1-overview-)
-- [🚨 2. Vulnerable Code](#prerequisites)
-- [💥 3. Exploitation](#environment-setup)
-- [🛡️ 4. Remediation](#deployment-steps)
-- [✅ 5. Verification](#configuration)
-- [📌 Summary](#testing)
+- [🚨 2. Vulnerable Code](./README.md#--1-overview-)
+- [💥 3. Exploitation](./README.md#--1-overview-)
+- [🛡️ 4. Remediation](./README.md#--1-overview-)
+- [✅ 5. Verification](./README.md#--1-overview-)
+- [📌 6. Summary](./README.md#--1-overview-)
 
 ## 📖  1. Overview :
 
@@ -493,7 +493,7 @@ Verification confirmed that:
 
 
     
-## 📌 Summary:
+## 📌 6. Summary:
 In these exercise, you have learned how:
 * To implement data masking and audit logging for sensitive fields (e.g., creditCardNo) using @PersonalData annotations and @cap-js/audit-logging plugin.
 * To enforce strict role-based access controls that prevent unauthorized data exposure while ensuring all administrator operations are audited.
