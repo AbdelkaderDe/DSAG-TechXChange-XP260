@@ -81,12 +81,11 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 #### 🪜 Step 1. Integrate Audit Logging Feature to CAP Application
 
-- **Action:** Execute the following command in your terminal to automatically update your mta.yaml file. This command binds the Managed SAP Audit Log Service and attaches it to the incident-management-srv module.
+- **Action:** Execute the following command in your terminal
     ```
       cds add audit-logging --plan standard
     ```
-- **Result:**
-  - The mta.yaml file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
+- **Result:** The mta.yaml file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
   
   - Open [mta.yaml](./mta.yaml) and scroll to the line 207 - **resources:** section (no edit required).
   - Confirm the following resource exists under the **resources:** section
