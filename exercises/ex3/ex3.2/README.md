@@ -170,15 +170,15 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 #### 🪜 Step 5. Use the SAP Audit Log Viewer to Verify Insufficient Logging
 
 - **Action:**
- - Log in to the SAP BTP cockpit with your subaccount user (XP260-0xx@education.cloud.sap" and navigate to the SAP Audit Log Viewer.
- - Apply filters for "data-modification" and "data-access" events.
- - Set the date/time range to match when the support user modified the incident record (e.g., Oct 20, 2025, 5:00 PM to Oct 20, 2025, 5:10 PM).
- - Execute the filter query to retrieve the log entries.
- - Locate the log entry corresponding to the support user (e.g., alice.support@company.com).
+  - Log in to the SAP BTP cockpit with your subaccount user (XP260-0xx@education.cloud.sap" and navigate to the SAP Audit Log Viewer.
+  - Apply filters for "data-modification" and "data-access" events.
+  - Set the date/time range to match when the support user modified the incident record (e.g., Oct 20, 2025, 5:00 PM to Oct 20, 2025, 5:10 PM).
+  - Execute the filter query to retrieve the log entries.
+  - Locate the log entry corresponding to the support user (e.g., alice.support@company.com).
 
 - **Result:**
- - You will notice that the specific field values and modifications **(customer, title, urgency, status, message) are NOT displayed in the audit log.**
- - This reveals the vulnerability: **Without @PersonalData annotations, sensitive data modifications are not properly logged for audit and compliance purposes** see screenshot:
+  - You will notice that the specific field values and modifications **(customer, title, urgency, status, message) are NOT displayed in the audit log.**
+  - This reveals the vulnerability: **Without @PersonalData annotations, sensitive data modifications are not properly logged for audit and compliance purposes** see screenshot:
  
  
 
