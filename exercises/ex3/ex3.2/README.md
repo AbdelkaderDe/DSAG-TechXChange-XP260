@@ -80,7 +80,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 ⚠️ Note: Ensure **[@cap-js/audit-logging](../ex3.1/README.md#step-1-add-audit-logging-dependency)** is Installed.
 
-- **Action:** Execute the following command in your terminal
+- ▶️ **Action:** Execute the following command in your terminal
     ```
       cds add audit-logging --plan standard
     ```
@@ -110,7 +110,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
  ```
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform      
  ```
-- **Action: Build the MTA**
+- ▶️ **Action: Build the MTA**
   - Open a terminal and navigate to the project root directory.
   - Run the following command to build the MTA, Alternatively, if using an IDE like SAP Business Application Studio: Right-click on the [mta.yaml](./mta.yaml) file in the file explorer. Select the option **Build MTA Project**.
 
@@ -131,7 +131,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 #### 🪜 Step 3. Verify the Deployment (Optional)
 
-- **Action: Confirm the Application’s Deployment Status**
+- ▶️ **Action: Confirm the Application’s Deployment Status**
    - Log in to your SAP BTP Cockpit and navigate to your subaccount, then open Spaces > Your Space> Applications
 
 - **Result:** Ensure that your application is listed as **Started.** see screenshot:
@@ -142,7 +142,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     <b></b>
   </p>
 
-- **Action: Verify the Audit Log Service Binding**
+- ▶️ **Action: Verify the Audit Log Service Binding**
    - Open the Application **incident-management-srv** > **Service Bindings** section.
    - Confirm that the following service binding is present:
      * Service Binding Name: incident-management-auditlog
@@ -159,7 +159,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 #### 🪜 Step 4. Simulate a Support User Accessing and Updating Sensitive Incident Data
 
-- **Action: Modify a record using the Application UI:**
+- ▶️ **Action: Modify a record using the Application UI:**
   - Log in to the incident management application UI using a support account (e.g., alice.support@company.com).
   - Navigate to the list of incidents and select a record.
   - Modify one or more fields (e.g., Customer, Title, Urgency, Status,Message ) within the record and save your updates.
@@ -168,7 +168,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 #### 🪜 Step 5. Configure Audit Log Viewer Access Permissions
 ⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer.
-- **Action: Create a Role Collection for Audit Log Viewer Access**
+- ▶️ **Action: Create a Role Collection for Audit Log Viewer Access**
   - Log in to the SAP BTP Cockpit with your assigned user 'XP260-0xx@education.cloud.sap (Business user)' and navigate to your subaccount.
   - Go to Security > Role Collections.
   - Click the Create button.
@@ -179,7 +179,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - **Result: A new role collection named auditlog-viewer is created.**
 
-- **Action: Add Roles to the Role Collection**
+- ▶️ **Action: Add Roles to the Role Collection**
   - In the Role Collections list, locate and click on the auditlog-viewer role collection you just created.
   - Click the Edit button.
   - Add the following role:
@@ -189,7 +189,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - **Result: The required roles are added to the auditlog-viewer role collection.**
 
-- **Action: Assign the Role Collection to Your User**
+- ▶️ **Action: Assign the Role Collection to Your User**
   - Navigate to Security > Users in your subaccount.
   - Click on your user email (e.g., XP260-0xx@education.cloud.sap).
   - Under Role Collections, click Assign Role Collection.
@@ -207,7 +207,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 #### 🪜 Step 6. Use the SAP Audit Log Viewer to Verify Insufficient Logging
 
-- **Action:**
+- ▶️ **Action:**
   - Log in to the SAP BTP cockpit with your subaccount user XP260-0xx@education.cloud.sap" and navigate to the SAP Audit Log Viewer.
   - Apply filters for "data-modification" and "data-access" events.
   - Set the date/time range to match when the support user modified the incident record (e.g., Oct 20, 2025, 5:00 PM to Oct 20, 2025, 5:10 PM).
@@ -231,7 +231,7 @@ To address the identified vulnerability of insufficient logging for sensitive in
 
 #### 🪜 Step 1. Annotate Personal Data for Incidents
 
-**Action:**
+- ▶️ **Action:**
   - Copy the contents of [data-privacy.cds](./srv/data-privacy.cds) into project’s /srv/data-privacy.cds file.
   - Open 'data-privacy.cds' from your project and make sure the annotations for Incidents, and Incidents.conversation are present—exactly as shown here.
 
@@ -271,7 +271,7 @@ In this section, you will verify that the remediation has successfully resolved 
  
  #### 🪜 Step 1. Rebuild and Deploy the Remediated Application
 
-- **Action: Build and Deploy the Updated MTA**
+- ▶️ **Action: Build and Deploy the Updated MTA**
   - Open a terminal and navigate to the project root directory.
   - Run the following commands to build the updated MTA with the corrected data-privacy.cds annotations:
   ```
@@ -283,7 +283,7 @@ In this section, you will verify that the remediation has successfully resolved 
 
 #### 🪜 Step 2. Simulate Authorized Data Modification and Verify Comprehensive Logging
 
-- **Action: Perform an Authorized Modification**
+- ▶️ **Action: Perform an Authorized Modification**
    - Log in to the incident management application UI using a support account (e.g., alice.support@company.com).
    - Navigate to the list of incidents and select an incident assigned to you.
    - Modify one or more sensitive fields:
@@ -295,7 +295,7 @@ In this section, you will verify that the remediation has successfully resolved 
 
 - **Result: ✅ The incident record is successfully updated without any access denial errors.**
 
-- **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
+- ▶️ **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
    - Log in  with your user (e.g., XP260-0xx@education.cloud.sap)to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
    - Login with your user (e.g., XP260-0xx@education.cloud.sap)
    - Apply the following filters:
