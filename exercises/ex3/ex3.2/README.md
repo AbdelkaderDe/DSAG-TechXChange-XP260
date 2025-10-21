@@ -304,7 +304,7 @@ In this section, you will verify that the remediation has successfully resolved 
   - Execute the filter query to retrieve the log entries.
   - Locate the log entry corresponding to your incident modification.
   
-- ✅ **Result:
+- ✅ **Result:**
   - Detailed audit logs now display sensitive field modifications – Unlike the vulnerability demonstrated in Step 5 of Exploitation, the audit log now shows complete information for all modified incident fields (customer, title, urgency, status, assignedTo, message) with their before and after values.
 
 - Complete traceability achieved – Each modification entry includes:
