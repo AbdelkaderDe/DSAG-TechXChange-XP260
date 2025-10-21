@@ -84,7 +84,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     ```
       cds add audit-logging --plan standard
     ```
-- **Result:** The mta.yaml file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
+- ✅ **Result:** The mta.yaml file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
   
   - Open [mta.yaml](./mta.yaml) and scroll to the line 207 - **resources:** section (no edit required).
   - Confirm the following resource exists under the **resources:** section
@@ -118,7 +118,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
    mbt build
  ```
 
-- **Result:** An **MTAR archive** (for example, incident-management_1.0.0.mtar) is created in the mta_archives/ directory.
+- ✅ **Result:** An **MTAR archive** (for example, incident-management_1.0.0.mtar) is created in the mta_archives/ directory.
   
 - ▶️ **Action: Deploy the MTA**
   - Locate the generated .mtar file in the mta_archives/ directory.
@@ -164,7 +164,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
   - Navigate to the list of incidents and select a record.
   - Modify one or more fields (e.g., Customer, Title, Urgency, Status,Message ) within the record and save your updates.
 
-- **Result: The incident record is successfully updated**, and the UI reflects the changes.
+- ✅ **Result: The incident record is successfully updated**, and the UI reflects the changes.
 
 #### 🪜 Step 5. Configure Audit Log Viewer Access Permissions
 ⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer.
@@ -177,7 +177,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     - Description: Access to Audit Log Viewer (optional)
   - Click Create.
 
-- **Result: A new role collection named auditlog-viewer is created.**
+- ✅ **Result: A new role collection named auditlog-viewer is created.**
 
 - ▶️ **Action: Add Roles to the Role Collection**
   - In the Role Collections list, locate and click on the auditlog-viewer role collection you just created.
@@ -187,7 +187,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     - Role Description :  'Read access to audit logs'
   - Click Save.
 
-- **Result: The required roles are added to the auditlog-viewer role collection.**
+- ✅ **Result: The required roles are added to the auditlog-viewer role collection.**
 
 - ▶️ **Action: Assign the Role Collection to Your User**
   - Navigate to Security > Users in your subaccount.
@@ -196,7 +196,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
   - Select auditlog-viewer from the dropdown list.
   - Click Assign.
 
-- **Result: ✅ The auditlog-viewer role collection is now assigned to your user account, enabling you to access the SAP Audit Log Viewer service.**, see screenshot
+- ✅ **Result: The auditlog-viewer role collection is now assigned to your user account, enabling you to access the SAP Audit Log Viewer service.**, see screenshot
 
     <p align="center">
     <img src="images/audit-log-application-role-collections.png" alt="" width="900"/>
@@ -214,7 +214,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
   - Execute the filter query to retrieve the log entries.
   - Locate the log entry corresponding to the support user (e.g., alice.support@company.com).
 
-- **Result:**
+- ✅ **Result:**
   - **You will notice that the specific field values and modifications** (customer, title, urgency, status, message) are **NOT displayed in the audit log.**
   - **This reveals the vulnerability:** Without @PersonalData annotations, sensitive data modifications are not properly logged for audit and compliance purposes see screenshot:
 
@@ -260,9 +260,9 @@ annotate my.Incidents.conversation with @PersonalData : {
 };
 
 ```
-**- Result:**
- - ✅ Audit logs automatically track data-modifications to incident fields – All changes to customer, title, urgency, status, assignedTo, and message fields are captured with complete audit trails, ensuring data privacy and regulatory adherence.
- - ✅ Sensitive fields marked as @PersonalData.IsPotentiallySensitive – For example, the 'message' field in conversations, which may contain personal details or private communications, is protected with enhanced audit logging and strict access controls to ensure data privacy.
+- ✅** Result:**
+ -  Audit logs automatically track data-modifications to incident fields – All changes to customer, title, urgency, status, assignedTo, and message fields are captured with complete audit trails, ensuring data privacy and regulatory adherence.
+ -  Sensitive fields marked as @PersonalData.IsPotentiallySensitive – For example, the 'message' field in conversations, which may contain personal details or private communications, is protected with enhanced audit logging and strict access controls to ensure data privacy.
 
 ## ✅ 5. Verification
 In this section, you will verify that the remediation has successfully resolved the  [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) vulnerability. This verification is organized into two key areas:
@@ -279,7 +279,7 @@ In this section, you will verify that the remediation has successfully resolved 
   
    cf deploy mta_archives/<mtar_name>.mtar
   ```
-- **Result:** The remediated application is now running in your SAP BTP Cloud Foundry environment with the @PersonalData annotations for the Incidents entity and its conversation element.
+- ✅**Result:** The remediated application is now running in your SAP BTP Cloud Foundry environment with the @PersonalData annotations for the Incidents entity and its conversation element.
 
 #### 🪜 Step 2. Simulate Authorized Data Modification and Verify Comprehensive Logging
 
@@ -293,7 +293,7 @@ In this section, you will verify that the remediation has successfully resolved 
      - Message – Add a new conversation message with additional context
    - Save your updates and confirm the changes appear in the UI.
 
-- **Result: ✅ The incident record is successfully updated without any access denial errors.**
+- ✅**Result: The incident record is successfully updated without any access denial errors.**
 
 - ▶️ **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
    - Log in  with your user (e.g., XP260-0xx@education.cloud.sap)to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
