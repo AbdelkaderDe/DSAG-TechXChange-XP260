@@ -260,6 +260,61 @@ annotate my.Incidents.conversation with @PersonalData : {
 };
 
 ```
-- Result:
+**- Result:**
  - ✅ Audit logs automatically track data-modifications to incident fields – All changes to customer, title, urgency, status, assignedTo, and message fields are captured with complete audit trails, ensuring data privacy and regulatory adherence.
  - ✅ Sensitive fields marked as @PersonalData.IsPotentiallySensitive – For example, the 'message' field in conversations, which may contain personal details or private communications, is protected with enhanced audit logging and strict access controls to ensure data privacy.
+
+## ✅ 5. Verification
+In this section, you will verify that the remediation has successfully resolved the  [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) vulnerability. This verification is organized into two key areas:
+ - Verify that authorized modifications to sensitive data are correctly logged with full detail, capturing the context of the change.
+ - Verify unauthorized access Attempts are blocked and logged as Security Events.
+ 
+ #### 🪜 Step 1. Rebuild and Deploy the Remediated Application
+
+- **Action: Build and Deploy the Updated MTA**
+  - Open a terminal and navigate to the project root directory.
+  - Run the following commands to build the updated MTA with the corrected data-privacy.cds annotations:
+  ```
+   mbt build
+   cf deploy mta_archives/<mtar_name>.mtar
+  ```
+- **Result:** The remediated application is now running in your SAP BTP Cloud Foundry environment with the @PersonalData annotations for the Incidents entity and its conversation element.
+
+#### 🪜 Step 2. Simulate Authorized Data Modification and Verify Comprehensive Logging
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
