@@ -176,7 +176,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - ✅ **Result: A new role collection named auditlog-viewer is created.**
 
-- ▶️ **Action: Add Roles to the Role Collection**
+- ▶️ **Action: Add Roles to the Role Collection and Assign the Role Collection to Your User**
      - In the Role Collections list, locate and click on the **auditlog-viewer role collection** you just created.
      - Click the **Edit** button.
      - In the **Roles** sections, add the following roles:
@@ -187,23 +187,14 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
     - In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User
     - Click Save.
 
-- ✅ **Result: The required roles are added to the auditlog-viewer role collection.**
-
-- ▶️ **Action: Assign the Role Collection to Your User**
-  - Navigate to Security > Users in your subaccount.
-  - Click on your user email (e.g., XP260-0xx@education.cloud.sap) Business User.
-  - Under Role Collections, click Assign Role Collection.
-  - Select auditlog-viewer from the dropdown list.
-  - Click Assign.
-
-- ✅ **Result: The auditlog-viewer role collection is now assigned to your user account, enabling you to access the SAP Audit Log Viewer service.**, see screenshot
-
+- ✅ **Result: Roles Successfully Assigned**
+    - The required roles have been added to the **auditlog-viewer** role collection, which is now assigned to your user account. This enables you to access the **SAP Audit Log Viewer** service, see screenshot
+      
     <p align="center">
     <img src="images/audit-log-application-role-collections.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
-
 
 #### 🪜 Step 6. Use the SAP Audit Log Viewer to Verify Insufficient Logging
 
