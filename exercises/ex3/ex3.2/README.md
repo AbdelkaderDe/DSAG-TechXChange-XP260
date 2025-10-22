@@ -256,7 +256,7 @@ annotate my.Incidents.conversation with @PersonalData : {
 };
 
 ```
-- ✅** Result:**
+- ✅ ** Result:**
  -  Audit logs automatically track data-modifications to incident fields – All changes to customer, title, urgency, status, assignedTo, and message fields are captured with complete audit trails, ensuring data privacy and regulatory adherence.
  -  Sensitive fields marked as @PersonalData.IsPotentiallySensitive – For example, the 'message' field in conversations, which may contain personal details or private communications, is protected with enhanced audit logging and strict access controls to ensure data privacy.
 
