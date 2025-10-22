@@ -20,7 +20,7 @@ Security Logging and Monitoring Failures is a critical web application security 
 
 - **Personal Data Protection:** Automatic audit logging for GDPR compliance using @PersonalData annotations
 - **Automated Audit Events:** Built-in logging for critical operations (SensitiveDataRead, PersonalDataModified, SecurityEvent)
-- **Enterprise Integration:** SAP Audit Log service with tamper-proof storage and regulatory compliance
+- **Enterprise Integration:** SAP Audit Log Viewer service with tamper-proof storage and regulatory compliance
 - **Custom Security Logging:** Programmatic audit event generation via @cap-js/audit-logging
 
 There are two excercises related to this topic.
