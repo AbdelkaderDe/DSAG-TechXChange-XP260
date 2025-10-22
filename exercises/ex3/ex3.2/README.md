@@ -177,15 +177,15 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 - ✅ **Result: A new role collection named auditlog-viewer is created.**
 
 - ▶️ **Action: Add Roles to the Role Collection**
-  1- In the Role Collections list, locate and click on the **auditlog-viewer role collection** you just created.
-  2- Click the **Edit** button.
-  3- In the **Roles** sections, add the following roles:
-    - Role Name : **auditlog-viewer**
-    - Role Description :  **View audit logs**
-    - Role Name : **auditlog-management**
-    - Role Description :  **Read access to audit logs**
-  4- In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User
-  5- Click Save.
+     - In the Role Collections list, locate and click on the **auditlog-viewer role collection** you just created.
+     - Click the **Edit** button.
+     - In the **Roles** sections, add the following roles:
+        - Role Name : **auditlog-viewer**
+        - Role Description :  **View audit logs**
+        - Role Name : **auditlog-management**
+        - Role Description :  **Read access to audit logs**
+    - In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User
+    - Click Save.
 
 - ✅ **Result: The required roles are added to the auditlog-viewer role collection.**
 
