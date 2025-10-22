@@ -256,9 +256,17 @@ annotate my.Incidents.conversation with @PersonalData : {
 };
 
 ```
-- ✅ ** Result:**
- -  Audit logs automatically track data-modifications to incident fields – All changes to customer, title, urgency, status, assignedTo, and message fields are captured with complete audit trails, ensuring data privacy and regulatory adherence.
- -  Sensitive fields marked as @PersonalData.IsPotentiallySensitive – For example, the 'message' field in conversations, which may contain personal details or private communications, is protected with enhanced audit logging and strict access controls to ensure data privacy.
+
+✅ **Result:**
+- The data privacy annotations for the Incidents entity and its conversation element have been successfully configured. This enables the following security and compliance capabilities:
+  - **Incident Entity Protection:**
+     - ✅ **Entity Classification:** The Incidents entity is marked as DataSubjectDetails, establishing that incident records contain information related to data subjects (customers).
+     - ✅ **Customer Linkage:** The customer field is explicitly classified as DataSubjectID, creating a clear audit trail, linking each incident to its associated data subject.
+     - ✅ **Field-Level Sensitivity Classification:** The fields title, urgency, status, and assignedTo are marked as **IsPotentiallyPersonal**, triggering automatic audit logging for any access or modification to these fields.
+
+  - **Conversation Message Protection:**
+    - ✅ Sensitive Message Logging: The message field within the conversation element is marked as **IsPotentiallySensitive**, ensuring that all conversation messages—which may contain personal details, private communications, or sensitive customer information—are captured in the audit log with complete context.
+    - ✅ Enhanced Audit Trail: Any create, read, update, or delete operation on conversation messages will now generate detailed audit log entries, providing a forensic record for compliance audits and threat detection.
 
 ## ✅ 5. Verification
 In this section, you will verify that the remediation has successfully resolved the  [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) vulnerability. This verification is organized into two key areas:
