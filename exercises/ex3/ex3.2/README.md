@@ -330,26 +330,26 @@ In this section, you will verify that the remediation has successfully resolved 
 #### 🪜 Step 2. Simulate Authorized Data Modification and Verify Comprehensive Logging
 
 - ▶️ **Action: Perform an Authorized Modification**
-   - Log in to the incident management application UI using a support account (e.g., alice.support@company.com).
-   - Navigate to the list of incidents and select an incident assigned to you.
-   - Modify one or more sensitive fields:
+  - Log in to the incident management application UI using a support account (e.g., alice.support@company.com).
+  - Navigate to the list of incidents and select an incident assigned to you.
+  - Modify one or more sensitive fields:
      - Title – Change the incident title
      - Urgency – Update the priority level
      - Status – Move to a different status (e.g., from "open" to "in-progress")
      - Message – Add a new conversation message with additional context
-   - Save your updates and confirm the changes appear in the UI.
+  - Save your updates and confirm the changes appear in the UI.
 
 - ✅**Result: The incident record is successfully updated without any access denial errors.**
 
 - ▶️ **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
-   - Log in  with your user (e.g., XP260-0xx@education.cloud.sap)to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
-   - Apply the following filters:
+  - Log in  with your user (e.g., XP260-0xx@education.cloud.sap)to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
+  - Apply the following filters:
      - Event Type: **data-modification, data-access**
      - Date/Time Range: **Set the range to match when you performed the modification** (e.g., Oct 20, 2025, 5:00 PM to 5:10 PM)
      - User: **Filter** by the support user account (e.g., alice.support@company.com)
   - Execute the filter query to retrieve the log entries.
   - Locate the log entry corresponding to your incident modification.
-  
+    
 - ✅ **Result:**
   - Detailed audit logs now display sensitive field modifications – Unlike the vulnerability demonstrated in [💥 3. Exploitation](./README.md#-3-exploitation), the audit log now shows complete information for all modified incident fields (customer, title, urgency, status, assignedTo, message) with their before and after values.
 
@@ -367,3 +367,15 @@ In this section, you will verify that the remediation has successfully resolved 
     <br>
     <b></b>
   </p>
+
+🪜#### Step 4. Attempt Unauthorized Modification and Verify Security Event Logging
+     
+- ▶️ **Action: Attempt to Modify an Incident Not Assigned to You**
+  - Log in to the incident management application UI using a support account (e.g., alice.support@company.com).
+  - Navigate to the list of incidents.
+  - Attempt to select and modify an incident that is NOT assigned to you (bob.support@company.com).
+  
+- ✅ **Result:** The modification is blocked with a 403 Forbidden error, and the incident remains unchanged.
+
+
+
