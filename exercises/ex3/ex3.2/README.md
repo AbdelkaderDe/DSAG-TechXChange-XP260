@@ -344,21 +344,21 @@ In this section, you will verify that the remediation has successfully resolved 
 - ▶️ **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
    - Log in  with your user (e.g., XP260-0xx@education.cloud.sap)to the SAP BTP Cockpit and navigate to the SAP Audit Log Viewer.
    - Apply the following filters:
-     - Event Type: data-modification, data-access
-     - Date/Time Range: Set the range to match when you performed the modification (e.g., Oct 20, 2025, 5:00 PM to 5:10 PM)
-     - User: Filter by the support user account (e.g., alice.support@company.com)
+     - Event Type: **data-modification, data-access**
+     - Date/Time Range: **Set the range to match when you performed the modification** (e.g., Oct 20, 2025, 5:00 PM to 5:10 PM)
+     - User: **Filter** by the support user account (e.g., alice.support@company.com)
   - Execute the filter query to retrieve the log entries.
   - Locate the log entry corresponding to your incident modification.
   
 - ✅ **Result:**
-  - Detailed audit logs now display sensitive field modifications – Unlike the vulnerability demonstrated in Step 5 of Exploitation, the audit log now shows complete information for all modified incident fields (customer, title, urgency, status, assignedTo, message) with their before and after values.
+  - Detailed audit logs now display sensitive field modifications – Unlike the vulnerability demonstrated in [💥 3. Exploitation](./README.md#-3-exploitation), the audit log now shows complete information for all modified incident fields (customer, title, urgency, status, assignedTo, message) with their before and after values.
 
   - Complete traceability achieved – Each modification entry includes:
     - The specific fields that were changed
     - The exact values before and after modification
     - The user who made the change (alice.support@company.com)
     - The precise timestamp of the modification.
-    - The object type 'ProcessorService.Incidents and subject type 'ProcessorService.Customers'
+    - The DataSubjectDetails **ProcessorService.Incidents** and DataSubjectID **ProcessorService.Customers**
 
   - Vulnerability fully remediated – Insufficient logging is resolved, with comprehensive audit trails ensuring GDPR compliance and enhanced data privacy. see screenshot
 
