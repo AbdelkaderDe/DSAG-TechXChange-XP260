@@ -166,7 +166,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 #### 🪜 Step 5. Configure Audit Log Viewer Access Permissions
 ⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer.
 - ▶️ **Action: Create a Role Collection for Audit Log Viewer Access**
-  - Log in to the SAP BTP Cockpit with your assigned user 'XP260-0xx@education.cloud.sap (Business user)' and navigate to your subaccount.
+  - Log in to the SAP BTP Cockpit with your assigned user **XP260-0xx@education.cloud.sap (Business user)** and navigate to your subaccount.
   - Go to Security > Role Collections.
   - Click the Create button.
   - Enter the following details:
