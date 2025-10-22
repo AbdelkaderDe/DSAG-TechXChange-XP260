@@ -180,8 +180,10 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
   - In the Role Collections list, locate and click on the auditlog-viewer role collection you just created.
   - Click the Edit button.
   - Add the following role:
-    - Role Name : 'AuditLogViewer'
-    - Role Description :  'Read access to audit logs'
+    - Role Name : **auditlog-viewer**
+    - Role Description :  **View audit logs**
+    - Role Name : **auditlog-management**
+    - Role Description :  **Read access to audit logs**
   - Click Save.
 
 - ✅ **Result: The required roles are added to the auditlog-viewer role collection.**
