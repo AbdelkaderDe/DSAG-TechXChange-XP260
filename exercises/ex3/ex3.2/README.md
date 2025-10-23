@@ -269,9 +269,9 @@ annotate my.Incidents.conversation with @PersonalData : {
     - ✅ Enhanced Audit Trail: Any create, read, update, or delete operation on conversation messages will now generate detailed audit log entries, providing a forensic record for compliance audits and threat detection.
 
 ## ✅ 5. Verification
-In this section, you will verify that the remediation has successfully resolved the  [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) vulnerability. This verification is organized into two key areas:
+In this section, you will verify that the remediation has successfully resolved the  [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/) vulnerability. This verification is organized into three key areas:
  
- - *(Optional)* Verify conversation data retrieval and logging in your local development environment.
+ - *(Optional)* Verify conversation data retrieval and logging,  in your local development environment.
  - Verify that authorized modifications to sensitive data are correctly logged with full detail, capturing the context of the change.
  - Verify unauthorized access attempts are blocked and logged as **Security Events**.
 
@@ -286,10 +286,10 @@ In this section, you will verify that the remediation has successfully resolved 
   ```
   - Open the [test/http/incident-conversations.http](./test/http/Incident-conversations.http) file from your project.
   - Ensure that the username is set to **alice (support user)**. The password should be left empty.
-  - Click on 'Send Request' to run 'GET {{server}}/odata/v4/processor/Incidents?$expand=conversation' request.
+  - Click on **Send Request** to run **GET {{server}}/odata/v4/processor/Incidents?$expand=conversation** request.
 
 - ✅ **Result:**
-  - Here is a sample audit log output showing SensitiveDataRead events for incident conversation data. In your log, the timestamp matches the current timestamp:
+  - Here is a sample audit log output showing **SensitiveDataRead** events for incident conversation data. In your log, the timestamp matches the current timestamp:
 
   ```
   ... Other logs
@@ -319,12 +319,23 @@ In this section, you will verify that the remediation has successfully resolved 
 
 - ▶️ **Action: Build and Deploy the Updated MTA**
   - Open a terminal and navigate to the project root directory.
-  - Run the following commands to build the updated MTA with the corrected data-privacy.cds annotations:
+  - Build the updated Multi-Target Application (MTA) with the corrected data-privacy.cds annotations:
   ```
-   mbt build
+    mbt build
+  ```
   
-   cf deploy mta_archives/<mtar_name>.mtar
+  - Log in to your SAP BTP Cloud Foundry environment (if not already logged in):
   ```
+   cf login -a https://api.cf.<region>.hana.ondemand.com
+  ```
+  
+  - Deploy the MTA to your SAP BTP Cloud Foundry environment:
+    
+  ``` 
+  cf deploy mta_archives/<mtar_name>.mtar
+  ```
+  - Replace <mtar_name> with the actual filename (e.g., incident-management_1.0.0.mtar).
+ 
 - ✅**Result:** The remediated application is now running in your SAP BTP Cloud Foundry environment with the @PersonalData annotations for the Incidents entity and its conversation element.
 
 #### 🪜 Step 3. Simulate Authorized Data Modification and Verify Comprehensive Logging
