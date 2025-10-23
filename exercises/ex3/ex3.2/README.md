@@ -423,10 +423,10 @@ In this section, you will verify that the remediation has successfully resolved 
    - Accessed and analyzed audit logs via SAP Audit Log Viewer.
 
 - 🎓 **Key Takeaways:**
- - **Comprehensive logging is essential** – Without proper audit trails, unauthorized access and data modifications go undetected
- - **Role-based access control + audit logging** – The combination prevents unauthorized access while providing forensic evidence
- - **Production-grade monitoring** – SAP Audit Log Viewer enables real-time visibility into security events and regulatory compliance
- - **Complete context matters** – Audit logs must capture user, timestamp, resource, action, and data changes for effective investigation
+ - **Comprehensive logging is essential** – Without proper audit trails, unauthorized access and data modifications go undetected.
+ - **Role-based access control + audit logging** – The combination prevents unauthorized access while providing forensic evidence.
+ - **Production-grade monitoring** – SAP Audit Log Viewer enables real-time visibility into security events and regulatory compliance.
+ - **Complete context matters** – Audit logs must capture user, timestamp, resource, action, and data changes for effective investigation.
 
 **Congratulations!** 🎉 
 
