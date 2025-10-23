@@ -1,4 +1,4 @@
-# Exercise 3.1 - Audit Logging for Sensitive Data Access in Local Developement
+# Exercise 3.1 - Audit Logging for Sensitive Data Access in Local Development
 Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)
 
 ## Table of Contents
@@ -9,7 +9,7 @@ Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp
 - [✅ 5. Verification](./README.md#-5-verification)
 - [📌 6. Summary](./README.md#-6-summary)
 
-## 📖  1. Overview:
+## 📖  1. Overview
 
 This exercise highlights how the absence of audit logging for sensitive data access creates blind spots in enterprise applications. In the Incident Management system, customer records include highly sensitive fields such as credit card numbers. As a result, users can access or exfiltrate regulated data without detection.
 
@@ -18,21 +18,21 @@ This exercise highlights how the absence of audit logging for sensitive data acc
 * Support Users:
   - ✅ Can view customer data.
   - ✅ Can view, create, update, and delete incidents (with restrictions on closed/high-urgency incidents).
-  - ❌ Cannot access customers sensitive data (e.g., credit card numbers).
-  - ⚠️ All access attempts must be logged (e.g., who accessed/modified which incident, when.
+  - ❌ Cannot access customers' sensitive data (e.g., credit card numbers).
+  - ⚠️ All access attempts must be logged (e.g., who accessed/modified which incident and when).
 
 * Administrators:
-  - ✅ Full access to customer and incidents data.
+  - ✅ Full access to customer and incident data.
   - ⚠️ All operations, including access to sensitive fields, are logged for audit compliance.
 
 ### 🎯 Key Learning Objectives
 
 * Ensure users only access customer data they are authorized to view.
-* Implement object-level authorization, data masking, and audit logging
+* Implement object-level authorization, data masking, and audit logging.
 * Maintain comprehensive records of access.
 
-## 🚨 2. Vulnerable Code:
-We’ll build upon [Exercise 2 - SQl Injection](../../ex2/README.md#%EF%B8%8F-4-remediation) by integrating audit logging—a critical missing piece in the original implementation—to track security-sensitive actions.
+## 🚨 2. Vulnerable Code
+We’ll build upon [Exercise 2 - SQL Injection](../../ex2/README.md#%EF%B8%8F-4-remediation) by integrating audit logging - a critical missing piece in the original implementation - to track security-sensitive actions.
 
 **File**: `db/schema.cds`
 ```
@@ -128,15 +128,15 @@ module.exports = { ProcessorService }
 
 **Why This is Vulnerable:**
 
-- ❌ **No object-level validation:** A support user can manipulate customers IDs in the API to access other customer's data, including credit card numbers.
+- ❌ **No object-level validation:** A support user can manipulate customer IDs in the API to access other customer's data, including credit card numbers.
 - ❌ **No data classification:** Credit card numbers are not annotated as sensitive, so audit logging isn't triggered.
 - ❌ **No data masking:** Credit card numbers are displayed in plain text to all users.
-- ❌ **No Audit Trail:**  No logging of access attempts to customers & incidents data, making security monitoring impossible.
-- ❌ **No audit logging:** No record of who accessed which customers, when, or what they did.
-- ❌ **Compliance Gap:** Lacks detailed audit records required by regulations like GDPR, SOX, and industry standards.
+- ❌ **No audit trail:**  No logging of access attempts to customer & incident data, making security monitoring impossible.
+- ❌ **No audit logging:** No record of who accessed which customer data, when, or what they did.
+- ❌ **Compliance gap:** Lacks detailed audit records required by regulations like GDPR, SOX, and other industry standards.
 
-## 💥 3. Exploitation:
-In this lab, a **Security Logging and Monitoring Failures** vulnerability is exploited via API calls in a local development environment **(SAP Business Application Studio with cds watch)**. Unlike production, key security measures such as real authentication flows, OAuth2 tokens, and data isolation are inactive, allowing ethical hackers to safely simulate attacks, validate vulnerabilities without risking live systems, and rapidly iterate fixes before deploying to production.
+## 💥 3. Exploitation
+In this workshop, a **Security Logging and Monitoring Failures** vulnerability is exploited via API calls in a local development environment **(SAP Business Application Studio with cds watch)**. Unlike production, key security measures such as real authentication flows, OAuth2 tokens, and data isolation are inactive, allowing ethical hackers to safely simulate attacks, validate vulnerabilities without risking live systems, and rapidly iterate fixes before deploying to production.
 
 ### Step 1: Start Local Development Server
 
@@ -203,22 +203,22 @@ Results :
 - ❌ No audit record is produced in local log files or the console output of the CAP runtime for any audit entries.
 - ❌ Sensitive data (e.g., credit card numbers) is not masked or protected in output.
 
-## 🛡️ 4. Remediation:
-To address the identified vulnerabilities and data privacy risks, this section implements SAP CAP's built-in security controls through:
+## 🛡️ 4. Remediation
+To address the identified vulnerabilities and data privacy risks, this section implements CAP's built-in security controls through:
   1. **Personal Data Annotation** - Explicitly tags sensitive fields for GDPR compliance.
   2. **Automated Audit Logging** - Tracks all access to protected data with @cap-js/audit-logging.
   3. **Fine-Grained Access Control** - Limits customer data visibility by user role.
 
 ### Step 1: Add Audit Logging Dependency
 
-- Action : Add the @cap-js/audit-logging plugin to your project
+- Action : Add the @cap-js/audit-logging plugin to your project.
 
 ```
 npm install @cap-js/audit-logging
 ```  
 - Result:
   - ✅ **Updates package.json** – The @cap-js/audit-logging dependency is automatically added to your project’s [package.json](./package.json) file.
-  - ✅ **Enables Automatic Audit Logging** – for every entity or field annotated with @PersonalData; all access and modifications are captured in real time..
+  - ✅ **Enables Automatic Audit Logging** – For every entity or field annotated with @PersonalData, all access and modifications are captured in real time.
   - ✅ **Tracks CRUD Operations** – Create, Read, Update, Delete on annotated data are fully traced.
   - ✅ **Generates GDPR-Compliant Audit Trails** – Logs are formatted to meet regulatory requirements, simplifying compliance reporting.
 
@@ -226,7 +226,7 @@ npm install @cap-js/audit-logging
 
 - Action : 
   - Copy the contents of [data-privacy.cds](./srv/data-privacy.cds) into a new project’s /srv/data-privacy.cds file.
-  - Open 'data-privacy.cds' from your project and make sure the annotations for Customers and Addresses are present—exactly as shown here. 
+  - Open 'data-privacy.cds' from your project and make sure the annotations for Customers and Addresses are present - exactly as shown here. 
 
 ```
 using { sap.capire.incidents as my } from './services';
@@ -260,11 +260,11 @@ annotate my.Addresses with @PersonalData : {
 
 ### Step 3: Create server.js with Custom 403 Handler
 
-As part of audit logs, there can be cases where you want to genereate custom audit logs. For example if you want to log 403 - Forbidden events when an user is not having roles but is still trying to access certain data. This can be achieved by adding custom handlers in a CAP application.
+As part of audit logs, there can be cases where you want to genereate custom audit logs. For example, if you want to log 403 - Forbidden events when a user is not having roles but is still trying to access certain data. This can be achieved by adding custom handlers in a CAP application.
 
-- Action :
+- Action:
   - Copy the contents of [server.js](./server.js) into new project’s root-level server.js file.
-  - Open 'server.js' from your project and make sure that the 403-audit logic (non-batch + batch sub-requests) are present exactly as shown here :
+  - Open 'server.js' from your project and make sure that the 403-audit logic (non-batch + batch sub-requests) are present exactly as shown here:
 
   ```
   const cds = require('@sap/cds')
@@ -323,7 +323,7 @@ As part of audit logs, there can be cases where you want to genereate custom aud
     - cds.on('serving'): Captures 403 errors within OData batch operations and logs them appropriately for service-specific events.
    
 
-## ✅ 5. Verification:
+## ✅ 5. Verification
 
 This section evaluates the implementation of audit logging and data protection in the CAP application.
 
@@ -364,14 +364,14 @@ This section evaluates the implementation of audit logging and data protection i
     - ✅ Audit logs are enabled and accessible via the terminal.   
 
  
-#### Step 3: Test Read Access to Customers with Support User
+#### Step 3: Test Read Access to Customer Data with Support User
 - Action:
-  - Open test/http/ProcessorService.http file.
+  - Open the test/http/ProcessorService.http file.
   - Ensure that the username is 'alice'. The password should be left empty.
-  - Scroll to  Line 119 and click on 'Send Request' to run the 'GET {{server}}/odata/v4/processor/Customers' request.
+  - Scroll to line 119 and click on 'Send Request' to run the 'GET {{server}}/odata/v4/processor/Customers' request.
 
 - Results:
-  - ✅ Here is a sample audit log event **SensitiveDataRead** for 1 customer entity. In your log, the timestamp matches the current timestamp.
+  - ✅ Here is a sample audit log event **SensitiveDataRead** for one customer entity. In your log, the timestamp matches the current timestamp.
     ```
     [odata] - GET /odata/v4/processor/Customers 
     [cds] - connect to audit-log > audit-log-to-console 
@@ -400,10 +400,10 @@ This section evaluates the implementation of audit logging and data protection i
 
 #### Step 4: Test Write Access to Customer Data with Admin User
 - Action:
-  - Open test/http/AdminService.http file.
+  - Open the file test/http/AdminService.http.
   - Change the username to 'incident.support@tester.sap.com' (admin role), password : 'initial'.
-  - Scroll to Line 25 and replace the value of the "creditCardNo" field with "1234567890123456".
-  - Scroll to Line 13 and and click on 'Send Request' to run 'POST {{server}}/odata/v4/admin/Customers' request.
+  - Scroll to line 25 and replace the value of the "creditCardNo" field with "1234567890123456".
+  - Scroll to line 13 and and click on 'Send Request' to run the 'POST {{server}}/odata/v4/admin/Customers' request.
  
   Results:
   - ✅ Here is a sample audit log **PersonalDataModified** for one customer entity. In your log, the timestamp matches the current timestamp.
@@ -435,9 +435,9 @@ This section evaluates the implementation of audit logging and data protection i
 
 #### Step 5: Test Write Access to Customer Data with Support User
 - Action:
-  - Open test/http/AdminService.http file.
+  - Open the file test/http/AdminService.http.
   - Change the username to 'alice'. The password should be empty.
-  - Go to Line 7 and and click on 'Send Request' to run 'POST {{server}}/odata/v4/admin/Customers' request.
+  - Go to line 7 and and click on 'Send Request' to run the 'POST {{server}}/odata/v4/admin/Customers' request.
 
 - Result:
   - ✅ Audit logs generate **SecurityEvent** for one customer entity. In your log, the timestamp matches the current timestamp.
@@ -464,10 +464,10 @@ This section evaluates the implementation of audit logging and data protection i
   time: 2025-08-29T22:54:27.493Z
 ```
 - ✅ Audit logs generate a **SecurityEvent** entry for the unauthorized write attempt.
-- ✅ No PersonalDataModified entry is created.
+- ✅ No **PersonalDataModified** entry is created.
 
 
-### 📌 Verification Summary: 
+### 📌 Verification Summary 
 Verification confirmed that:
   * All sensitive fields (e.g., creditCardNo) are annotated with @PersonalData, masked in API responses, and tracked in audit logs.
   * Role-based access controls enforce least-privilege, effectively blocking unauthorized data exposure.
@@ -477,9 +477,9 @@ Verification confirmed that:
 
 
     
-## 📌 6. Summary:
-In these exercise, you have learned how:
-* To implement data masking and audit logging for sensitive fields (e.g., creditCardNo) using @PersonalData annotations and @cap-js/audit-logging plugin.
+## 📌 6. Summary
+In this exercise, you have learned how:
+* To implement data masking and audit logging for sensitive fields (e.g., creditCardNo) using @PersonalData annotations and the @cap-js/audit-logging plugin.
 * To enforce strict role-based access controls that prevent unauthorized data exposure while ensuring all administrator operations are audited.
 * To generate comprehensive security event logs for unauthorized access attempts, enabling regulatory compliance with PCI-DSS and GDPR requirements.
 
