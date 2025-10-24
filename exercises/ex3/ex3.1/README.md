@@ -260,10 +260,10 @@ annotate my.Addresses with @PersonalData : {
 
 ### Step 3: Create server.js with Custom 403 Handler
 
-As part of audit logs, there can be cases where you want to genereate custom audit logs. For example, if you want to log 403 - Forbidden events when a user is not having roles but is still trying to access certain data. This can be achieved by adding custom handlers in a CAP application.
+As part of audit logs, there can be cases where you want to generate custom audit logs. For example, if you want to log 403 - Forbidden events when a user is not having roles but is still trying to access certain data. This can be achieved by adding custom handlers in a CAP application.
 
 - Action:
-  - Copy the contents of [server.js](./server.js) into new project’s root-level server.js file.
+  - Copy the contents of [server.js](./server.js) into a new project’s root-level server.js file.
   - Open 'server.js' from your project and make sure that the 403-audit logic (non-batch + batch sub-requests) are present exactly as shown here:
 
   ```
@@ -346,7 +346,7 @@ This section evaluates the implementation of audit logging and data protection i
   ```
 
 - Results:
-  - ✅ The AdminService.http and Processor.http  files are generated under the test folder with sample GET, POST, and PATCH requests for testing.
+  - ✅ The AdminService.http and ProcessorService.http  files are generated under the test folder with sample GET, POST, and PATCH requests for testing.
   - ✅ These files include pre-configured authentication headers and request bodies for different user roles.
   - ✅ Ready to use with SAP Business Application Studio's REST Client extension.
 
