@@ -13,22 +13,22 @@ Vulnerability: [A09:2021-Security Logging and Monitoring Failures](https://owasp
 
 ## 1. Overview
 
-In this exercise you will extend the local audit-logging setup from [Exercise 3.1 - Audit Logging for Sensitive Data Access in Local Developemt](../ex3.1/README.md) to production-grade SAP BTP Cloud Foundry environment.
+In this exercise, you will extend the local audit-logging setup from [Exercise 3.1 - Audit Logging for Sensitive Data Access in Local Development](../ex3.1/README.md) to the production-grade SAP BTP, Cloud Foundry environment.
 
 ### 🎯 Key Learning Objectives
 
-  * Design and implement comprehensive audit logging events that tracks and validates authenticated access to sensitive data endpoints.
-  * Bind the managed SAP Audit Log Service to your application.
-  * Build and Deploy the application on the SAP BTP Cloud Foundry runtime.
-  * Use the SAP Audit Log Viewer to access, filter, and analyze audit trails with full context (user, timestamp, action, resource)
+  * Design and implement comprehensive audit logging events that track and validate authenticated access to sensitive data endpoints.
+  * Bind the managed SAP Audit Log service to your application.
+  * Build and deploy the application on the SAP BTP, Cloud Foundry runtime.
+  * Use the SAP Audit Log Viewer service to access, filter, and analyze audit trails with full context (user, timestamp, action, resource).
 
 ## 📋 Prerequisites
 
-* Completed [Exercise 3.1 - Audit Logging for Sensitive Data Access](../ex3.1/README.md).
-* SAP Work Zone Standard Edition configured and accessible.
+* Completed [Exercise 3.1 - Audit Logging for Sensitive Data Access in Local Development](../ex3.1/README.md).
+* SAP Build Work Zone, standard edition configured and accessible.
 * The SAP Audit Log Viewer service has already been subscribed to in your SAP BTP subaccount with the standard plan.
 
-## 🚨 2. Vulnerable Code:
+## 🚨 2. Vulnerable Code
 Your existing [data-privacy.cds](../ex3.1/srv/data-privacy.cds) file only covers the Customers and Addresses entities. However, it is missing annotations for the Incidents entity and its conversation element. This gap can lead to significant privacy and compliance risks.
 
 
@@ -63,29 +63,29 @@ annotate my.Addresses with @PersonalData : {
 
 ❌ **No data classification:** Key incident fields (e.g., title, urgency, assignedTo, and conversation messages) are missing sensitivity classifications which are required for triggering audit logs and managing data retention policies.
 
-❌ **Compliance Gap:** The absence of required privacy annotations for incident records creates a compliance gap with regulations like GDPR and other industry standards, potentially leading to legal penalties and security breaches.
+❌ **Compliance gap:** The absence of required privacy annotations for incident records creates a compliance gap with regulations like GDPR and other industry standards, potentially leading to legal penalties and security breaches.
 
 ## 💥 3. Exploitation
 In this section, you will demonstrate the exploitation of the vulnerability through the following steps:
 
  - Integrate the audit logging feature into your CAP (Cloud Application Programming) application.
- - Build and deploy the application in its current vulnerable state to SAP BTP Cloud Foundry environment.
+ - Build and deploy the application in its current vulnerable state to SAP BTP, Cloud Foundry environment.
  - Verify the deployment to confirm the application is operational and ready for demonstrating the exploitation of the vulnerability in subsequent steps.
  - Simulate a support user accessing and updating sensitive incident data.
- - Configure audit log viewer access permissions for your user. 
- - Use the SAP Audit Log Viewer to Verify Insufficient Logging.
+ - Configure SAP Audit Log Viewer service access permissions for your user. 
+ - Use the SAP Audit Log Viewer service to verify insufficient logging.
 
 #### 🪜 Step 1. Integrate Audit Logging Feature into CAP Application
 
-- ⚠️ Note: Ensure **[@cap-js/audit-logging](../ex3.1/README.md#step-1-add-audit-logging-dependency)** is Installed.
+- ⚠️ Note: Ensure **[@cap-js/audit-logging](../ex3.1/README.md#step-1-add-audit-logging-dependency)** is installed.
 
-- ▶️ **Action:** Execute the following command in your terminal
+- ▶️ **Action:** Execute the following command in your terminal:
     ```
       cds add audit-logging --plan standard
     ```
 
   - Open [mta.yaml](./mta.yaml) and scroll to the line 207 - **resources:** section (no edit required).
-  - Confirm the following resource exists under the **resources:** section
+  - Confirm the following resource exists under the **resources:** section:
 
     ```
     - name: incident-management-auditlog
@@ -94,7 +94,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
         service: auditlog
         service-plan: standard
     ```
-  - Then, locate the incident-management-srv module and verify that the **requires:** section includes the binding in line 33 :  
+  - Then, locate the incident-management-srv module and verify that the **requires:** section includes the binding in line 33:  
     
     ```
     requires:
@@ -103,13 +103,13 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - ✅ **Result:** The mta.yaml file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
   
-#### 🪜 Step 2. Build and deploy the CAP appplication
+#### 🪜 Step 2. Build and Deploy the CAP Application
 
 - ⚠️ Note: Ensure you're logged in to your Cloud Foundry space via the **cf CLI** command or **Business application file explorer UI** before deploying.
   
 - ▶️ **Action: Build the MTA**
   - Open a terminal and navigate to the project root directory.
-  - Run the following command to build the MTA, Alternatively, if using an IDE like SAP Business Application Studio: Right-click on the [mta.yaml](./mta.yaml) file in the file explorer. Select the option **Build MTA Project**.
+  - Run the following command to build the MTA. Alternatively, if using an IDE like SAP Business Application Studio: Right-click on the [mta.yaml](./mta.yaml) file in the file explorer. Select the option **Build MTA Project**.
 
  ```
    mbt build
@@ -124,14 +124,14 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 ```
  cf deploy mta_archives/<mtar_name>.mtar
 ```
-- ✅ **Result: The deployment succeeds**, and the vulnerable application is now running in your SAP BTP Cloud Foundry environment.
+- ✅ **Result: The deployment succeeds**, and the vulnerable application is now running in your SAP BTP, Cloud Foundry environment.
 
 #### 🪜 Step 3. Verify the Deployment (Optional)
 
 - ▶️ **Action: Confirm the Application’s Deployment Status**
-   - Log in to your SAP BTP Cockpit and navigate to your subaccount, then open Spaces > Your Space> Applications
+   - Log in to your SAP BTP cockpit and navigate to your subaccount, then open Spaces > Your Space> Applications.
 
-- **Result:** Ensure that your application is listed as **Started.** see screenshot:
+- ✅ **Result:** Ensure that your application is listed as **Started.**. See screenshot:
 
   <p align="center">
     <img src="images/incident-management-application.png" alt="" width="900"/>
@@ -146,7 +146,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
      * Service: **auditlog**
      * Plan: **standard**
 
-- ✅ **Result: The audit log service binding is confirmed as active and correctly configured**, along with other required services. see screenshot:
+- ✅ **Result: The audit log service binding is confirmed as active and correctly configured**, along with other required services. See screenshot:
 
   <p align="center">
     <img src="images/audit-log-application-binding.png" alt="" width="900"/>
@@ -160,16 +160,16 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 - ▶️ **Action: Modify a record using the Application UI:**
   - Log in to the incident management application UI using a support account (e.g., alice.support@company.com).
   - Navigate to the list of incidents and select a record.
-  - Modify one or more fields (e.g., Customer, Title, Urgency, Status,Message ) within the record and save your updates.
+  - Modify one or more fields (e.g., Customer, Title, Urgency, Status, Message) within the record and save your updates.
 
 - ✅ **Result: The incident record is successfully updated**, and the UI reflects the changes.
 
 
-#### 🪜 Step 5. Configure Audit Log Viewer Access Permissions
+#### 🪜 Step 5. Configure SAP Audit Log Viewer service Access Permissions
 
-- ⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer.
-- ▶️ **Action: Create a Role Collection for Audit Log Viewer Access**
-  - Log in to the SAP BTP Cockpit with your assigned user **XP260-0xx@education.cloud.sap (Business User)** and navigate to your subaccount.
+- ⚠️ Note: To retrieve the audit logs for your subaccount using the SAP Audit Log Viewer service, you need to have proper authorizations. Complete the following steps before accessing the SAP Audit Log Viewer service.
+- ▶️ **Action: Create a Role Collection for SAP Audit Log Viewer service Access**
+  - Log in to the SAP BTP cockpit with your assigned user **XP260-0xx@education.cloud.sap (Business User)** and navigate to your subaccount.
   - Go to Security > Role Collections.
   - Click the Create button.
   - Enter the following details:
@@ -187,11 +187,11 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
         - Role Description :  **View audit logs**
         - Role Name : **auditlog-management**
         - Role Description :  **Read access to audit logs**
-    - In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User
+    - In the **Users** section, add your user email (e.g., XP260-0xx@education.cloud.sap) as Business User.
     - Click Save.
 
 - ✅ **Result: Roles Successfully Assigned**
-    - The required roles have been added to the **auditlog-viewer** role collection, which is now assigned to your user account. This enables you to access the **SAP Audit Log Viewer** service, see screenshot
+    - The required roles have been added to the **auditlog-viewer** role collection, which is now assigned to your user account. This enables you to access the **SAP Audit Log Viewer service**. See screenshot:
       
     <p align="center">
     <img src="images/audit-log-application-role-collections.png" alt="" width="900"/>
@@ -200,10 +200,10 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
   </p>
 
 
-#### 🪜 Step 6. Use the SAP Audit Log Viewer to Verify Insufficient Logging
+#### 🪜 Step 6. Use the SAP Audit Log Viewer service to Verify Insufficient Logging
 
 - ▶️ **Action:**
-  - Log in to the SAP BTP cockpit with your subaccount user **XP260-0xx@education.cloud.sap** and navigate to the SAP Audit Log Viewer.
+  - Log in to the SAP BTP cockpit with your subaccount user **XP260-0xx@education.cloud.sap** and navigate to the SAP Audit Log Viewer service.
   - Apply filters for **data-modification** and **data-access** events.
   - Set the date/time range to match when the support user modified the incident record (e.g., Oct 20, 2025, 5:00 PM to Oct 20, 2025, 5:10 PM).
   - Execute the filter query to retrieve the log entries.
@@ -211,7 +211,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 - ✅ **Result:**
   - **You will notice that the specific field values and modifications** (customer, title, urgency, status, message) are **NOT displayed in the audit log.**
-  - **This reveals the vulnerability:** Without @PersonalData annotations, sensitive data modifications are not properly logged for audit and compliance purposes see screenshot:
+  - **This reveals the vulnerability:** Without @PersonalData annotations, sensitive data modifications are not properly logged for audit and compliance purposes. See screenshot:
 
     <p align="center">
     <img src="images/audit-log-application-no-personal-annotation.png" alt="" width="900"/>
@@ -221,15 +221,15 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 
 
 ## 🛡️ 4. Remediation
-To address the identified vulnerability of insufficient logging for sensitive incident data, this section implements SAP CAP's built-in security controls through:
+To address the identified vulnerability of insufficient logging for sensitive incident data, this section implements CAP's built-in security controls through:
   - **Personal Data Annotation** – Explicitly tags sensitive fields in incident records for GDPR compliance.
   - **Automated Audit Logging** – Tracks all access and modifications to protected data with @cap-js/audit-logging.
 
 #### 🪜 Step 1. Annotate Personal Data for Incidents
 
 - ▶️ **Action:**
-  - Copy the contents of **[data-privacy.cds](./srv/data-privacy.cds)** into project’s **/srv/data-privacy.cds** file.
-  - Open **data-privacy.cds** file from your project and make sure the annotations for Incidents, and Incidents.conversation are present—exactly as shown here.
+  - Copy the contents of **[data-privacy.cds](./srv/data-privacy.cds)** into the project’s **/srv/data-privacy.cds** file.
+  - Open the **data-privacy.cds** file from your project and make sure the annotations for Incidents, and Incidents.conversation are present - exactly as shown here.
 
 ```
 using { sap.capire.incidents as my } from './services';
@@ -265,7 +265,7 @@ annotate my.Incidents.conversation with @PersonalData : {
      - ✅ **Field-Level Sensitivity Classification:** The fields title, urgency, status, and assignedTo are marked as **IsPotentiallyPersonal**, triggering automatic audit logging for any access or modification to these fields.
 
   - **Conversation Message Protection:**
-    - ✅ Sensitive Message Logging: The message field within the conversation element is marked as **IsPotentiallySensitive**, ensuring that all conversation messages—which may contain personal details, private communications, or sensitive customer information—are captured in the audit log with complete context.
+    - ✅ Sensitive Message Logging: The message field within the conversation element is marked as **IsPotentiallySensitive**, ensuring that all conversation messages - which may contain personal details, private communications, or sensitive customer information - are captured in the audit log with complete context.
     - ✅ Enhanced Audit Trail: Any create, read, update, or delete operation on conversation messages will now generate detailed audit log entries, providing a forensic record for compliance audits and threat detection.
 
 ## ✅ 5. Verification
@@ -286,7 +286,7 @@ In this section, you will verify that the remediation has successfully resolved 
   ```
   - Open the [test/http/incident-conversations.http](./test/http/Incident-conversations.http) file from your project.
   - Ensure that the username is set to **alice (support user)**. The password should be left empty.
-  - Click on **Send Request** to run **GET {{server}}/odata/v4/processor/Incidents?$expand=conversation** request.
+  - Click on **Send Request** to run the **GET {{server}}/odata/v4/processor/Incidents?$expand=conversation** request.
 
 - ✅ **Result:**
   - Here is a sample audit log output showing **SensitiveDataRead** events for incident conversation data. In your log, the timestamp matches the current timestamp:
@@ -324,19 +324,19 @@ In this section, you will verify that the remediation has successfully resolved 
     mbt build
   ```
   
-  - Log in to your SAP BTP Cloud Foundry environment (if not already logged in):
+  - Log in to your SAP BTP, Cloud Foundry environment (if not already logged in):
   ```
    cf login -a https://api.cf.<region>.hana.ondemand.com
   ```
   
-  - Deploy the MTA to your SAP BTP Cloud Foundry environment:
+  - Deploy the MTA to your SAP BTP, Cloud Foundry environment:
     
   ``` 
    cf deploy mta_archives/<mtar_name>.mtar
   ```
   - Replace <mtar_name> with the actual filename (e.g., incident-management_1.0.0.mtar).
  
-- ✅**Result:** The remediated application is now running in your SAP BTP Cloud Foundry environment with the @PersonalData annotations for the Incidents entity and its conversation element.
+- ✅**Result:** The remediated application is now running in your SAP BTP, Cloud Foundry environment with the @PersonalData annotations for the Incidents entity and its conversation element.
 
 #### 🪜 Step 3. Simulate Authorized Data Modification and Verify Comprehensive Logging
 
@@ -352,8 +352,8 @@ In this section, you will verify that the remediation has successfully resolved 
 
 - ✅**Result: The incident record is successfully updated without any access denial errors.**
 
-- ▶️ **Action: Access the SAP Audit Log Viewer and Verify Detailed Logging**
-  - Log in  with your user (e.g., **XP260-0xx@education.cloud.sap**) to the SAP BTP Cockpit and navigate to the **SAP Audit Log Viewer**.
+- ▶️ **Action: Access the SAP Audit Log Viewer service and Verify Detailed Logging**
+  - Log in  with your user (e.g., **XP260-0xx@education.cloud.sap**) to the SAP BTP cockpit and navigate to the **SAP Audit Log Viewer service**.
   - Apply the following filters:
      - Event Type: **data-modification, data-access**
      - Date/Time Range: **Set the range to match when you performed the modification** (e.g., Oct 20, 2025, 5:00 PM to 5:10 PM)
@@ -371,7 +371,7 @@ In this section, you will verify that the remediation has successfully resolved 
     - The precise timestamp of the modification.
     - The DataSubjectDetails **ProcessorService.Incidents** and DataSubjectID **ProcessorService.Customers**.
 
-  - Vulnerability fully remediated – Insufficient logging is resolved, with comprehensive audit trails ensuring GDPR compliance and enhanced data privacy. see screenshot
+  - Vulnerability fully remediated – Insufficient logging is resolved, with comprehensive audit trails ensuring GDPR compliance and enhanced data privacy. See screenshot
 
     <p align="center">
     <img src="images/audit-log-data-modifications.png" alt="" width="900"/>
@@ -403,30 +403,30 @@ In this section, you will verify that the remediation has successfully resolved 
   </p>
 
   - This entry clearly documents the unauthorized access attempt, including:
-    - The user trying to modify the resource (alice.support@company.com)
+    - The user trying to modify the resource (alice.support@company.com).
     - The exact resource attempted to be accessed.
-    - The timestamp and IP address of the request
+    - The timestamp and IP address of the request.
     - The event category (audit.security-events), confirming the attempt was logged as a security event.
 
-## 📌 6. Summary:
+## 📌 6. Summary
 
-- In this exercise, you have accomplished:
+In this exercise, you have accomplished:
 1. **Local Development Validation** (Exercise 3.1)
    - Verified audit logging functionality in development environment
    - Tested sensitive data read operations and event capture
    - Validated role-based access controls
 
 2. **Production Deployment & Validation** (Exercise 3.2)
-   - Deployed remediated application to SAP BTP Cloud Foundry.
+   - Deployed remediated application to SAP BTP, Cloud Foundry environment.
    - Simulated authorized data modifications and verified comprehensive logging.
    - Attempted unauthorized access and confirmed security event capture.
-   - Accessed and analyzed audit logs via SAP Audit Log Viewer.
+   - Accessed and analyzed audit logs via SAP Audit Log Viewer service.
 
-- 🎓 **Key Takeaways:**
+🎓 **Key Takeaways:**
   - **Comprehensive logging is essential** – Without proper audit trails, unauthorized access and data modifications go undetected.
   - **Role-based access control + audit logging** – The combination prevents unauthorized access while providing forensic evidence.
-  - **Production-grade monitoring** – SAP Audit Log Viewer enables real-time visibility into security events and regulatory compliance.
-  - **Complete context matters** – Audit logs captures user, timestamp, resource, action, and data changes for effective investigation.
+  - **Production-grade monitoring** – SAP Audit Log Viewer service enables real-time visibility into security events and regulatory compliance.
+  - **Complete context matters** – Audit logs capture user, timestamp, resource, action, and data changes for effective investigation.
 
-- 🎉 **Congratulations!:** You have successfully remediated the **[A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)** vulnerability and transformed your application into an **enterprise-grade, audit-compliant system** ready for production use and regulatory scrutiny.
+🎉 **Congratulations!** You have successfully remediated the **[A09:2021-Security Logging and Monitoring Failures](https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/)** vulnerability and transformed your application into an **enterprise-grade, audit-compliant system** ready for production use and regulatory scrutiny.
 
