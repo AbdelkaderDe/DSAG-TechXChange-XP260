@@ -9,6 +9,8 @@ Login to open your subaccount XP260_0XX, where XX is your seat number.
 - Username: xp260-0XX@education.cloud.sap ( with XX depending on your seat from 01 - 40 )
 - Password: Will be given to you as part of the session
 
+In the list of directories and subaccounts, click on the entry for your subaccount.
+
 ## Review the subscribed services
 
 The SAP BTP subaccount will have subscriptions to 
