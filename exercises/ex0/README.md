@@ -26,7 +26,7 @@ Check the subscriptions and the environment under Services > Instances and Subsc
 
 Check the users under Security > Users.
 
-Check your user xp260-0XX@education.cloud.sap. He will have two representations in the cockpit, one as platform user and one as business user. 
+Check your user xp260-0XX@education.cloud.sap. There will be two representations in the cockpit, one as platform user and one as business user. 
 
 Check the role collections assigned to the platform user representation:
 - Select the user.
