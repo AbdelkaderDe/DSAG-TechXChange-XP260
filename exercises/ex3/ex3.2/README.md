@@ -84,7 +84,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
       cds add audit-logging --plan standard
     ```
 
-  - Open [mta.yaml](./mta.yaml) and scroll to the line 207 - **resources:** section (no edit required).
+  - Open 'mta.yaml' and scroll to the line 208 - **resources:** section (no edit required).
   - Confirm the following resource exists under the **resources:** section:
 
     ```
@@ -101,7 +101,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
       - name: incident-management-auditlog    
     ```
 
-- ✅ **Result:** The mta.yaml file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
+- ✅ **Result:** The 'mta.yaml' file is updated to include the audit log resource under **resources:** section and the corresponding binding in the **incident-management-srv** module under **requires:** section.
   
 #### 🪜 Step 2. Build and Deploy the CAP Application
 
@@ -109,7 +109,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
   
 - ▶️ **Action: Build the MTA**
   - Open a terminal and navigate to the project root directory.
-  - Run the following command to build the MTA. Alternatively, if using an IDE like SAP Business Application Studio: Right-click on the [mta.yaml](./mta.yaml) file in the file explorer. Select the option **Build MTA Project**.
+  - Run the following command to build the MTA. Alternatively, if using an IDE like SAP Business Application Studio: Right-click on the 'mta.yaml' file in the file explorer. Select the option **Build MTA Project**.
 
  ```
    mbt build
