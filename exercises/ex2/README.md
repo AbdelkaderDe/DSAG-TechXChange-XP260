@@ -16,7 +16,7 @@ This exercise demonstrates how unsanitized user inputs can be exploited to perfo
 ### 📐Business Rules
 
   - ❌ Users must not exploit insecure input fields to inject or modify SQL queries.
-  - ⚠️ All user inputs must be rigorously validated and sanitized to prevent SQL Injection.
+  - ⚠️ All user input must be rigorously validated and sanitized to prevent SQL Injection.
 
 ### ⚠️ Why This Matters
 
