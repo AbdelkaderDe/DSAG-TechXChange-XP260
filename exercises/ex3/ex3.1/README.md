@@ -332,7 +332,7 @@ This section evaluates the implementation of audit logging and data protection i
 - Key aspects include:
   - Ensuring sensitive fields (e.g., creditCardNo) are properly annotated for logging.
   - Confirming role-based access controls are enforced.
-  - Verifying that audit logs record all API interactions, such as SensitiveDataRead, PersonalDataModified, and SecurityEvent.
+  - Verifying that audit logs record all API interactions, such as `SensitiveDataRead`, `PersonalDataModified`, and `SecurityEvent`.
 
 - Testing is performed both locally in SAP Business Application Studio and in SAP BTP production environments to validate that logs are correctly generated, masked, and compliant with enterprise security standards.
 
