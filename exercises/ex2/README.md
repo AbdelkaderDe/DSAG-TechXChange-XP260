@@ -361,7 +361,7 @@ The remediation successfully addresses the SQL Injection vulnerability by:
 ### 🔑 Key Take‑Aways (SAP CAP Recommendations)
 Whenever there’s user input involved:
   - 1. **Never use string concatenation when constructing queries!** Use parameterized APIs (e.g., CAP’s SELECT.from().where()) to ensure user input is treated as data, not executable code.
-  - 2. **Never surround tagged template strings with parentheses!** The parentheses `(${userInput})` force JavaScript to evaluate the template literal as a raw string before it reaches the SQL parser. The malicious input becomes part of the SQL command: WHERE id = (1; DROP TABLE users--).
+  - 2. **Never surround tagged template strings with parentheses!** The parentheses `(${userInput})` force JavaScript to evaluate the template literal as a raw string before it reaches the SQL parser. The malicious input becomes part of the SQL command: `WHERE id = (1; DROP TABLE users--)`.
 
 - In this exercise, you have learned how to:
   
