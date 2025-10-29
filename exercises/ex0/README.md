@@ -1,6 +1,9 @@
 # Getting Started
 In the exercises, you will use an SAP BTP subaccount with a subaccount admin privileges. We use the Identity Authentication service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
 
+
+
+
 ## Access your SAP BTP subaccount
 Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
 
@@ -37,7 +40,7 @@ In the list of directories and subaccounts, click on the entry for your subaccou
 | :------------------ | :-------   |
 | Cloud Foundry Runtime | standard |
 
-Check the subscriptions, instances and the environment under Subaccount XP260_0xx > Instances and Subscriptions in the SAP BTP cockpit.
+- Check the subscriptions, instances and the environment under Subaccount XP260_0xx > Instances and Subscriptions in the SAP BTP cockpit.
   
   <p align="center">
     <img src="images/btp-subaccount-instances-subscriptions.png" alt="" width="900"/>
