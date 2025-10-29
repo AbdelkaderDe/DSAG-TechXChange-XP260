@@ -59,7 +59,7 @@ The solution diagram illustrates the key components and their interactions withi
 - Check the subscriptions, instances and the environment under Subaccount **XP260_0xx > Instances and Subscriptions** in the **SAP BTP cockpit**.
   
   <p align="center">
-    <img src="images/btp-subaccount-instances-subscriptions.png" alt="" width="900"/>
+    <img src="images/btp-configured_user_platform.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
@@ -80,6 +80,13 @@ The solution diagram illustrates the key components and their interactions withi
   - **Business_Application_Studio_Developer**
   - **Business_Application_Studio_Extension_Deployer**
   - **Launchpad_Admin**
+  - **Subaccount Viewer**
+
+  <p align="center">
+    <img src="images/btp-configured_user_application.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
 
 - You will make use of some test users to test the application you are working on :
   - **bob.support@company.com** (Support user)
@@ -89,6 +96,7 @@ The solution diagram illustrates the key components and their interactions withi
   - Select a user. In the right frame, check the role collections assigned:
   - Check if **bob.support@company.com** and **alice.support@company.com** are assigned to the role collection **Incident Management Support**. 
   - Check if **david.admin@company.com** is assigned to the role collection **Incident Management Admin**.
+
 
 ## Review the development environment
  
