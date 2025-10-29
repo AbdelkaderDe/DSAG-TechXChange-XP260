@@ -281,7 +281,7 @@ In this section, you will verify that the remediation has successfully resolved 
   ```
    cds watch
   ```
-  - Open the [test/http/incident-conversations.http](./test/http/Incident-conversations.http) file from your project.
+  - Open the 'test/http/incident-conversations.http' file from your project.
   - Ensure that the username is set to **alice (support user)**. The password should be left empty.
   - Click on **Send Request** to run the **GET {{server}}/odata/v4/processor/Incidents?$expand=conversation** request.
 
