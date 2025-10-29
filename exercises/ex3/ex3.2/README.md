@@ -400,7 +400,7 @@ In this section, you will verify that the remediation has successfully resolved 
 
   - This entry clearly documents the unauthorized access attempt, including:
     - The user trying to modify the resource (alice.support@company.com).
-    - The exact resource attempted to be accessed.
+    - The exact resource the user tried to access.
     - The timestamp and IP address of the request.
     - The event category (audit.security-events), confirming the attempt was logged as a security event.
 
