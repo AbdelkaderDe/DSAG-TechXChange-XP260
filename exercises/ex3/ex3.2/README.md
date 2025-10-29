@@ -115,14 +115,14 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
    mbt build
  ```
 
-- ✅ **Result:** An **MTAR archive** (for example, incident-management_1.0.0.mtar) is created in the mta_archives/ directory.
+- ✅ **Result:** An **MTAR archive** 'incident-management_1.0.0.mtar' is created in the mta_archives/ directory.
   
 - ▶️ **Action: Deploy the MTA**
   - Locate the generated .mtar file in the mta_archives/ directory.
   - Run the following command in your terminal to deploy it:
 
 ```
- cf deploy mta_archives/<mtar_name>.mtar
+ cf deploy mta_archives/incident-management_1.0.0.mtar
 ```
 - ✅ **Result: The deployment succeeds**, and the vulnerable application is now running in your SAP BTP, Cloud Foundry environment.
 
