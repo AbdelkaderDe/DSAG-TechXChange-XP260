@@ -21,6 +21,12 @@ The SAP BTP subaccount will have subscriptions to
 You will be using the Cloud Foundry Runtime environment.
 
 Check the subscriptions and the environment under Services > Instances and Subscriptions in the SAP BTP cockpit.
+  
+  <p align="center">
+    <img src="images/btp-subaccount-subscriptions.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
 
 ## Review the configured user access
 
