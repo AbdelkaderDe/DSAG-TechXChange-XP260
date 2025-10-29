@@ -57,7 +57,7 @@ The solution diagram illustrates the key components and their interactions withi
 | Cloud Foundry Runtime | standard |
 
 - Check the subscriptions, instances and the environment under Subaccount **XP260_0xx > Instances and Subscriptions** in the **SAP BTP cockpit**.
-  
+ 
   <p align="center">
     <img src="images/btp-subaccount-instances-subscriptions.png" alt="" width="900"/>
     <br>
