@@ -1,10 +1,31 @@
 # Getting Started
+
+## Overview 
+
+In this exercise, we will be using the [Incident Management application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference implementation for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (BTP).
+
+In this exercise, we will be using the Incident Management application. The Incident Management application is designed as a reference implementation for the SAP BTP Developer's Guide. It showcases best practices for developing applications on SAP Business Technology Platform.
 In the exercises, you will use an SAP BTP subaccount with a subaccount admin privileges. We use the Identity Authentication service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
+ 
+### Business Scenario
+ACME, a leading electronics company, uses this application to manage customer service incidents. The application supports the following business process:
+  1. A customer contacts ACME's call center with an issue.
+  2. A call center representative (Processor) receives the call.
+  3. The representative creates a new incident in the system based on the customer's complaint.
+  4. The conversation details are recorded as part of the incident.
 
+### Solution Diagram
+The solution diagram illustrates the key components and their interactions within the Incident Management Application deployed on SAP Business Technology Platform (BTP).
 
-
+  <p align="center">
+    <img src="images/solution-diagram-incident-management.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
 
 ## Access your SAP BTP subaccount
+you will use an SAP BTP subaccount with a subaccount admin privileges. We use the Identity Authentication service tenant akihlqzx8.accounts.ondemand.com as custom identity provider, both for platform and application users.
+
 Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView)
 
 Login to open your subaccount XP260_0XX, where XX is your seat number.
@@ -40,7 +61,7 @@ In the list of directories and subaccounts, click on the entry for your subaccou
 | :------------------ | :-------   |
 | Cloud Foundry Runtime | standard |
 
-- Check the subscriptions, instances and the environment under Subaccount XP260_0xx > Instances and Subscriptions in the SAP BTP cockpit.
+- Check the subscriptions, instances and the environment under Subaccount **XP260_0xx** > **Instances and Subscriptions** in the **SAP BTP cockpit**.
   
   <p align="center">
     <img src="images/btp-subaccount-instances-subscriptions.png" alt="" width="900"/>
