@@ -11,7 +11,8 @@ Vulnerability: [A03:2021-Injection](https://owasp.org/Top10/A03_2021-Injection/)
 
 ## 📖  1. Overview
 
-This exercise demonstrates how unsanitized user inputs can be exploited to perform SQL Injection attacks, thereby compromising the integrity and confidentiality of enterprise data. In the Incident Management system, input fields - such as those accepting the customer ID - are vulnerable if not properly validated. As a result, attackers might inject malicious SQL code to retrieve, alter, or delete sensitive records without detection.
+This exercise demonstrates how unsanitized user inputs can be exploited to perform SQL Injection attacks, thereby compromising the integrity and confidentiality of enterprise data. In the incident management application that you already know from the previous exercises, input fields - such as those accepting the customer ID - are vulnerable if not properly validated. As a result, attackers might inject malicious SQL code to retrieve, alter, or delete sensitive records without detection.
+In this exercise you will test the application locally in the development environment. Instead of building and deploying the application to SAP BTP, you will use `cds watch` to launch a local server.
 
 ### 📐Business Rules
 
