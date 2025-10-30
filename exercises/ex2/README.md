@@ -273,7 +273,7 @@ This section outlines the steps to confirm that the remediation for the SQL Inje
 - Legitimate requests continue to function correctly and return expected results.
 - The application now correctly uses parameterized queries, preventing any manipulation of the query structure.
 
-### Step 1: Test Legitimate Request (Valid Input)
+### Step 1: Test Legitimate Request (Sanity Check)
 - Action:
   - Stop the current execution of cds watch in the integrated terminal with Ctrl-C. Run the following commands from integrated terminal:
 
@@ -299,9 +299,9 @@ Authorization: Basic incident.support@tester.sap.com:initial
   - ✅ The system returns a single customer record for ID = 1004100.
   - ✅ This confirms that legitimate functionality remains intact after the fix.
 
-### Step 2: Test SQL Injection Attempt (Malicious Input)
+### Step 2: Test Basic SQL Injection (True-Clause Attack)
 - Action:
-  - Execute the **Test 2: SQL Injection True-Clause Attack request:**
+  - Execute the **Test 2: Basic SQL Injection** by clicking on "Send Request" above line 29:
 ```
   GET http://localhost:4004/odata/v4/admin/fetchCustomer
   Content-Type: application/json
@@ -330,23 +330,18 @@ Authorization: Basic incident.support@tester.sap.com:initial
 - ✅ The malicious payload ' OR '1'='1 is treated as a literal string value rather than executable SQL.
 - ✅ This confirms that the SQL Injection vulnerability has been successfully mitigated.
 
-### Step 3: Test Additional Malicious Payloads (Optional)
+### Step 3: SQL Injection -  multiple sql statements
 - Action:
-  - - Execute the **Test 3: Union-Based SQL Injection**
+  - - Execute the **Test 3** by clicking on "Send Request" above line 42:
 
 ```
-  ### Test 3: SQL Injection -  multiple sql statements
-  # Payload: '; SELECT * FROM sap_capire_incidents_Customers;--
-  # Expected: 
-  #   - CAP's SQLite adapter blocks multiple statements (HTTP 400)
-  #   - Other databases (HANA/PostgreSQL) might execute both queries
   GET  {{server}}/odata/v4/admin/fetchCustomer
   Content-Type: application/json
   Authorization: Basic {{username}}:{{password}}
 
-{
+  {
      "customerID": "1004100'; SELECT * from sap_capire_incidents_Customers;-- "
-}
+  }
 ```
 - Result:
 - ✅ All malicious payloads fail to return unintended data or alter query behavior.
