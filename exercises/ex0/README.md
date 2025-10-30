@@ -1,5 +1,22 @@
 # Getting Started
 
+# Table of Contents
+
+- [Overview](#overview)
+  - [Business Scenario](#business-scenario)
+  - [Solution Diagram](#solution-diagram)
+- [Access your SAP BTP Subaccount](#access-your-sap-btp-subaccount)
+  - [Review the Subscribed Services and Instances](#review-the-subscribed-services-and-instances)
+    - [Subscriptions](#subscriptions)
+    - [Instances](#instances)
+    - [Environments](#environments)
+  - [Review the Configured User Access](#review-the-configured-user-access)
+- [Review the Development Environment](#review-the-development-environment)
+- [Launch SAP Business Application Studio](#launch-sap-business-application-studio)
+  - [Login to your Cloud Foundry Environment from SAP Business Application Studio](#-login-to-your-cloud-foundry-environment-from-sap-business-application-studio)
+- [Launch SAP Build Work Zone](#launch-sap-build-work-zone)
+- [Summary](#summary)
+
 ## Overview 
 
 In this Hands-on exercises, we will be using the [Incident Management application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (BTP).
@@ -30,9 +47,9 @@ The solution diagram illustrates the key components and their interactions withi
   - Password: Will be given to you as part of the session
   - In the list of directories and subaccounts, click on the entry for your subaccount.
 
-## Review the Subscribed Services and Instances 
+### Review the Subscribed Services and Instances 
 
-### Subscriptions
+#### Subscriptions
 
 | Application                           | Plan             |
 | :------------------------------       | :--------------- |
@@ -40,7 +57,7 @@ The solution diagram illustrates the key components and their interactions withi
 | SAP Business Application Studio       | standard-edition |
 | SAP Build Work Zone, standard edition | standard         |
 
-### Instances
+#### Instances
 
 | Instance Name                       | Service                                    | Plan        |
 | :------------------------------     | :-------------------------------------     | :---------- |
@@ -50,7 +67,7 @@ The solution diagram illustrates the key components and their interactions withi
 | incident-management-html5-repo-host | HTML5 Application Repository Service       | app-host    |
 | incident-management-html5-runtime   | HTML5 Application Repository Service       | app-runtime |
 
-### Environments
+#### Environments
 
 | Environment Name    | Plan       |
 | :------------------ | :-------   |
@@ -64,7 +81,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-## Review the Configured User Access
+#### Review the Configured User Access
 
 - Check the users under **Security > Users**.
 
@@ -133,12 +150,72 @@ The solution diagram illustrates the key components and their interactions withi
 
 Now after these checks, you can open the SAP Business Application Studio. 
 
-Navigate to Services > Instances and Subscriptions in the SAP BTP cockpit. Then click on the small 'Go to Application' icon next to the name SAP Business Application Studio.
+- Navigate to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Then click on the small **Go to Application** icon next to the name SAP Business Application Studio.
 
-On the logon screen, click on the IDP 'akihlqzx8.accounts.ondemand.com' to login with single sign-on (SSO).
+ <p align="center">
+    <img src="images/btp-subaccount-open-BAS-application.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
 
-You will see your Dev Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
-When it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application. In the Workspace on the right side, you will find your incident management application in the list of projects.
+- On the logon screen, click on the IDP 'akihlqzx8.accounts.ondemand.com' to login with single sign-on (SSO).
+ <p align="center">
+    <img src="images/btp-subaccount-open-BAS-SSO.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
+- Enter email and password in the login window.
+
+ <p align="center">
+    <img src="images/btp-subaccount-open-BAS-login-windows.png" alt="" width="450"/>
+    <br>
+    <b></b>
+  </p>
+
+- You will see your Dev Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
+
+ <p align="center">
+    <img src="images/btp-subaccount-open-BAS-dev-space-stopped.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+  
+- When it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application.
+
+ <p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-space-running.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+- Click on the incident-management to open the application in your workspace.
+
+ <p align="center">
+  <img src="images/btp-subaccount-open-BAS-open-secure-incident-management.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+- In the Workspace on the right side, you will find your incident management application in the list of projects.
+ <p align="center">
+  <img src="images/btp-subaccount-open-BAS-folder-explorer.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+
+
+
+
+## Login to Your Cloud Foundry Environment from SAP Business Application Studio
+
+### - login using UI
+### - login using command line
+
+
+
+
 
 Bookmark your SAP Business Application Studio link.
 
