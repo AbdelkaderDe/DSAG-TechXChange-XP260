@@ -396,9 +396,9 @@ This section evaluates the implementation of audit logging and data protection i
   - ✅ Each customer entity generates a separate audit log entry.
   - ✅ When creditCardNo is accessed, a **SensitiveDataRead** log is automatically generated.
   - ✅ These events are richer than standard audit logs and include:
-        - Who accessed the data
-        - When it was accessed
-        - Context of the access
+    - Who accessed the data
+    - When it was accessed
+    - Context of the access
 
 #### Step 4: Test Write Access to Customer Data with Admin User
 - Action:
