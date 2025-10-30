@@ -289,6 +289,7 @@ add the following parts in the code:
 
 **annotations.cds file:**
   - **General Information:** Add assignedTo field to UI.FieldGroup #GeneratedGroup
+  - **Extend UI:** Show assignedTo on the user interface.
   - **Selection Fields:** Add assignedTo to UI.SelectionFields for filtering/sorting
 
 **i18n.properties file:**
