@@ -121,7 +121,7 @@ annotate AdminService with @(requires: 'admin');
 - Action:
   - Log out as Alice and log in as bob.support@company.com (another support user).
   - Repeat the update and delete actions on any incidents.
-- Result: ❌ The system allows Bob to perform the same unauthorized updates and deletions, confirming that all support users have unrestricted access to all incidents.
+- Result: ❌ The system allows Bob to perform the same unauthorized updates and deletions, confirming that all support users have unrestricted access to all open incidents.
 
 ### 📌 Critical Vulnerability Summary
 
