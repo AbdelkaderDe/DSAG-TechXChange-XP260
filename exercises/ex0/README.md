@@ -231,7 +231,7 @@ Once you have SAP Business Application Studio open with your secure incident man
 9. Paste the **SSO Passcode** back into BAS and click on **Sign In** button
 10. In section **Cloud Foundry Target** select **Organization** and **Space** (for example, `XP260-0XX`)
 11. Click on **Apply** button
-12. Once connected, a pop up in the status bar in BAS should display your org and space information.
+12. Once connected, a notification message pop up in the status bar in BAS should confirms that your Cloud Foundry organization and space have been set and are ready for use.
   
 ### Login Using the Command Line (Terminal)
 
