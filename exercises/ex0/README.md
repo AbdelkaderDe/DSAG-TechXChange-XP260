@@ -244,7 +244,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-6.Select Sign in with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
+6. Select **Sign in** with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
 ⚠️ **Note:** If your account is not displayed, click **Sign in to to another account**.
 <p align="center">
   
@@ -291,15 +291,22 @@ Once you have SAP Business Application Studio open with your secure incident man
   ```
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
-3- When prompted:
+3. When prompted:
   * Email: xp260-0XX@education.cloud.sap
   * Password: Use the password provided during the session.
     
-4- To verify the login, run
+4.  To verify the login, run
   ```
     cf target
   ```
-You should see the current organization and space listed.
+- You should see the current organization and space listed.
+  
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-cf-target-message.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
 
 ## Launch SAP Build Work Zone
 
