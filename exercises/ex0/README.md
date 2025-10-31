@@ -161,7 +161,7 @@ Now after these checks, you can open the SAP Business Application Studio.
   </p>
 
 2- On the logon screen, click on the custom identity provider (IDP) ***akihlqzx8.accounts.ondemand.com** to login with single sign-on (SSO). 
-  - ⚠️ **Note:** If prompted for an **Origin Key**, enter: **akihlqzx8-platform**
+- ⚠️ **Note:** If prompted for an **Origin Key**, enter: **akihlqzx8-platform**
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-SSO.png" alt="" width="900"/>
     <br>
@@ -217,7 +217,7 @@ Once you have SAP Business Application Studio open with your secure incident man
 
 1. In SAP Business Application Studio, open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from Hamburger menu.
 
- <p align="center">
+<p align="center">
   <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
   <br>
   <b></b>
@@ -225,7 +225,7 @@ Once you have SAP Business Application Studio open with your secure incident man
   
 2. Search for and select **CF: Login to Cloud Foundry**.
 
-  <p align="center">
+<p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-palette-cf-login.png" alt="" width="900"/>
   <br>
   <b></b>
@@ -246,9 +246,9 @@ Once you have SAP Business Application Studio open with your secure incident man
 </p>
 
 6. Select **Sign in** with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
-⚠️ **Note:** If your account is not displayed, click **Sign in to to another account**.
+-⚠️ **Note:** If your account is not displayed, click **Sign in to to another account**.
+
 <p align="center">
-  
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-idp.png" alt="" width="900"/>
   <br>
   <b></b>
