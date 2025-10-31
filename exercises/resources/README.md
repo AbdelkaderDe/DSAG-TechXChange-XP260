@@ -15,7 +15,7 @@
 
 ## Tutorials
 -  [Develop a Full Stack CAP Application following the SAP BTP Developers Guide](https://discovery-center.cloud.sap/missiondetail/4327/4608/)
--  [Develop an Enterprise-Grade CAP Application Following the SAP BTP Developers Guide](https://discovery-center.cloud.sap/missiondetail/4431/4717/)
+-  [Develop an Enterprise-Grade CAP Application following the SAP BTP Developer's Guide](https://discovery-center.cloud.sap/missiondetail/4431/4717/)
 -  [Developing and Extending SAP Fiori Elements Apps](https://learning.sap.com/courses/developing-and-extending-sap-fiori-elements-apps)
 -  [Getting Started with In-App Extensibility in SAP S/4HANA](https://learning.sap.com/learning-journey/get-started-with-in-app-extensibility-in-sap-s-4hana)
 -  [Develop Extensions Using SAP S/4HANA Cloud, ABAP Environment](https://learning.sap.com/learning-journey/develop-extensions-using-sap-s-4hana-cloud-abap-environment)
