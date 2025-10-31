@@ -239,7 +239,7 @@ Once you have SAP Business Application Studio open with your secure incident man
 
 5. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
 <p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
