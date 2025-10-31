@@ -161,7 +161,7 @@ Now after these checks, you can open the SAP Business Application Studio.
   </p>
 
 2- On the logon screen, click on the custom identity provider (IDP) ***akihlqzx8.accounts.ondemand.com** to login with single sign-on (SSO). 
-  - **Note** If prompted for an **Origin Key**, enter: **akihlqzx8-platform**
+  - ⚠️ **Note:** If prompted for an **Origin Key**, enter: **akihlqzx8-platform**
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-SSO.png" alt="" width="900"/>
     <br>
@@ -223,16 +223,64 @@ Once you have SAP Business Application Studio open with your secure incident man
 </p>
   
 2. Search for and select **CF: Login to Cloud Foundry**.
-3. You’ll see a **Cloud Foundry Sign In Targets**. Follow these steps:
-4. Click on the link **Open New Browser** to generate your SSO Passcode.
-5. Select **Sign in to another account**
-6. Enter the origin key of your indentity provider: **akihlqzx8-platform**
-7. Click on button **Sign in with an alternative identity provider**
-8. Copy the temporary authentication code generated in the **Passcode** field.
-9. Paste the **SSO Passcode** back into BAS and click on **Sign In** button
-10. In section **Cloud Foundry Target** select **Organization** and **Space** (for example, `XP260-0XX`)
-11. Click on **Apply** button
-12. Once connected, a notification message pop up in the status bar in BAS should confirms that your Cloud Foundry organization and space have been set and are ready for use.
+
+  <p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-palette-cf-login.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+4. You’ll see a **Cloud Foundry Sign In Targets**.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+5. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+6.Select Sign in with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
+⚠️ **Note:** If your account is not displayed, click **Sign in to to another account**.
+<p align="center">
+  
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-idp.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+7. You’ll see a passcode page, copy the temporary authentication code generated in the **Passcode** field.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+10. Paste the **SSO Passcode** back into BAS and click on **Sign In** button
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-paste-code.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+11. In section **Cloud Foundry Target** select **Organization** and **Space** (for example, `XP260-0XX`) then click on **Apply** button.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+13. Once connected, a notification message pop up in the status bar in BAS should confirms that your Cloud Foundry organization and space have been set and are ready for use.
+
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
   
 ### Login Using the Command Line (Terminal)
 
