@@ -292,8 +292,8 @@ Once you have SAP Business Application Studio open with your secure incident man
   cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
   ```
 3. When prompted:
-  * Email: xp260-0XX@education.cloud.sap
-  * Password: Use the password provided during the session.
+    * Email: xp260-0XX@education.cloud.sap
+    * Password: Use the password provided during the session.
     
 4.  To verify the login, run
   ```
