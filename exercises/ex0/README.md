@@ -169,6 +169,7 @@ Now after these checks, you can open the SAP Business Application Studio.
   </p>
 
 3- Enter email and password in the login window.
+- ⚠️ **Note:** You may not see this step if you're already authenticated through SSO.
 
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-login-windows.png" alt="" width="450"/>
