@@ -102,6 +102,8 @@ Copy the contents of [services_vulnerable.js](./srv/services_vulnerable.js) into
 
 ## 💥 3. Exploitation
 
+We will exploit the SQL Injection vulnerability in a local development environment (SAP Business Application Studio with cds watch). Unlike production, key security measures such as real authentication flows, OAuth2 tokens, and data isolation are inactive, allowing ethical hackers to safely simulate attacks, validate vulnerabilities without risking live systems, and rapidly iterate fixes before deploying to production.
+
 ### Step 1: Create a Test File for HTTP Endpoint
 - Action:
   - Navigate to the `test/http` directory in your CAP project folder.
