@@ -131,7 +131,7 @@ In this section, you will demonstrate the exploitation of the vulnerability thro
 - ▶️ **Action: Confirm the Application’s Deployment Status**
    - Log in to your [SAP BTP cockpit](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView) and navigate to your subaccount, then open Spaces > Your Space> Applications.
 
-- ✅ **Result:** Ensure that your application is listed as **Started.**. See screenshot:
+- ✅ **Result:** Ensure that your application is listed as **Started**. See screenshot:
 
   <p align="center">
     <img src="images/incident-management-application.png" alt="" width="900"/>
