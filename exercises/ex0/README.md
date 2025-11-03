@@ -231,22 +231,15 @@ Once you have SAP Business Application Studio open with your secure incident man
   <b></b>
 </p>
 
-4. You’ll see a **Cloud Foundry Sign In Targets**.
+4. You’ll see a **Cloud Foundry Sign In Targets**. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
 
-5. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
 6. Select **Sign in** with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
--⚠️ **Note:** If your account is not displayed, click **Sign in to to another account**.
+- ⚠️ **Note:** If your account is not displayed, click **Sign in to to another account**.
 
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-idp.png" alt="" width="900"/>
