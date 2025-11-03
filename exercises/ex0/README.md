@@ -177,7 +177,7 @@ Now after these checks, you can open the SAP Business Application Studio.
     <b></b>
   </p>
 
-4- You will see your Dev Space called 'secure_incident_management'. Make sure it is in a running state, if not start it.
+4- You will see your Dev Space called 'secure_incident_management'. Make sure it is in a **RUNNING** state, if not start it.
 
  <p align="center">
     <img src="images/btp-subaccount-open-BAS-dev-space-stopped.png" alt="" width="900"/>
