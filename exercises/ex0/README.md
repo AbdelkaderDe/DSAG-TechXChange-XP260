@@ -310,7 +310,7 @@ Once you have SAP Business Application Studio open with your secure incident man
 
 ## Launch SAP Build Work Zone
 
-1- Go back to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Click on the **Go to Application** icon next to the **SAP Build Work Zone, standard edition** application to open the SAP Build Work Zone application. 
+1- Go back to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Click on the **Go to Application** icon next to the **SAP Build Work Zone, standard edition** subscription to open the SAP Build Work Zone Site. 
 
 <p align="center">
   <img src="images/btp-subaccount-open-SAP-Build-Work-Zone.png" alt="" width="900"/>
