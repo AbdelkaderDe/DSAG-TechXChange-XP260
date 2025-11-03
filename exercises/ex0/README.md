@@ -185,7 +185,7 @@ Now after these checks, you can open the SAP Business Application Studio.
     <b></b>
   </p>
   
-5- When it is running, click on 'secure_incident_management' to open the SAP Business Application Studio with your incident management application.
+5- When it is running, click on **secure_incident_management** to open the SAP Business Application Studio with your incident management application.
 
  <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-space-running.png" alt="" width="900"/>
