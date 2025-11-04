@@ -21,8 +21,8 @@
   
 ## Overview 
 
-In these hands-on exercises, we will be using the [Incident Management Application](https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/), which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (SAP BTP).
- 
+In these hands-on exercises, we will be using the <a href="https://discovery-center.cloud.sap/protected/index.html#/mymissiondetail/143790/" target="_blank">Incident Management Application</a>, which is designed as a reference application for the <a href="https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide" target="_blank">SAP BTP Developer's Guide</a>. It showcases best practices for developing applications on SAP Business Technology Platform (SAP BTP).
+
 ### Business Scenario
 ACME, a leading electronics company, uses this application to manage customer service incidents. The application supports the following business process:
   1. A customer contacts ACME's call center with an issue.
