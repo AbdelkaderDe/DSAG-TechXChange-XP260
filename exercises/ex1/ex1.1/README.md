@@ -375,7 +375,7 @@ UI.FieldGroup #GeneratedGroup : {
 ```
 ... Other entries
 
-// ✅ ADDED: #XFLD: Label for assigned user field
+#XFLD,121: ✅ ADDED Label for assigned user field
 AssignedTo=Assigned To
 
 ```
