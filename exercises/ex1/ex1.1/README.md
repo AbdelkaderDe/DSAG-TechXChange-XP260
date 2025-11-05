@@ -382,7 +382,7 @@ AssignedTo=Assigned To
 ## ✅ 5. Verification
 This section outlines the steps to confirm that the remediation for the Horizontal Privilege Escalation vulnerability has been successfully implemented. The goal is to verify that support users can only modify or delete incidents assigned to them or unassigned incidents, and that updates or deletions on closed incidents are blocked.
 
-### Step 1: Deploy the Updated Application to Cloud Foundry
+### 🪜 Step 1: Deploy the Updated Application to Cloud Foundry
 - Open a terminal window.
   - In the Explorer Pane, right-click on the project name to open the context menu.
   - Select the menu item "Open in Integrated Terminal".
@@ -402,40 +402,40 @@ This section outlines the steps to confirm that the remediation for the Horizont
   cf deploy mta_archives/incident-management_1.0.0.mtar
   ```
 
-### Step 2: Login as Alice (Support User)
-- Action:
+### 🪜 Step 2: Login as Alice (Support User)
+- ▶️ Action:
   - Access SAP Build Work Zone and log in with alice.support@company.com. (Note: Make sure to refresh the application first.)
   - In the incident list, locate an incident assigned to Alice (e.g., "Strange noise when switching off Inverter").
   - Confirm the 'Assigned To' column displays alice.support@company.com.
   - Click on the incident to open its details.
   - Click "Edit", modify the title (e.g., change to "UPDATED BY ALICE - Test"), add a conversation entry, and save.
-- Result:
+- ✅ Result:
   - ✅ The system allows Alice to successfully edit and save her own incident.
   - ✅ This confirms that the **@restrict: { grant: ['UPDATE', 'DELETE'], to: 'support', where: 'assignedTo is null or assignedTo = $user' }** rule correctly permits actions on incidents assigned to her.    
 
-### Step 3: Verify Alice Cannot Modify Another User's Incident
-- Action:
+### 🪜 Step 3: Verify Alice Cannot Modify Another User's Incident
+- ▶️ Action:
   - In the incident list, locate an incident assigned to Bob (e.g., "No current on a sunny day").
   - Click "Edit" on this incident.
-- Result:
+- ✅ Result:
   - ❌ The system blocks the edit attempt.
   - ❌ The UI shows a 403 Forbidden error (or "Access denied" message).
   - ✅ This confirms that the where: 'assignedTo = $user' condition is effectively enforced — Alice cannot access Bob’s incident, even though both are support users. 👉 This resolves the Horizontal Privilege Escalation vulnerability.
  
-### Step 4: Verify Alice Cannot Modify or Delete a Closed Incident that is on Alice's Name
+### 🪜 Step 4: Verify Alice Cannot Modify or Delete a Closed Incident that is on Alice's Name
 - Action:
   - Locate a closed incident (e.g., one with status "Closed").
   - Click "Edit" and make changes.
   - Click "Save". If editing is not possible, attempt to select the incident and click "Delete".
-- Result:
+- ✅ Result:
   - ❌ For updates: The system blocks the edit with an error (e.g., "Cannot modify a closed incident" from services.js).
   - ❌ For deletions: The system prevents deletion with a similar error. This confirms the combined effect of @restrict and the onModify handler in services.js.
 
-### Step 5: Verify Alice Can Modify an Unassigned Incident
-- Action:
+### 🪜 Step 5: Verify Alice Can Modify an Unassigned Incident
+- ▶️ Action:
   - Locate an unassigned incident (e.g., one where "Assigned To" is null).
   - Click "Edit", make changes (e.g., update the title), and save.
-- Result: ✅ The system allows the modification, as per the remediated rule (where: 'assignedTo is null or assignedTo = $user'), demonstrating that unassigned incidents are accessible to support users.
+- ✅ Result: The system allows the modification, as per the remediated rule (where: 'assignedTo is null or assignedTo = $user'), demonstrating that unassigned incidents are accessible to support users.
 
 ## 📌 Verification Summary
 The remediation is successful as a combination of:
