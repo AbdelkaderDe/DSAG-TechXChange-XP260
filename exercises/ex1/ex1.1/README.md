@@ -367,10 +367,11 @@ UI.FieldGroup #GeneratedGroup : {
 ... // Other methods
 ```
 
-**File**: /i18n/i18n.properties
+**File**: /i18n/i18n.properties changes
 
 - Copy the contents of [i18n.properties](./_i18n/i18n.properties) into your project’s **/_i18n/i18n.properties** file.
 - Ensure the following corrected code is included in the file:
+  
 ```
 ... Other entries
 
