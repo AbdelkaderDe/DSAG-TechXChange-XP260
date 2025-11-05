@@ -309,8 +309,7 @@ add the following parts in the code:
   - **Extend UI:** Show assignedTo on the user interface.
   - **Selection Fields:** Add assignedTo to UI.SelectionFields for filtering/sorting
 
-**i18n.properties file:**
-  - Add new property: AssignedTo=Assigned To
+**i18n.properties file:** Add new property: AssignedTo=Assigned To
 
 - Copy the contents of [annotations.cds](./app/incidents/annotations.cds) into your project’s **app/incidents/annotations.cds** file.
 - Ensure the following corrected code is included in the file:
