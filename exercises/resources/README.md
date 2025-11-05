@@ -1,12 +1,22 @@
 # Additional resources for developing secure applications
 
+## Security Considerations for Applications
+- Security Considerations for Applications :
+  -   [Explore](https://help.sap.com/docs/btp/btp-developers-guide/building-blocks?q=Security+Considerations#security-considerations-in-the-explore-phase)
+  -   [Discover](https://help.sap.com/docs/btp/btp-developers-guide/discover?q=Security+Considerations#security-considerations-in-the-discover-phase)
+  -   [Design](https://help.sap.com/docs/btp/btp-developers-guide/design-6bb733981248482e86559bc52a87aaff?q=Security+Considerations#security-considerations-in-the-design-phase)
+
+  -   [Develop](https://help.sap.com/docs/btp/btp-developers-guide/security-considerations-for-applications?q=Security+Considerations)
+  -   [Run and Scale](https://help.sap.com/docs/btp/btp-developers-guide/run-and-scale?q=Security+Considerations#security-considerations-in-the-run-and-scale-phase)
+
 ## Topics pages on the SAP Community
+- [Cloud Application Programming](https://pages.community.sap.com/topics/cloud-application-programming)
 - [SAP Fiori tools](https://pages.community.sap.com/topics/fiori-tools)
 - [SAP Build Code](https://pages.community.sap.com/topics/build-code) 
-- [Cloud Application Programming](https://pages.community.sap.com/topics/cloud-application-programming)
 - [ABAP (includes RAP)](https://pages.community.sap.com/topics/abap)
   
 ## Other resources
+  
 - [Flexible Programming Model Explorer](https://sapui5.hana.ondemand.com/test-resources/sap/fe/core/fpmExplorer/index.html#/overview/introduction)
 - [SAPUI5 documentation for SAP Fiori elements](https://sapui5.hana.ondemand.com/#/topic/03265b0408e2432c9571d6b3feb6b1fd)
 - [SAP Fiori development newsletter](https://www.sap.com/cmp/nl/sap-fiori-development-newsletter/index.html)
