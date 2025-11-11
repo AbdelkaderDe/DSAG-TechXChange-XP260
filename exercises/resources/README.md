@@ -6,6 +6,7 @@
 -   [Design](https://help.sap.com/docs/btp/btp-developers-guide/design-6bb733981248482e86559bc52a87aaff#security-considerations-in-the-design-phase)
 -   [Develop](https://help.sap.com/docs/btp/btp-developers-guide/security-considerations-for-applications)
 -   [Run and Scale](https://help.sap.com/docs/btp/btp-developers-guide/run-and-scale#security-considerations-in-the-run-and-scale-phase)
+-   [CAP Security Guide](https://cap.cloud.sap/docs/guides/security/)
 
 ## Topic Pages at SAP Community
 - [SAP Cloud Application Programming Model](https://pages.community.sap.com/topics/cloud-application-programming)
