@@ -34,9 +34,9 @@ class ProcessorService extends cds.ApplicationService {
     // 1️⃣ Check if incident is already closed
     if (result.status_code === 'C') {
       // Allow only admins to modify/delete closed incidents
-      if (!req.user.is('admin')) {
+      if (!req.user || !req.user.is('admin')) {
         const action = req.event === 'UPDATE' ? 'modify' : 'delete';
-        return req.reject(403, `Cannot ${action} a closed incident`);
+        req.error(403, `Cannot ${action} a closed incident`, 'status_code');
       }
       // Admins can proceed
       return;
@@ -45,8 +45,8 @@ class ProcessorService extends cds.ApplicationService {
     // 2️⃣ Check if user is attempting to close the incident (status_code set to 'C')
     if (req.data.status_code === 'C') {
       // Block support users from closing high-urgency incidents
-      if (result.urgency_code === 'H' && !req.user.is('admin')) {
-        return req.reject(403, 'Only administrators can close high-urgency incidents');
+      if (result.urgency_code === 'H' && (!req.user || !req.user.is('admin'))) {
+        req.error(403, 'Only administrators can close high-urgency incidents', 'status_code');
       }
     }
 
