@@ -28,13 +28,13 @@ class ProcessorService extends cds.ApplicationService {
       .columns('status_code', 'urgency_code')
       .where({ ID: req.data.ID });
 
-    if (!result) return req.reject(404, `Incident ${req.data.ID} not found`);
+    if (!result) return req.error(404, `Incident ${req.data.ID} not found`);
 
     // 1️⃣ Check if incident is already closed
     if (result.status_code === 'C') {
       if (!req.user.is('admin')) {
         const action = req.event === 'UPDATE' ? 'modify' : 'delete';
-        return req.reject(403, `Cannot ${action} a closed incident`);
+        return req.error(403, `Cannot ${action} a closed incident`);
       }
       return;
     }
@@ -42,7 +42,7 @@ class ProcessorService extends cds.ApplicationService {
     // 2️⃣ Check if user is attempting to close the incident (status_code set to 'C')
     if (req.data.status_code === 'C') {
       if (result.urgency_code === 'H' && !req.user.is('admin')) {
-        return req.reject(403, 'Only administrators can close high-urgency incidents');
+        return req.error(403, 'Only administrators can close high-urgency incidents');
       }
     }
   }
