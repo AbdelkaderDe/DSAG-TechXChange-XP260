@@ -14,7 +14,7 @@
 - [Overview](#overview)
   - [Business Scenario](#business-scenario)
   - [Solution Diagram](#solution-diagram)
-- Step 1: Set Up Your Trial Account
+- [Step 1: Set Up Your Trial Account](#step-1-set-up-your-trial-account)
 - Step 2: Set Up Set Up Subscriptions
 - Step 3: Provision SAP HANA Cloud Service
 - Step 4: Set Up Custom SAP Cloud Identity
@@ -70,10 +70,18 @@ The solution diagram illustrates the key components and their interactions withi
 4. If this is your first time accessing the trial, you may be prompted to select a region (e.g., US East, Singapore). Select an appropriate region to create your global account setup.
 
   <p align="center">
-    <img src="images/solution-diagram-incident-management.png" alt="" width="900"/>
+    <img src="images/btp-trial-regions.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
+
+5.  Click on the subaccount tile (typically labeled trial) to open the SAP BTP Cockpit for your trial subaccount.
+  <p align="center">
+    <img src="images/trial-global-account.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+   
 
 - Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView).
 
