@@ -1,4 +1,4 @@
-# Getting Started
+# SAP BTP Trial Setup & Deployment
 
 ## Table of Contents
 
