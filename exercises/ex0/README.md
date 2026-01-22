@@ -1,4 +1,4 @@
-# BTP Trial Account: Environment Setup and Initial Deployment
+# Environment Setup and Initial Deployment
 
     
 ## Table of Contents
