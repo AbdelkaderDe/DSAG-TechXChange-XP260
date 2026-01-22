@@ -1,6 +1,6 @@
 # Environment Setup and Initial Deployment
 
-🚀 Quick Start
+## 🚀 Quick Start
 
 * **Duration:** 2 hours hands-on workshop
 * **What you'll build:** A simple SAP BTP application with security features
@@ -8,6 +8,12 @@
 * **Setup time:** ~30 minutes
 * **Start here:** [Step 1: Set Up Your Trial Account](#step-1-set-up-your-trial-account)
 
+## Set up Process flow Diagram
+  <p align="center">
+    <img src="images/setup-process-flow-diagram.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
     
 ## Table of Contents
 
@@ -22,7 +28,12 @@
 - Step 6: Launch BAS, Import Project, and Deploy to Cloud Foundry
 - Step 7: Set Up SAP Build Work Zone
 
-
+## Set up Process flow Diagram
+  <p align="center">
+    <img src="images/solution-diagram-incident-management.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
 
 - [Access Your SAP BTP Subaccount](#access-your-sap-btp-subaccount)
   - [Review the Subscribed Services and Instances](#review-the-subscribed-services-and-instances)
