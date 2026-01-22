@@ -6,7 +6,7 @@
 * **What you'll build:** A simple SAP BTP application with security features
 * **Prerequisites:** Web browser, SAP BTP Trial Account
 * **Setup time:** ~30 minutes
-* **Start here:** Step 1: Set Up Your Trial Account
+* **Start here:** [Step 1: Set Up Your Trial Account](#step-1-set-up-your-trial-account)
 
     
 ## Table of Contents
@@ -14,6 +14,16 @@
 - [Overview](#overview)
   - [Business Scenario](#business-scenario)
   - [Solution Diagram](#solution-diagram)
+- Step 1: Set Up Your Trial Account
+- Step 2: Set Up Set Up Subscriptions
+- Step 3: Provision SAP HANA Cloud Service
+- Step 4: Set Up Custom SAP Cloud Identity
+- Step 5: Configure User Access (Role Collections & Platform Roles)
+- Step 6: Launch BAS, Import Project, and Deploy to Cloud Foundry
+- Step 7: Set Up SAP Build Work Zone
+
+
+
 - [Access Your SAP BTP Subaccount](#access-your-sap-btp-subaccount)
   - [Review the Subscribed Services and Instances](#review-the-subscribed-services-and-instances)
     - [Subscriptions](#subscriptions)
@@ -50,7 +60,21 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-## Access your SAP BTP Subaccount
+## Step 1: Set Up Your Trial Account
+
+1. Navigate to the [SAP BTP Trial Sign-Up/Login Page](https://account.hanatrial.ondemand.com/).
+2. If you don't have a trial account:
+    - Click Sign Up and follow the prompts to create your account using your email.
+    - Verify your email address to complete registration.
+3. If you already have a trial account, click Log In and enter your SAP BTP credentials.
+4. If this is your first time accessing the trial, you may be prompted to select a region (e.g., US East, Singapore). Select an appropriate region to create your global account setup.
+
+  <p align="center">
+    <img src="images/solution-diagram-incident-management.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
 - Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView).
 
 - ⚠️ **Note:** You will use an SAP BTP subaccount with subaccount admin privileges. We use the Identity Authentication service tenant **akihlqzx8.accounts.ondemand.com** as custom identity provider, both for platform and application users.
