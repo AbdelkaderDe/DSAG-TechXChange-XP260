@@ -100,17 +100,17 @@ In this step, you will ensure the necessary applications are subscribed to.
   - We use the Identity Authentication service tenant as custom identity provider, both for platform and application users.
 
 ### 1. Navigate to the Service Marketplace
-1- From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
-2- Click on Service Marketplace.
+  1- From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
+  2- Click on Service Marketplace.
 
 ### 2. Subscribe to Services
 Search for and create a subscription for the 3 additional services listed below.
 
-| Application                           | Plan             |
-| :------------------------------       | :--------------- |
-| [SAP HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/audit-log-service/?region=all)              | tools             |
-| Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | default |
-| [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |
+| Application                           | Plan             | Purpose             |
+| :------------------------------       | :--------------- | :---------------    |
+| [SAP HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/audit-log-service/?region=all)              | tools             |Provides the database administration tools.|
+| [Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | default |Manages user authentication|
+| [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |The Launchpad where you will access your deployed app.|
 
 
 
