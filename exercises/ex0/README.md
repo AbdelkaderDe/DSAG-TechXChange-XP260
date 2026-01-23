@@ -21,7 +21,7 @@
   - [Business Scenario](#business-scenario)
   - [Solution Diagram](#solution-diagram)
 - [Step 1: Set Up Your Trial Account](#step-1-set-up-your-trial-account)
-- Step 2: Set Up Subscriptions
+- [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions)
 - Step 3: Provision SAP HANA Cloud Service
 - Step 4: Configure Custom SAP Cloud Identity
 - Step 5: Configure User Access (Role Collections & Platform Roles)
@@ -95,7 +95,8 @@ The solution diagram illustrates the key components and their interactions withi
 In this step, you will ensure the necessary applications are subscribed to.
 
   ⚠️ **Note:** 
-  - Your Trial account comes pre-configured with SAP Business Application Studio (subscribed) and the Cloud Foundry Environment (enabled). You do not need to add these manually.
+  - Your Trial account comes pre-configured with [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all) (subscribed) and the
+    [Cloud Foundry Environment](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/cloud-foundry-runtime?region=all) (enabled). You do not need to add these manually.
   - We use the Identity Authentication service tenant as custom identity provider, both for platform and application users.
 
 ### 1. Navigate to the Service Marketplace
@@ -107,8 +108,8 @@ Search for and create a subscription for the 3 additional services listed below.
 
 | Application                           | Plan             |
 | :------------------------------       | :--------------- |
-| [Audit Log Viewer Service](https://discovery-center.cloud.sap/serviceCatalog/audit-log-service/?region=all)              | free             |
-| [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | standard-edition |
+| [SAP HANA Cloud](https://discovery-center.cloud.sap/serviceCatalog/audit-log-service/?region=all)              | tools             |
+| Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | default |
 | [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |
 
 
