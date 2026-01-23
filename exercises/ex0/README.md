@@ -105,6 +105,16 @@ In this step, you will ensure the necessary applications are subscribed to.
 
 ### 2. Subscribe to Services
 Search for and create a subscription for the 3 additional services listed below.
+For each service:
+* Click on the **... (More) menu**, then select Create. 
+* In the Create wizard:
+  - **Service:** ensure the correct service is selected.
+  - **Plan:** select the plan from the table (e.g., standard, default, or tools).
+  - **Runtime Environment:** Cloud Foundry.
+  - **Space:** leave blank.
+  - Click **Create**.
+
+* Repeat this process for the remaining services.
 
 | Application                           | Plan             | Purpose             |
 | :------------------------------       | :--------------- | :---------------    |
