@@ -21,9 +21,9 @@
   - [Business Scenario](#business-scenario)
   - [Solution Diagram](#solution-diagram)
 - [Step 1: Set Up Your Trial Account](#step-1-set-up-your-trial-account)
-- Step 2: Set Up Set Up Subscriptions
+- Step 2: Set Up Subscriptions
 - Step 3: Provision SAP HANA Cloud Service
-- Step 4: Set Up Custom SAP Cloud Identity
+- Step 4: Configure Custom SAP Cloud Identity
 - Step 5: Configure User Access (Role Collections & Platform Roles)
 - Step 6: Launch BAS, Import Project, and Deploy to Cloud Foundry
 - Step 7: Set Up SAP Build Work Zone
@@ -77,23 +77,54 @@ The solution diagram illustrates the key components and their interactions withi
 2. If you don't have a trial account:
     - Click Sign Up and follow the prompts to create your account using your email.
     - Verify your email address to complete registration.
-3. On the welcome page, click Go To Your Trial Account.
-4. Select your preferred region (e.g., US East, Singapore) when prompted.
-5. Click your global account tile, then select the default trial subaccount to enter the SAP BTP Cockpit.
-
+3. Select your preferred region (e.g., US East, Singapore) when prompted.
   <p align="center">
     <img src="images/btp-trial-regions.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
-
-5.  Click on the subaccount tile (typically labeled trial) to open the SAP BTP Cockpit for your trial subaccount.
+4.  Click on the subaccount tile (typically labeled trial) to open the SAP BTP Cockpit for your trial subaccount.
   <p align="center">
     <img src="images/trial-global-account.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
-   
+
+## Step 2: Set Up Subscriptions
+
+In this step, you will ensure the necessary applications are subscribed to.
+
+  ⚠️ **Note:** 
+  - Your Trial account comes pre-configured with SAP Business Application Studio (subscribed) and the Cloud Foundry Environment (enabled). You do not need to add these manually.
+  - We use the Identity Authentication service tenant as custom identity provider, both for platform and application users.
+
+### 1. Navigate to the Service Marketplace
+1- From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
+2- Click on Service Marketplace.
+
+### 2. Subscribe to Services
+Search for and create a subscription for the 3 additional services listed below.
+
+| Application                           | Plan             |
+| :------------------------------       | :--------------- |
+| [Audit Log Viewer Service](https://discovery-center.cloud.sap/serviceCatalog/audit-log-service/?region=all)              | free             |
+| [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | standard-edition |
+| [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |
+
+
+
+  From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
+Click on Service Marketplace.
+  
+#### Subscriptions
+
+| Application                           | Plan             |
+| :------------------------------       | :--------------- |
+| [Audit Log Viewer Service](https://discovery-center.cloud.sap/serviceCatalog/audit-log-service/?region=all)              | free             |
+| [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | standard-edition |
+| [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |
+
+
 
 - Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView).
 
