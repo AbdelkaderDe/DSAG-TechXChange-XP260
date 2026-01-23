@@ -77,8 +77,9 @@ The solution diagram illustrates the key components and their interactions withi
 2. If you don't have a trial account:
     - Click Sign Up and follow the prompts to create your account using your email.
     - Verify your email address to complete registration.
-3. If you already have a trial account, click Log In and enter your SAP BTP credentials.
-4. If this is your first time accessing the trial, you may be prompted to select a region (e.g., US East, Singapore). Select an appropriate region to create your global account setup.
+3. On the welcome page, click Go To Your Trial Account.
+4. Select your preferred region (e.g., US East, Singapore) when prompted.
+5. Click your global account tile, then select the default trial subaccount to enter the SAP BTP Cockpit.
 
   <p align="center">
     <img src="images/btp-trial-regions.png" alt="" width="900"/>
