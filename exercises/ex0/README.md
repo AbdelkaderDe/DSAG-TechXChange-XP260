@@ -196,22 +196,21 @@ To authorize the users you just created in IAS, you must register them within yo
   6. Click **Create** to finalize.
 
 ### 3.4. Configure Role Collections
-To ensure you have full administrative rights to manage the development tools, assign the following role collections to your identity provider user admin.
-  
-  1. In the **SAP BTP Cockpit**, go to your **trial Subaccount**.
-  2. On the left-side menu, navigate to **Security > Users**.
-  3. Click on your IAS Admin User email address to open the user details page.
-  4. Ensure the Identity Provider at the top matches your IAS tenant.
-  5. Click the Assign Role Collection button.
-  6. Search for and select the following roles from the list:
-    * Business_Application_Studio_Administrator
-    * Business_Application_Studio_Developer
-    * Business_Application_Studio_Extension_Deployer
-    * Launchpad_Admin
-    * SAP HANA Cloud Administrator
-    * Subaccount Viewer
-  7. Click Assign.
+To ensure you have full administrative rights to manage the development tools, assign the following role collections to your identity-provider user admin.
 
+1. In the **SAP BTP Cockpit**, go to your **trial subaccount**.
+2. On the left-side menu, navigate to **Security → Users**.
+3. Click your IAS admin-user email to open the details page.
+4. Verify that the **Identity Provider** field shows your IAS tenant.
+5. Click **Assign Role Collection**.
+6. Search for and select these roles:
+   - **`Business_Application_Studio_Administrator`**
+   - **`Business_Application_Studio_Developer`**
+   - **`Business_Application_Studio_Extension_Deployer`**
+   - **`Launchpad_Admin`**
+   - **`SAP HANA Cloud Administrator`**
+   - **`Subaccount_Viewer`**
+7. Click **Assign**.
 
 
 
