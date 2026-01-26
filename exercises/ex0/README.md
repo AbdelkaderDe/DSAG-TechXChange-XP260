@@ -26,6 +26,11 @@
    - [2.2. Subscribe to Cloud Identity Services (Trial)](#22-subscribe-to-cloud-identity-services-trial)
    - [2.3. Establish Trust with SAP Cloud Identity (Trial)](#23-establish-trust-with-sap-cloud-identity-trial)
    - [2.4. Subscribe to SAP Build Work Zone, Standard Edition (Trial)](#24-subscribe-to-sap-build-work-zone-standard-edition-trial)
+- [Step 3: Configure Users access]()
+     - [3.1. Import business users into SAP cloud identity](#21-subscribe-to-sap-hana-cloud-trial)
+     - [3.2. Add business users to the btp cockpit]()
+     - [Configure role collections]()
+
 - [Step 3: Provision SAP HANA Cloud Service](#step-3-provision-sap-hana-cloud-service)
 - [Step 4: Configure Custom SAP Cloud Identity](#step-4-configure-custom-sap-cloud-identity)
 - [Step 5: Configure User Access (Role Collections & Platform Roles)](#step-5-configure-user-access-role-collections--platform-roles)
@@ -126,8 +131,6 @@ Trial accounts have a pre-linked Identity Authentication (IAS) tenant, so subscr
     <br>
     <b></b>
   </p>
-  
-  7. Bookmark SAP Cloud Identity URL (e.g., https://<your-tenant>.accounts.ondemand.com/admin) — you will need it later to add business users.
 
 ### 2.3. Establish Trust with SAP Cloud Identity (Trial)
 Establishing trust allows SAP Cloud Identity Services to act as your central identity provider, enabling secure Single Sign-On (SSO) and centralized management of business users. This connection is a technical requirement for services like SAP Build Work Zone to authenticate users and correctly assign the role collections needed to access applications.
