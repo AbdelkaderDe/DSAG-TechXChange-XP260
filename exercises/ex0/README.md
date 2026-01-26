@@ -20,7 +20,7 @@
 - [Overview](#overview)
   - [Business Scenario](#business-scenario)
   - [Solution Diagram](#solution-diagram)
-- [Step 1: Set Up Your Trial Account](#step-1-set-up-your-trial-account)
+- [Step 1: Set Up Your BTP Trial Account](#step-1-set-up-your-trial-account)
 - [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions)
 - Step 3: Provision SAP HANA Cloud Service
 - Step 4: Configure Custom SAP Cloud Identity
