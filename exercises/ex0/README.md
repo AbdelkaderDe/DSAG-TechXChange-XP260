@@ -24,7 +24,7 @@
 - [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions)
    - 2.1. [Subscribe to SAP HANA Cloud (Trial)](#21-subscribe-to-sap-hana-cloud-trial)
    - 2.2. [Subscribe to Cloud Identity Services (Trial)](#22-subscribe-to-cloud-identity-services-trial)
-   - 2.3. [Establish OpenID Connect Trust (Trial)](#23-establish-openid-connect-trust-trial)
+   - 2.3. [Establish Trust with SAP Cloud Identity (Trial)]([#23-establish-trust-with-sap-cloud-identity-trial))
    - 2.4. [Subscribe to SAP Build Work Zone, Standard Edition (Trial)](#24-subscribe-to-sap-build-work-zone-standard-edition-trial)
 - [Step 3: Provision SAP HANA Cloud Service](#step-3-provision-sap-hana-cloud-service)
 - [Step 4: Configure Custom SAP Cloud Identity](#step-4-configure-custom-sap-cloud-identity)
