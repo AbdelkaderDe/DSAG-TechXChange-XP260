@@ -163,33 +163,14 @@ Establishing trust allows SAP Cloud Identity Services to act as your central ide
     <b></b>
   </p>
 
-     
-6. Once subscribed, click View Subscription,
-  1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
-  2. Click on **Service Marketplace**.
-  3. Search for **"SAP HANA Cloud"** and select it from the results.
-  4. Click the three-dot menu **(...)** next to the service name, then choose Create.
-  5. In the Create Subscription wizard:
-      * Confirm Service is set to "SAP HANA Cloud"
-      * Select **Subscription Plan: tools** (free Trial plan)
-      * Click **Create**.
-  6. After subscription completes, click View Subscription
-
-
-Verify the instance is active in the Instances tab.
-
-
-
-
-#### Subscriptions
-
-| Application                           | Plan             |
-| :------------------------------       | :--------------- |
-| [Audit Log Viewer Service](https://discovery-center.cloud.sap/serviceCatalog/audit-log-service/?region=all)              | free             |
-| [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all)       | standard-edition |
-| [SAP Build Work Zone, standard edition](https://discovery-center.cloud.sap/serviceCatalog/sap-build-work-zone-standard-edition/?region=all) | standard         |
-
-
+### 2.4. Subscribe to SAP Build Work Zone, Standard Edition (Trial)
+  1. Return to the **Service Marketplace** in your subaccount.
+  2. Search for **"SAP Build Work Zone, standard edition"** and select it.
+  3. Click the three-dot menu **(...)** next to the service name, then choose **Create**.
+  4. In the Create Subscription wizard:
+      * Confirm Service is set to "SAP Build Work Zone, standard edition"
+      * Select **Subscription Plan: standard**
+  5. After subscription complete, Confirm **Status = "Subscribed"**
 
 - Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView).
 
