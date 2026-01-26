@@ -123,7 +123,6 @@ In this step, you will ensure the necessary applications are subscribed to.
   - Your Trial account comes pre-configured with [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all) (subscribed) and the
     [Cloud Foundry Environment](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/cloud-foundry-runtime?region=all) (enabled). You do not need to add these manually.
   - Before subscribing to SAP Build Work Zone, standard edition, you must establish trust between your BTP subaccount and an SAP Cloud Identity Services – Identity Authentication (IAS) tenant using OpenID Connect (OIDC).
-Search for and create a subscription for the 3 additional services listed below.
 
 ### 2.1. Subscribe to SAP HANA Cloud (Trial)
   1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
@@ -134,10 +133,33 @@ Search for and create a subscription for the 3 additional services listed below.
       * Confirm Service is set to "SAP HANA Cloud"
       * Select **Subscription Plan: tools** (free Trial plan)
       * Click **Create**.
-  6. After subscription completes, click View Subscription, then click **Create Instance** to provision your Trial HANA Cloud database:
-      * Follow the wizard to configure your instance (use default settings for Trial)
-      * Note: Trial HANA Cloud instances expire after 30 days and can be restarted via the cockpit.
+  6. After subscription complete, Confirm **Status = "Subscribed"**
 
+### 2.2. Subscribe to Cloud Identity Services (Trial)
+Trial accounts have a pre-linked Identity Authentication (IAS) tenant, so subscription and instance setup are simplified:
+  1. Return to the **Service Marketplace** in your subaccount.
+  2. Search for **"Cloud Identity Services"** and select it from the results.
+  3. Click the three-dot menu **(...)** next to the service name, then choose Create.
+  4. In the Create Subscription wizard:
+      * Confirm Service is set to **"Cloud Identity Services"**
+      * Select **Subscription Plan: default**.
+      * Click **Create** to initiate the subscription.
+  5. After subscription complete, Confirm **Status = "Subscribed"**
+  6. Activate your IAS Administration Console access via email:
+      * Check your registered email inbox (including spam/junk folders) for an activation message from SAP Cloud Identity Services.
+      * 1. Click the activation link in the email, follow the prompts to set a secure password, and log into the Identity Authentication Administration Console to confirm access. This step is optional for Trial trust setup but required for advanced user management later, including adding business users to access your SAP Build Work Zone and deployed applications.
+        
+
+5. Once subscribed, click View Subscription,
+  1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
+  2. Click on **Service Marketplace**.
+  3. Search for **"SAP HANA Cloud"** and select it from the results.
+  4. Click the three-dot menu **(...)** next to the service name, then choose Create.
+  5. In the Create Subscription wizard:
+      * Confirm Service is set to "SAP HANA Cloud"
+      * Select **Subscription Plan: tools** (free Trial plan)
+      * Click **Create**.
+  6. After subscription completes, click View Subscription
 
 
 Verify the instance is active in the Instances tab.
