@@ -239,20 +239,13 @@ The Space is where applications and services are actually deployed.
   8. Click **Add**.
 
 
+#### Configuration Summary for Admin Platform User
 
-
-
-  
-
-#### Instances
-
-| Instance Name                       | Service                                    | Plan        |
+| Level                       | Roles Assigned                                    | Purpose        |
 | :------------------------------     | :-------------------------------------     | :---------- |
-| incident-management-auth            | [Authorization and Trust Management Service](https://discovery-center.cloud.sap/serviceCatalog/authorization-and-trust-management-service/?region=all) | application |
-| incident-management-db              | [SAP HANA Schemas & HDI Containers](https://help.sap.com/docs/hana-cloud-database/sap-hana-cloud-sap-hana-database-deployment-infrastructure-hdi-reference/sap-hdi-containers)          | hdi-shared  |
-| incident-management-destination     | [Destination Service](https://discovery-center.cloud.sap/serviceCatalog/destination-service/?service_plan=lite&region=all&commercialModel=btpea)                        | lite        |
-| incident-management-html5-repo-host | [HTML5 Application Repository Service](https://help.sap.com/docs/btp/sap-business-technology-platform/html5-application-repository)       | app-host    |
-| incident-management-html5-runtime   | [HTML5 Application Repository Service](https://help.sap.com/docs/btp/sap-business-technology-platform/html5-application-repository)       | app-runtime |
+| Subaccount          | Subaccount Viewer / Administrator| View resources and manage security. |
+| Org.              |Org Manager, Org User   | Create spaces and manage Org-level members.| 
+| Space        | Space Developer, Space Manager          | Deploy applications and manage service instances.| 
 
 #### Environments
 
