@@ -150,6 +150,15 @@ Establishing trust allows SAP Cloud Identity Services to act as your central ide
       * Select **Subscription Plan: standard**
   5. After subscription complete, Confirm **Status = "Subscribed"**
 
+At the conclusion of Step 2: Set Up Subscriptions, your Subscriptions tab will display the complete list of successfully subscribed required services, exactly as illustrated in the following 
+image:
+
+  <p align="center">
+    <img src="images/btp-trial-subscriptions.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
 - Access your SAP BTP account for the session XP260 using this link: [Global Account: SAP-TechEd-2025 – Account Explorer](https://emea.cockpit.btp.cloud.sap/cockpit?idp=akihlqzx8.accounts.ondemand.com#/globalaccount/4c772782-0751-42ee-93c3-897452fdcb63/accountModel&//?section=HierarchySection&view=TreeTableView).
 
 - ⚠️ **Note:** You will use an SAP BTP subaccount with subaccount admin privileges. We use the Identity Authentication service tenant **akihlqzx8.accounts.ondemand.com** as custom identity provider, both for platform and application users.
