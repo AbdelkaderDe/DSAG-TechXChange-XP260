@@ -88,7 +88,7 @@ The solution diagram illustrates the key components and their interactions withi
 
 ## Step 2: Set Up Subscriptions
 
-In this step, you will ensure the necessary applications are subscribed to.
+In this step, you will set up the required application subscriptions
 
 | Application                           | Subscription Plan             | Purpose             |
 | :------------------------------       | :--------------- | :---------------    |
