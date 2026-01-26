@@ -28,8 +28,9 @@
    - [2.4. Subscribe to SAP Build Work Zone, Standard Edition (Trial)](#24-subscribe-to-sap-build-work-zone-standard-edition-trial)
 - [Step 3: Configure Users access]()
      - [3.1. Import business users into SAP cloud identity](#21-subscribe-to-sap-hana-cloud-trial)
-     - [3.2. Add business users to the btp cockpit]()
-     - [Configure role collections]()
+     - [3.2. Set initial password for business users](#21-subscribe-to-sap-hana-cloud-trial)
+     - [3.3. Add business users to the btp cockpit]()
+     - [3.4. Configure role collections]()
 
 - [Step 3: Provision SAP HANA Cloud Service](#step-3-provision-sap-hana-cloud-service)
 - [Step 4: Configure Custom SAP Cloud Identity](#step-4-configure-custom-sap-cloud-identity)
@@ -163,6 +164,51 @@ image:
     <br>
     <b></b>
   </p>
+
+## Step 3: Configure Users access
+This section details how to manage users and their access rights within your SAP BTP trial landscape, leveraging SAP Cloud Identity Services (Identity Authentication Service - IAS) as your identity provider.
+
+### 3.1. Import Business Users into SAP Cloud Identity.
+  1. Download user data file [IAS-business-users.csv](./IAS-business-users.csv)
+  2. Open your web browser and navigate to your IAS tenant's administration console. The URL typically looks like https://<your_tenant_id>.accounts.ondemand.com/admin.
+  3. Enter your administrator credentials and log in.
+  2. From the main Dashboard, click on the User Management tile.
+  3. Click the **Browse** button to select the CSV file you prepared earlier.
+  4. Click the Import button at the top right.
+  5. Browse and select your IAS-business-users.csv file.
+  7. Click Import.
+  8. Click Confirm to finalize the import.
+
+### 3.2. Set initial password for business users
+  1. In the **User Management** screen, search for and click on a user (e.g., alice.jones@acme.com).
+  2. Navigate to the **Authentication** tab.
+  3. Click on Password Details.
+  4. Set **Initial Password:** Click this to manually type a temporary password (e.g., S@p-Btp-2025!) that you will give to the user.
+  5. Repeat this for all imported users (bob.smith@acme.com,david.miller@acme.com).
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 #### Instances
 
