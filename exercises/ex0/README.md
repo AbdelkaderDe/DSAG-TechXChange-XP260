@@ -32,7 +32,6 @@
      - [3.3. Add business users to the btp cockpit]()
      - [3.4. Configure role collections]()
      - [3.5. Configure Cloud Foundry Admin Access (Platform User)]()
-
 - [Step 4: Create SAP HANA Cloud Instance](#step-3-provision-sap-hana-cloud-service)
 - [Step 5: Launch SAP BAS, Import Project, and Deploy to Cloud Foundry](#step-6-launch-bas-import-project-and-deploy-to-cloud-foundry)
 - [Step 6: Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
