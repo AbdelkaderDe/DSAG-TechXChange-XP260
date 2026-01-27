@@ -203,40 +203,6 @@ To ensure you have full administrative rights to manage the development tools, a
    - **`Subaccount_Viewer`**
 7. Click **Assign**.
 
-### 3.5. Configure Cloud Foundry Admin Access (Platform User)
-For identity-provider user admin , who act as Platform Users, follow these steps to manage the Org and Space levels.
-#### 3.5.1 Add Admin as Org Member
-The Org (Organization) is the top level of the **Cloud Foundry environment**.
-  1. In the SAP BTP Cockpit, navigate to your Subaccount.
-  2. On the left-side menu, click on **Cloud Foundry > Org Members.**
-  3. Click the **Add Members** button.
-  4. User Name: Enter your AIS admin email.
-  5. Identity Provider: Select your Custom IAS tenant (ensure it matches the one used for the role collections in the previous step).
-  6. Assign the following Org Roles:
-      - **Org Manager** (Allows management of spaces, users, and domains).
-      - **Org User** (Grants basic access to the Org).
-#### 3.5.2 Add Admin as Space Member
-The Space is where applications and services are actually deployed.
-  1. On the left-side menu, navigate to **Cloud Foundry > Spaces**.
-  2. Click on the name of the space you want to manage (e.g., dev).
-  3. On the left panel within the space view, click **Members**.
-  4. Click the **Add Members** button.
-  5. **User Name:** Enter your AIS admin email
-  6. **Identity Provider:** Ensure your Custom IAS tenant is selected.
-  7. Assign the following Space Roles:
-      - **Space Developer** (Required to deploy apps and create service instances).
-      - **Space Manager** (Provides "Space membership" management and visibility).
-  8. Click **Add**.
-
-
-#### Configuration Summary for Admin Platform User
-
-| Level                       | Roles Assigned                                    | Purpose        |
-| :------------------------------     | :-------------------------------------     | :---------- |
-| Subaccount          | Subaccount Viewer / Administrator| View resources and manage security. |
-| Org.              |Org Manager, Org User   | Create spaces and manage Org-level members.| 
-| Space        | Space Developer, Space Manager          | Deploy applications and manage service instances.| 
-
 #### Environments
 
 | Environment Name    | Plan       |
