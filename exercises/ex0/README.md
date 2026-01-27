@@ -26,7 +26,7 @@
    - [2.2. Subscribe to Cloud Identity Services (Trial)](#22-subscribe-to-cloud-identity-services-trial)
    - [2.3. Establish Trust with SAP Cloud Identity (Trial)](#23-establish-trust-with-sap-cloud-identity-trial)
    - [2.4. Subscribe to SAP Build Work Zone, Standard Edition (Trial)](#24-subscribe-to-sap-build-work-zone-standard-edition-trial)
-- [Step 3: Configure Users access]()
+- [Step 3: Configure Users access](Configure Users access](#step-3-configure-users-access)
      - [3.1. Import business users into SAP cloud identity](#21-subscribe-to-sap-hana-cloud-trial)
      - [3.2. Set initial password for business users](#21-subscribe-to-sap-hana-cloud-trial)
      - [3.3. Add business users to the btp cockpit]()
