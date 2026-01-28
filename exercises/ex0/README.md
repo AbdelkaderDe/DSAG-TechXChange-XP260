@@ -210,7 +210,7 @@ To ensure you have full administrative rights to manage the development tools, a
 ## Step 4: Create SAP HANA Cloud Instance
 In this step, you will provision a new SAP HANA Cloud database instance and map it to your Cloud Foundry environment. This allows your applications and development tools (like SAP Business Application Studio) to interact with the database.
 
-### 4.1 Identify your Organization and Space IDs
+### 4.1: Identify your Organization and Space IDs
 Before creating the instance, you need to know where it will be mapped.
   1. In your **SAP BTP Cockpit**, go to your **Trial Subaccount > Overview**.
   2. Click on **Cloud Foundry Environment** tab.
@@ -228,7 +228,7 @@ Before creating the instance, you need to know where it will be mapped.
       - Copy the alphanumeric string after **/space/** and before **/applications**, e.g,84304933-24e6-popo-950a-46105da935d0
   8. Save both IDs for [Step 4.2 Create the SAP HANA Cloud Instance](#42-create-the-sap-hana-cloud-instance).
 
-### 4.2 Create the SAP HANA Cloud Instance
+### 4.2: Create the SAP HANA Cloud Instance
 1. Navigate to **Services > Instances and Subscriptions**.
 2. Find **SAP HANA Cloud** under the **Subscriptions tab** and click the **Go to Application** icon to open **SAP HANA Cloud Central**.
 3. If you are prompted for login, choose the **custom IDP** and login with your admin user.
@@ -294,7 +294,7 @@ During this step, you will:
 
 By the end of this step, the Secure Incident Management application will be successfully deployed on SAP BTP Cloud Foundry, and authorized users will be able to access and use it.
 
-### Step 5.1 Create a Dev Space:
+### 5.1: Create a Dev Space:
 
 1. Open SAP Business Application Studio (BAS) from your BTP Cockpit.
 
@@ -333,12 +333,12 @@ By the end of this step, the Secure Incident Management application will be succ
   <b></b>
 </p>
 
-### Step 5.2 Download and Import the Project
+### 5.2: Download and Import the Project
 1. Download the project file secure-incident-management.tar from the following link:
   👉 [Download Secure Incident Management Project](https://github.com/AbdelkaderDe/DSAG-TechXChange-XP260/releases/download/v0.1.0-btp-trial-workshop/secure-incident-management.tar)
 2. Save the file locally on your machine. This archive will be imported into SAP Business Application Studio in the next step.
 
-### 5.2 Import Project to BAS
+### 5.3: Import Project to BAS
 BAS-import-project.png
 1. In the BAS Explorer pane, click Import Project.
 2. Select the secure-incident-management.tar file from your local machine and import it.
@@ -349,9 +349,9 @@ BAS-import-project.png
 </p>
 4. The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
 
-5.3: Prepare for Deployment (Run npm update)
-
-### Step 5.3 : Prepare for Deployment (Run npm update)
+5. Bookmark your **SAP Business Application Studio** link.
+   
+### 5.4 : Prepare for Deployment (Run npm update)
 Before you build and deploy the application, it's crucial to ensure all project dependencies are up-to-date.
 
 1. **Open the Integrated Terminal:** If you haven't already, open the terminal by navigating to **Hamburger menu → Terminal → New Terminal**, or by right-clicking on the project name in the Project Explorer and selecting **Open in Integrated Terminal**.
@@ -369,25 +369,135 @@ npm update
 ```
 Wait for the command to complete. This process fetches and installs the latest compatible versions of your project's Node.js dependencies.
 
-### 5.4: Deploy the Application to Cloud Foundry
+### 5.5: Deploy the Application to Cloud Foundry
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
-#### 5.4.1: Option 1: Deploy via UI
+#### 5.5.1: Option 1: Deploy via UI
 1. Login to Cloud Foundry:
   * Press Ctrl + Shift + P to open the **Command Palette.**
+  <p align="center">
+    <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+  
   * Type **CF: Login to Cloud Foundry** and press Enter.
+  <p align="center">
+    <img src="images/btp-subaccount-open-BAS-dev-UI-command-palette-cf-login.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>  
+
   * In the CloudFoundry Sign In prompt, click **Open a New Browser** to generate your SSO Passcode.
+  <p align="center">
+    <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+    
   * In the browser window:
-    Select Sign in to another account.
-  Choose Sign in with alternative identity provider.
-  Copy the temporary authentication code displayed in the pop-up window.
+      Select Sign in to another account.
+      Choose Sign in with alternative identity provider.
+      Copy the temporary authentication code displayed in the pop-up window.
+
+2. Return to BAS, paste the SSO Passcode, and click Sign In.
+3. Select your Cloud Foundry target (Organization and Space), then click **Apply**.
+4.You should now be logged in to your Cloud Foundry space.
 
 
-5. Return to BAS, paste the SSO Passcode, and click Sign In.
-6. Select your Cloud Foundry target (Organization and Space), then click Apply.
+## Login to Your Cloud Foundry Environment from SAP Business Application Studio
+Once you have SAP Business Application Studio open with your secure incident management project, you need to authenticate with your Cloud Foundry environment to deploy and manage applications. Choose one of the following methods to log in:
 
-You should now be logged in to your Cloud Foundry space.
+### 1. Login Using the User Interface (UI)
 
+1. In SAP Business Application Studio, open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
+
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+  
+2. Search for and select **CF: Login to Cloud Foundry**.
+
+
+
+3. You’ll see **Cloud Foundry Sign In and Targets**. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+4. Select **Sign in** with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
+- ⚠️ **Note:** If your account is not displayed, click **Sign in to another account**.
+
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-idp.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+5. You’ll see a passcode page, copy the temporary authentication code generated in the **Passcode** field.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+6. Paste the **SSO Passcode** back into the SAP Business Application Studio and click on the **Sign In** button.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-paste-code.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+7. In section **Cloud Foundry Target**, select **Organization** and **Space** (for example, `XP260-0XX`), then click on the **Apply** button.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+8. Once connected, a notification message pops up in the status bar in the SAP Business Application Studio confirming that your Cloud Foundry organization and space have been set and are ready for use.
+
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+  
+### 2. Login Using the Command Line (Terminal)
+
+1. **Open Terminal**
+   - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
+   - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
+
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+   
+2. **Run the following command to log in:**
+  ```
+  cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
+  ```
+3. When prompted enter:
+    * Email: xp260-0XX@education.cloud.sap
+    * Password: Use the password provided during the session.
+    
+4.  To verify the login, run
+  ```
+    cf target
+  ```
+5- You should see the current organization and space listed.
+  
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-cf-target-message.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
 
 
 
@@ -547,103 +657,7 @@ Now after these checks, you can open the SAP Business Application Studio.
 
 7- **Bookmark your SAP Business Application Studio link**.
 
-## Login to Your Cloud Foundry Environment from SAP Business Application Studio
-Once you have SAP Business Application Studio open with your secure incident management project, you need to authenticate with your Cloud Foundry environment to deploy and manage applications. Choose one of the following methods to log in:
 
-### 1. Login Using the User Interface (UI)
-
-1. In SAP Business Application Studio, open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
-
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-  
-2. Search for and select **CF: Login to Cloud Foundry**.
-
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-command-palette-cf-login.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-3. You’ll see **Cloud Foundry Sign In and Targets**. Select **SSO Passcode** and click on the link **Open New Browser** to generate your SSO Passcode.
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-4. Select **Sign in** with your user **xp260-0XX@education.cloud.sap (origin: akihlqzx8-platform)**.
-- ⚠️ **Note:** If your account is not displayed, click **Sign in to another account**.
-
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-idp.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-5. You’ll see a passcode page, copy the temporary authentication code generated in the **Passcode** field.
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-6. Paste the **SSO Passcode** back into the SAP Business Application Studio and click on the **Sign In** button.
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-paste-code.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-7. In section **Cloud Foundry Target**, select **Organization** and **Space** (for example, `XP260-0XX`), then click on the **Apply** button.
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-8. Once connected, a notification message pops up in the status bar in the SAP Business Application Studio confirming that your Cloud Foundry organization and space have been set and are ready for use.
-
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-  
-### 2. Login Using the Command Line (Terminal)
-
-1. **Open Terminal**
-   - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
-   - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
-
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-   
-2. **Run the following command to log in:**
-  ```
-  cf login -a https://api.cf.eu10-004.hana.ondemand.com  --origin akihlqzx8-platform
-  ```
-3. When prompted enter:
-    * Email: xp260-0XX@education.cloud.sap
-    * Password: Use the password provided during the session.
-    
-4.  To verify the login, run
-  ```
-    cf target
-  ```
-5- You should see the current organization and space listed.
-  
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-cf-target-message.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
 
 ## Launch SAP Build Work Zone
 
