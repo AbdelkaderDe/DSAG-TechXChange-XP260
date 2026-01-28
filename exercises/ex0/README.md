@@ -335,7 +335,7 @@ By the end of this step, the Secure Incident Management application will be succ
 
 ### Step 5.2 Download and Import the Project:
 1. Download the project file secure-incident-management.tar from the following link:
-  👉 [Download Secure Incident Management Project]( https://DSAG-TechXChange-XP260/releases/download/untagged-a3e4aca324f4ce9e0992/secure-incident-management.tar)
+  👉 [Download Secure Incident Management Project](https://github.com/AbdelkaderDe/DSAG-TechXChange-XP260/releases/download/v0.1.0-btp-trial-workshop/secure-incident-management.tar)
 2. Save the file locally on your machine. This archive will be imported into SAP Business Application Studio in the next step.
 
 ### 5.2 Import Project to BAS
@@ -349,6 +349,7 @@ BAS-import-project.png
 </p>
 
 4. The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
+
 
 
 
