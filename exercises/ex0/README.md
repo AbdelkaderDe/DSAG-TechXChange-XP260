@@ -221,9 +221,9 @@ Before creating the instance, you need to know where it will be mapped.
 
   6. Go to **Cloud Foundry > Spaces**, then click on your space (e.g., dev).
   7. Copy the Space ID from the URL:
-      - Look at your browser's address bar. The URL format is:**../org/<ORG-ID>/space/<SPACE-ID>/applications**
+      - Look at your browser's address bar. The URL format is:**../org/\<ORG-ID\>/space/\<SPACE-ID\>/applications**
       - Copy the alphanumeric string after **/space/** and before **/applications**, e.g,84304933-24e6-popo-950a-46105da935d0
-  8. Save both IDs for Step 4.3.
+  8. Save both IDs for [Step 4.2 4.2 Create the SAP HANA Cloud Instance](#42-create-the-sap-hana-cloud-instance).
 
 ### 4.2 Create the SAP HANA Cloud Instance
 1. Navigate to **Services > Instances and Subscriptions**.
