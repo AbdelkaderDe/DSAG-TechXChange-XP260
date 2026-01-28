@@ -333,7 +333,7 @@ By the end of this step, the Secure Incident Management application will be succ
   <b></b>
 </p>
 
-### Step 5.2 Download and Import the Project:
+### Step 5.2 Download and Import the Project
 1. Download the project file secure-incident-management.tar from the following link:
   👉 [Download Secure Incident Management Project](https://github.com/AbdelkaderDe/DSAG-TechXChange-XP260/releases/download/v0.1.0-btp-trial-workshop/secure-incident-management.tar)
 2. Save the file locally on your machine. This archive will be imported into SAP Business Application Studio in the next step.
@@ -347,8 +347,31 @@ BAS-import-project.png
   <br>
   <b></b>
 </p>
-
 4. The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
+
+5.3: Prepare for Deployment (Run npm update)
+
+### Step 5.3 : Prepare for Deployment (Run npm update)
+Before you build and deploy the application, it's crucial to ensure all project dependencies are up-to-date.
+
+1. **Open the Integrated Terminal:** If you haven't already, open the terminal by navigating to **Hamburger menu → Terminal → New Terminal**, or by right-clicking on the project name in the Project Explorer and selecting **Open in Integrated Terminal**.
+
+2- A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
+
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+3. **Run the dependency update command:**
+
+In the terminal, type the following command and press Enter:
+'''
+npm update
+'''
+Wait for the command to complete. This process fetches and installs the latest compatible versions of your project's Node.js dependencies.
+
 
 
 
