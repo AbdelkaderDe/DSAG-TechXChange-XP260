@@ -93,8 +93,7 @@ In this step, you will set up the required application subscriptions
   ⚠️ **Note:** 
   - Your Trial account comes pre-configured with [SAP Business Application Studio](https://discovery-center.cloud.sap/serviceCatalog/business-application-studio/?region=all) (subscribed) and the
     [Cloud Foundry Environment](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/cloud-foundry-runtime?region=all) (enabled). You do not need to add these manually.
-  - Before subscribing to SAP Build Work Zone, standard edition, you must establish trust between your BTP subaccount and an SAP Cloud Identity Services – Identity Authentication (IAS) tenant using OpenID Connect (OIDC).
-
+  
 ### 2.1. Subscribe to SAP HANA Cloud (Trial)
   1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
   2. Click on **Service Marketplace**.
