@@ -426,7 +426,7 @@ Login to Cloud Foundry:
     <b></b>
   </p>
 
-#### 5.5.2: Option 2: Deploy via UI
+#### 5.5.2: Option 2: Deploy via Command Line
 
 1. **Open Terminal**
    - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
