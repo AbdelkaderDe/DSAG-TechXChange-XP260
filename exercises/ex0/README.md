@@ -552,67 +552,6 @@ Login to Cloud Foundry:
     <b></b>
   </p>
 
-## Launch SAP Business Application Studio
-
-Now after these checks, you can open the SAP Business Application Studio. 
-
-1- Navigate to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Then click on the small **Go to Application** icon next to the name SAP Business Application Studio.
-
- <p align="center">
-    <img src="images/btp-subaccount-open-BAS-application.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
-
-2- On the logon screen, click on the custom identity provider (IDP) **akihlqzx8.accounts.ondemand.com** to login with single sign-on (SSO). 
-- ⚠️ **Note:**
-    - If prompted for an **Origin Key**, enter: **akihlqzx8-platform**.
-    - Always select the Custom Identity Provider **akihlqzx8.accounts.ondemand.com** when authenticating during exercises.
- <p align="center">
-    <img src="images/btp-subaccount-open-BAS-SSO.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
-
-3- Enter email and password in the login window.
-- ⚠️ **Note:** You may not see this step if you're already authenticated through SSO.
-
- <p align="center">
-    <img src="images/btp-subaccount-open-BAS-login-windows.png" alt="" width="450"/>
-    <br>
-    <b></b>
-  </p>
-
-4- You will see your Dev Space called 'secure_incident_management'. Make sure it is in a **RUNNING** state, if not start it.
-
- <p align="center">
-    <img src="images/btp-subaccount-open-BAS-dev-space-stopped.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
-  
-5- When it is running, click on **secure_incident_management** to open the SAP Business Application Studio with your incident management application.
-
- 
-
-6- Click on **incident-management** to open the application in your workspace.
-
- <p align="center">
-  <img src="images/btp-subaccount-open-BAS-open-secure-incident-management.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-- In the workspace on the right side, you will find your incident management application in the list of projects.
- <p align="center">
-  <img src="images/btp-subaccount-open-BAS-folder-explorer.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-7- **Bookmark your SAP Business Application Studio link**.
-
-
 
 ## Launch SAP Build Work Zone
 
