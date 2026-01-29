@@ -37,9 +37,8 @@
 - [Step 5. Launch SAP BAS, Import Project, and Deploy to Cloud Foundry](#step-5-launch-sap-bas-import-project-and-deploy-to-cloud-foundry)
      - [5.1. Create a Dev Space](#51-create-a-dev-space)
      - [5.2. Download and Import the Project](#52-download-and-import-the-project)
-     - [5.3. Import Project to BAS](#42-create-the-sap-hana-cloud-instance)
-     - [5.4. Deploy the Application to Cloud Foundry](#42-create-the-sap-hana-cloud-instance)
-     - [5.5. Assign Role Collections](#42-create-the-sap-hana-cloud-instance)
+     - [5.3. Deploy the Application to Cloud Foundry](#53-deploy-the-application-to-cloud-foundry)
+     - [5.4. Assign Role Collections](#42-create-the-sap-hana-cloud-instance)
 - [Step 6. Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
 - [Step 7. Login to the application]()
 
@@ -391,7 +390,7 @@ Wait for the command to complete. This process fetches and installs the latest c
 #### 5.3.2 Deploy to Cloud Foundry
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
-#### 5.4.1. Option 1: Deploy via UI
+##### 5.3.2.1 Option 1: Deploy via UI
 **1. Login to Cloud Foundry:**
   * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
   <p align="center">
@@ -468,7 +467,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>
 
-#### 5.5.2. Option 2: Deploy via Command Line
+#### 5.3.2.2 Option 2. Deploy via Command Line
 
 1. **Open Terminal**
    - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
