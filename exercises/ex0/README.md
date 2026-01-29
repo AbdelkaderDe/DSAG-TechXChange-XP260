@@ -189,24 +189,26 @@ The BTP Trial landscape only supports default SAP-managed identity providers. Us
   5. Repeat this for all imported users (bob.smith@acme.com,david.miller@acme.com).
 
 ### 3.3. Map IAS Users to the BTP Subaccount
+
 To authorize the users you just created in IAS, you must register them within your specific BTP Subaccount.
-  1. Open the SAP BTP Cockpit and navigate to your Subaccount.
-  2. In the left navigation pane, expand Security and select Users.
-  3. Click the Create button to open the user mapping dialog.
-  4. Identity Provider: Select your IAS tenant from the dropdown (e.g., xxxxxx.accounts.ondemand.com(business users)).
-  5. User Name, E-mail: Enter the user’s email address (e.g., alice.jones@acme.com). This must match the email used in the IAS import.
-  6. Click **Create** to finalize.
+
+1. Open the SAP BTP Cockpit and navigate to your Subaccount.
+2. In the left navigation pane, expand Security and select Users.
+3. Click the Create button to open the user mapping dialog.
+4. Identity Provider: Select your IAS tenant from the dropdown (e.g., xxxxxx.accounts.ondemand.com(business users)).
+5. User Name, E-mail: Enter the user's email address (e.g., alice.jones@acme.com). This must match the email used in the IAS import.
+6. Click **Create** to finalize.
 
 Repeat this process for each of the following users:
-    * bob.smith@acme.com (Support user)
-    * alice.jones@acme.com (Support user)
-    * david.miller@acme.com (Admin user)
+  * bob.smith@acme.com (Support user)
+  * alice.jones@acme.com (Support user)
+  * david.miller@acme.com (Admin user)
 
 To add your IAS admin user:
-    * Repeat the steps above
-    * Use the email address of your IAS admin account (e.g., admin@yourcompany.com)
-    * Ensure the Identity Provider matches your custom IAS tenant.
-
+  * Repeat the steps above
+  * Use the email address of your IAS admin account (e.g., admin@yourcompany.com)
+  * Ensure the Identity Provider matches your custom IAS tenant.
+  
 ### 3.4. Configure Role Collections
 To ensure you have full administrative rights to manage the development tools, assign the following role collections to your identity-provider user admin.
 
