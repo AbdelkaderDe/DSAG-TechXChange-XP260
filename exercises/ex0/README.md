@@ -492,6 +492,18 @@ You can deploy the application using one of two methods: **via the UI** or **via
   <b></b>
 </p>
 
+6- **Build the Application**
+  * Ensure your terminal is pointed to the correct directory:**secure-incident-management**
+  * Run the Cloud MTA Build Tool to generate the deployment archive:
+
+```
+mbt build
+```
+
+7- **Deploy the Application**
+```
+cf deploy mta_archives/incident-management_1.0.0.mtar
+```
 
 
 
