@@ -367,7 +367,6 @@ BAS-import-project.png
   <b></b>
 </p>
 4. The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
-
 5. Bookmark your **SAP Business Application Studio** link.
    
 ### 5.4 : Prepare for Deployment (Run npm update)
