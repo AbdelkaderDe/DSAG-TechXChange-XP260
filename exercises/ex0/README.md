@@ -420,45 +420,45 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>
   
-  * Paste the **SSO Passcode** back into the SAP Business Application Studio and click on the **Sign In** button.
-  <p align="center">
-    <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-paste-code.png" alt="" width="900"/>
-    <br>
+* Paste the **SSO Passcode** back into the SAP Business Application Studio and click on the **Sign In** button.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-paste-code.png" alt="" width="900"/>
+  <br>
+<b></b>
+</p>
+
+* In section **Cloud Foundry Target**, select **Organization** and **Space** (for example, `dev`), then click on the **Apply** button.
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
+  <br>
   <b></b>
-  </p>
+</p>
 
-  * In section **Cloud Foundry Target**, select **Organization** and **Space** (for example, `dev`), then click on the **Apply** button.
-  <p align="center">
-    <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
+*  Once connected, a notification message pops up in the status bar in the SAP Business Application Studio confirming that your Cloud Foundry organization and space have been set and are ready for use.
 
-  *  Once connected, a notification message pops up in the status bar in the SAP Business Application Studio confirming that your Cloud Foundry organization and space have been set and are ready for use.
-
-  <p align="center">
-    <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
 
 **2. Build MTA Project**
-    * Click the Explorer icon (left sidebar) if the project panel isn’t already visible.
-    * Locate and right-click on the **mta.yaml** file in your project root.
-    * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
+  * Click the Explorer icon (left sidebar) if the project panel isn’t already visible.
+  * Locate and right-click on the **mta.yaml** file in your project root.
+  * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
 
-  <p align="center">
-    <img src="images/BAS-build-mta-project-UI.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
+<p align="center">
+  <img src="images/BAS-build-mta-project-UI.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
 
 **3. Deploy the Application**
-    * In the Explorer view, find and expand the mta_archives folder.
-    * Right-click on the generated .mtar file.
-    * Select **Deploy MTA Archive**.
-    * If prompted, log in to your Cloud Foundry space.
-    * Wait for the deployment process to complete and check the output panel for confirmation.
+  * In the Explorer view, find and expand the mta_archives folder.
+  * Right-click on the generated .mtar file.
+  * Select **Deploy MTA Archive**.
+  * If prompted, log in to your Cloud Foundry space.
+  * Wait for the deployment process to complete and check the output panel for confirmation.
 
   <p align="center">
     <img src="images/BAS-deploy-mta-project-UI.png" alt="" width="900"/>
