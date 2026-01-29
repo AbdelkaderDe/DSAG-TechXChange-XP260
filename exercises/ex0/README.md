@@ -405,17 +405,16 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>  
 
-  * In the CloudFoundry Sign In prompt,choose **SSO** then click **Open a New Browser** to generate your **SSO Passcode**.
+* In the CloudFoundry Sign In prompt, choose **SSO**, then click **Open a New Browser** to generate your **SSO Passcode**.
 
-  <p align="center">
-    <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
+<p align="center">
+  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
+  <br>
+</p>
 
-  * If prompted for login: Choose Sign in with alternative identity provider.
-  * You’ll see a passcode page, copy the temporary authentication code generated in the **Passcode** field.
-  <p align="center">
+* If prompted for login: Choose **Sign in with alternative identity provider**.
+
+* You’ll see a passcode page — copy the temporary authentication code generated in the **Passcode** field.  <p align="center">
     <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
     <br>
     <b></b>
