@@ -358,7 +358,6 @@ By the end of this step, the Secure Incident Management application will be succ
 2. Save the file locally on your machine. This archive will be imported into SAP Business Application Studio in the next step.
 
 ### 5.3: Import Project to BAS
-BAS-import-project.png
 1. In the BAS Explorer pane, click Import Project.
 2. Select the secure-incident-management.tar file from your local machine and import it.
 <p align="center">
@@ -391,7 +390,7 @@ Wait for the command to complete. This process fetches and installs the latest c
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
 #### 5.5.1: Option 1: Deploy via UI
-Login to Cloud Foundry:
+1. **Login to Cloud Foundry:**
   * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
   <p align="center">
     <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
@@ -440,6 +439,30 @@ Login to Cloud Foundry:
 
   <p align="center">
     <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
+2. **Build MTA Project**
+  * Click the Explorer icon (left sidebar) if the project panel isn’t already visible.
+  * Locate and right-click on the **mta.yaml** file in your project root.
+  * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
+
+  <p align="center">
+    <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
+3. **Deploy the Application**
+  * In the Explorer view, find and expand the mta_archives folder.
+  * Right-click on the generated .mtar file.
+  * Select **Deploy MTA Archive**.
+  * If prompted, log in to your Cloud Foundry space.
+  * Wait for the deployment process to complete and check the output panel for confirmation.
+
+  <p align="center">
+    <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
