@@ -505,6 +505,20 @@ mbt build
 ```
 cf deploy mta_archives/incident-management_1.0.0.mtar
 ```
+### 5.4. Assign Collections Assignment
+To demonstrate real-world access control, you'll test the application using dedicated accounts with precisely scoped role collections.These users showcase how proper role assignments enforce least privilege in production:
+
+  * bob.support@company.com (Support user)
+  * alice.support@company.com (Support user)
+  * david.admin@company.com (Admin user)
+
+To assign the roles in the SAP BTP Cockpit:
+
+1. Navigate to your Subaccount and go to Security → Users.
+2. Assign the role collections to Bob, Alice, and David:
+3. Select the user. In the right-hand details frame, use the Assign Role Collection button:
+4. Assign bob.smith@acme.com and alice.jones@acme.com to the Incident Management Support role collection.
+5. Assign david.admin@company.com to the Incident Management Admin role collection.
 
 
 
