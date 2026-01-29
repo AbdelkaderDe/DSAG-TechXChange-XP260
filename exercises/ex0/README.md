@@ -390,7 +390,7 @@ Wait for the command to complete. This process fetches and installs the latest c
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
 #### 5.5.1: Option 1: Deploy via UI
-1. **Login to Cloud Foundry:**
+**1. Login to Cloud Foundry:**
   * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
   <p align="center">
     <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
@@ -443,7 +443,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>
 
-2. **Build MTA Project**
+**2. Build MTA Project**
     * Click the Explorer icon (left sidebar) if the project panel isn’t already visible.
     * Locate and right-click on the **mta.yaml** file in your project root.
     * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
@@ -454,7 +454,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>
 
-3. **Deploy the Application**
+**3. Deploy the Application**
     * In the Explorer view, find and expand the mta_archives folder.
     * Right-click on the generated .mtar file.
     * Select **Deploy MTA Archive**.
