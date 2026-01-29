@@ -20,13 +20,13 @@
 - [Overview](#overview)
   - [Business Scenario](#business-scenario)
   - [Solution Diagram](#solution-diagram)
-- [Step 1: Set Up Your BTP Trial Account](#step-1-set-up-your-trial-account)
-- [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions)
+- [Step 1. Set Up Your BTP Trial Account](#step-1-set-up-your-trial-account)
+- [Step 2. Set Up Subscriptions](#step-2-set-up-subscriptions)
    - [2.1. Subscribe to SAP HANA Cloud (Trial)](#21-subscribe-to-sap-hana-cloud-trial)
    - [2.2. Subscribe to Cloud Identity Services (Trial)](#22-subscribe-to-cloud-identity-services-trial)
    - [2.3. Establish Trust with SAP Cloud Identity (Trial)](#23-establish-trust-with-sap-cloud-identity-trial)
    - [2.4. Subscribe to SAP Build Work Zone, Standard Edition (Trial)](#24-subscribe-to-sap-build-work-zone-standard-edition-trial)
-- [Step 3: Configure Users access](#step-3-configure-users-access)
+- [Step 3. Configure Users access](#step-3-configure-users-access)
      - [3.1. Import business users into SAP cloud identity](#31-import-business-users-into-sap-cloud-identity)
      - [3.2. Set Initial Password For Business Users](#32-set-initial-password-for-business-users)
      - [3.3. Map IAS Users to BTP Subaccount](#33-map-ias-users-to-the-btp-subaccount)
@@ -34,13 +34,13 @@
 - [Step 4: Create SAP HANA Cloud Instance](#step-4-create-sap-hana-cloud-instance)
      - [4.1. Identify your Organization and Space IDs](#41-identify-your-organization-and-space-ids)
      - [4.2. Create the SAP HANA Cloud Instance](#42-create-the-sap-hana-cloud-instance)
-- [Step 5: Launch SAP BAS, Import Project, and Deploy to Cloud Foundry](#step-5-launch-sap-bas-import-project-and-deploy-to-cloud-foundry)
-     - [5.1. Create a Dev Space](#41-identify-your-organization-and-space-ids)
+- [Step 5. Launch SAP BAS, Import Project, and Deploy to Cloud Foundry](#step-5-launch-sap-bas-import-project-and-deploy-to-cloud-foundry)
+     - [5.1. Create a Dev Space](#51-create-a-dev-space)
      - [5.2. Download and Import the Project](#42-create-the-sap-hana-cloud-instance)
      - [5.3. Deploy to Cloud Foundry](#42-create-the-sap-hana-cloud-instance)
      - [5.4. Assign Role Collections](#42-create-the-sap-hana-cloud-instance)
-- [Step 6: Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
-- [Step 7: Login to the application]()
+- [Step 6. Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
+- [Step 7. Login to the application]()
 
 ## Overview 
 
@@ -64,7 +64,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-## Step 1: Set Up Your Trial Account
+## Step 1. Set Up Your Trial Account
 
 1. Navigate to the [SAP BTP Trial Sign-Up/Login Page](https://account.hanatrial.ondemand.com/).
 2. If you don't have a trial account:
@@ -83,7 +83,7 @@ The solution diagram illustrates the key components and their interactions withi
     <b></b>
   </p>
 
-## Step 2: Set Up Subscriptions
+## Step 2. Set Up Subscriptions
 
 In this step, you will set up the required application subscriptions
 
@@ -164,7 +164,7 @@ At the conclusion of [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions
     <b></b>
   </p>
 
-## Step 3: Configure Users access
+## Step 3. Configure Users access
 This section details how to manage users and their access rights within your SAP BTP trial landscape, leveraging SAP Cloud Identity Services (Identity Authentication Service - IAS) as your identity provider.
 
 ⚠️ **Note:** 
@@ -226,10 +226,10 @@ To ensure you have full administrative rights to manage the development tools, a
    - **`Subaccount Viewer`**
 7. Click **Assign**.
 
-## Step 4: Create SAP HANA Cloud Instance
+## Step 4. Create SAP HANA Cloud Instance
 In this step, you will provision a new SAP HANA Cloud database instance and map it to your Cloud Foundry environment. This allows your applications and development tools (like SAP Business Application Studio) to interact with the database.
 
-### 4.1: Identify your Organization and Space IDs
+### 4.1. Identify your Organization and Space IDs
 Before creating the instance, you need to know where it will be mapped.
   1. In your **SAP BTP Cockpit**, go to your **Trial Subaccount > Overview**.
   2. Click on **Cloud Foundry Environment** tab.
@@ -247,31 +247,31 @@ Before creating the instance, you need to know where it will be mapped.
       - Copy the alphanumeric string after **/space/** and before **/applications**, e.g,84304933-24e6-popo-950a-46105da935d0
   8. Save both IDs for [Step 4.2 Create the SAP HANA Cloud Instance](#42-create-the-sap-hana-cloud-instance).
 
-### 4.2: Create the SAP HANA Cloud Instance
+### 4.2. Create the SAP HANA Cloud Instance
 1. Navigate to **Services > Instances and Subscriptions**.
 2. Find **SAP HANA Cloud** under the **Subscriptions tab** and click the **Go to Application** icon to open **SAP HANA Cloud Central**.
 3. If you are prompted for login, choose the **custom IDP** and login with your admin user.
 4. In the new tab, click **Create Instance**.
 
-* **Step 1: Type:**
+* **Step 1. Type:**
     * Select **SAP HANA Cloud** in **Instance Type**
     * Select **Configure manually** from the **Instance Configuration** options.
     * Click **Next** Step.
 
-* **Step 2: SAP HANA Database: General**
+* **Step 2. SAP HANA Database: General**
     * **Instance Name**: e.g., hanadb.
     * **Administrator Password:** Set a strong password for the DBADMIN user.
     * Click **Next** Step.
 
-* **Step 3: SAP HANA Database: Sizes and Availability**
+* **Step 3. SAP HANA Database: Sizes and Availability**
     * Leave default trial sizing and availability settings unchanged.
     * **Next** Step.
 
-* **Step 4: SAP HANA Database: Connections**
+* **Step 4. SAP HANA Database: Connections**
     * Under **Allowed Connections**, select **Allow all IP addresses**. This is required for trial and development access.
     * Click **Next** Step.
 
-* **Step 5: SAP HANA Database: Advanced Settings**
+* **Step 5. SAP HANA Database: Advanced Settings**
     * Keep default settings for **Version** and **Additional Features**.
     * **Instance Mapping**
         * Click **Add Mapping**.
@@ -279,15 +279,15 @@ Before creating the instance, you need to know where it will be mapped.
         * Paste your **Organization ID** and **Space ID** (copied from [Step 4.1 Identify your Organization and Space IDs](#41-identify-your-organization-and-space-ids)) into the **Environment Instance ID** and **Environment Group** fields.
         * Click Next Step.
 
-* **Step 6: Data Lake: general**
+* **Step 6. Data Lake: general**
     *  Keep default settings for **Create Data Lake**.
     *  Click **Review and Create**.
 
-* **Step 7: Review New Instances**
+* **Step 7. Review New Instances**
     * Verify all details, especially the Instance Mapping configuration.
     * Click **Create Instance**.
    
-* **Step 8: Verify Instance Creation**
+* **Step 8. Verify Instance Creation**
     * Wait for the instance to be provisioned. This may take several minutes.
     * Once complete, you will see your instance (e.g., hanadb) listed in the All Instances view with a Running status (green indicator).
     * Confirm the Type shows SAP HANA Database and the instance is ready for use.
@@ -298,7 +298,7 @@ Before creating the instance, you need to know where it will be mapped.
     <b></b>
   </p>
 
-## Step 5: Launch SAP BAS, Import Project, and Deploy to Cloud Foundry
+## Step 5. Launch SAP BAS, Import Project, and Deploy to Cloud Foundry
 ### Oveview
 In this step, you will use SAP Business Application Studio (BAS) to import, build, and deploy the Secure Incident Management application to your Cloud Foundry environment on SAP BTP.
 
@@ -313,7 +313,7 @@ During this step, you will:
 
 By the end of this step, the Secure Incident Management application will be successfully deployed on SAP BTP Cloud Foundry, and authorized users will be able to access and use it.
 
-### 5.1: Create a Dev Space:
+### 5.1. Create a Dev Space:
 
 1. Open SAP Business Application Studio (BAS) from your BTP Cockpit.
 
@@ -352,12 +352,12 @@ By the end of this step, the Secure Incident Management application will be succ
   <b></b>
 </p>
 
-### 5.2: Download and Import the Project
+### 5.2. Download and Import the Project
 1. Download the project file secure-incident-management.tar from the following link:
   👉 [Download Secure Incident Management Project](https://github.com/AbdelkaderDe/DSAG-TechXChange-XP260/releases/download/v0.1.0-btp-trial-workshop/secure-incident-management.tar)
 2. Save the file locally on your machine. This archive will be imported into SAP Business Application Studio in the next step.
 
-### 5.3: Import Project to BAS
+### 5.3. Import Project to BAS
 1. In the BAS Explorer pane, click Import Project.
 2. Select the secure-incident-management.tar file from your local machine and import it.
 <p align="center">
@@ -368,7 +368,7 @@ By the end of this step, the Secure Incident Management application will be succ
 4. The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
 5. Bookmark your **SAP Business Application Studio** link.
    
-### 5.4 : Prepare for Deployment (Run npm update)
+### 5.4. Prepare for Deployment (Run npm update)
 Before you build and deploy the application, it's crucial to ensure all project dependencies are up-to-date.
 
 1. **Open the Integrated Terminal:** If you haven't already, open the terminal by navigating to **Hamburger menu → Terminal → New Terminal**, or by right-clicking on the project name in the Project Explorer and selecting **Open in Integrated Terminal**.
@@ -386,10 +386,10 @@ npm update
 ```
 Wait for the command to complete. This process fetches and installs the latest compatible versions of your project's Node.js dependencies.
 
-### 5.5: Deploy the Application to Cloud Foundry
+### 5.5. Deploy the Application to Cloud Foundry
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
-#### 5.5.1: Option 1: Deploy via UI
+#### 5.5.1. Option 1: Deploy via UI
 **1. Login to Cloud Foundry:**
   * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
   <p align="center">
@@ -466,7 +466,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>
 
-#### 5.5.2: Option 2: Deploy via Command Line
+#### 5.5.2. Option 2: Deploy via Command Line
 
 1. **Open Terminal**
    - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
