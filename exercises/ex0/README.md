@@ -38,7 +38,6 @@
      - [5.1. Create a Dev Space](#51-create-a-dev-space)
      - [5.2. Download and Import the Project](#52-download-and-import-the-project)
      - [5.3. Import Project to BAS](#42-create-the-sap-hana-cloud-instance)
-     - [5.4. Prepare for Deployment (Run npm update)](#42-create-the-sap-hana-cloud-instance)
      - [5.4. Deploy the Application to Cloud Foundry](#42-create-the-sap-hana-cloud-instance)
      - [5.5. Assign Role Collections](#42-create-the-sap-hana-cloud-instance)
 - [Step 6. Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
@@ -369,10 +368,12 @@ By the end of this step, the Secure Incident Management application will be succ
 5.The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
 6. Bookmark your **SAP Business Application Studio** link.
    
-### 5.3. Prepare for Deployment (Run npm update)
+### 5.3. Deploy the Application to Cloud Foundry
 Before you build and deploy the application, it's crucial to ensure all project dependencies are up-to-date.
 
-1. **Open the Integrated Terminal:** If you haven't already, open the terminal by navigating to **Hamburger menu → Terminal → New Terminal**, or by right-clicking on the project name in the Project Explorer and selecting **Open in Integrated Terminal**.
+### 5.3.1 Prepare for Deployment (Run npm update)
+
+**1. Open the Integrated Terminal:** If you haven't already, open the terminal by navigating to **Hamburger menu → Terminal → New Terminal**, or by right-clicking on the project name in the Project Explorer and selecting **Open in Integrated Terminal**.
 
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-open-terminal.png" alt="" width="900"/>
@@ -380,14 +381,14 @@ Before you build and deploy the application, it's crucial to ensure all project 
   <b></b>
 </p>
 
-2. **Run the dependency update command:** In the terminal, type the following command and press Enter:
+**2. Run the dependency update command:** In the terminal, type the following command and press Enter:
 
 ```
 npm update
 ```
 Wait for the command to complete. This process fetches and installs the latest compatible versions of your project's Node.js dependencies.
 
-### 5.4. Deploy the Application to Cloud Foundry
+#### 5.3.2 Deploy to Cloud Foundry
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
 #### 5.4.1. Option 1: Deploy via UI
