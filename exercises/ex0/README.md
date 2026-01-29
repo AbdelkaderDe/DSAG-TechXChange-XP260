@@ -449,7 +449,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
   * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
 
   <p align="center">
-    <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
+    <img src="images/BAS-build-mta-project-UI.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
@@ -462,7 +462,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
   * Wait for the deployment process to complete and check the output panel for confirmation.
 
   <p align="center">
-    <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
+    <img src="images/BAS-deploy-mta-project-UI.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
