@@ -325,7 +325,7 @@ By the end of this step, the Secure Incident Management application will be succ
       <br>
       <b></b>
   </p>
-    
+  
     * If prompted for login, select your Custom Identity Provider (IdP) and sign in with your admin user.
 
   <p align="center">
