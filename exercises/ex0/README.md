@@ -370,7 +370,7 @@ By the end of this step, the Secure Incident Management application will be succ
 ### 5.3. Deploy the Application to Cloud Foundry
 Before you build and deploy the application, it's crucial to ensure all project dependencies are up-to-date.
 
-### 5.3.1 Prepare for Deployment (Run npm update)
+### 5.3.1. Prepare for Deployment (Run npm update)
 
 **1. Open the Integrated Terminal:** If you haven't already, open the terminal by navigating to **Hamburger menu → Terminal → New Terminal**, or by right-clicking on the project name in the Project Explorer and selecting **Open in Integrated Terminal**.
 
@@ -387,10 +387,10 @@ npm update
 ```
 Wait for the command to complete. This process fetches and installs the latest compatible versions of your project's Node.js dependencies.
 
-#### 5.3.2 Deploy to Cloud Foundry
+#### 5.3.2. Deploy to Cloud Foundry
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
-##### 5.3.2.1 Option 1: Deploy via UI
+##### 5.3.2.1. Option 1: Deploy via UI
 **1. Login to Cloud Foundry:**
   * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
   <p align="center">
@@ -467,7 +467,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>
 
-#### 5.3.2.2 Option 2. Deploy via Command Line
+#### 5.3.2.2. Option 2. Deploy via Command Line
 
 1. **Open Terminal**
    - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
