@@ -207,7 +207,6 @@ To ensure you have full administrative rights to manage the development tools, a
    - **`Business_Application_Studio_Extension_Deployer`**
    - **`Launchpad_Admin`**
    - **`SAP HANA Cloud Administrator`**
-   - **`Subaccount_Viewer`**
 7. Click **Assign**.
 
 ## Step 4: Create SAP HANA Cloud Instance
