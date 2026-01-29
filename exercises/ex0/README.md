@@ -271,7 +271,7 @@ Before creating the instance, you need to know where it will be mapped.
     * Under **Allowed Connections**, select **Allow all IP addresses**. This is required for trial and development access.
     * Click **Next** Step.
 
-9. **Step 5: SAP HANA Database: Advanced Settings**
+* **Step 5: SAP HANA Database: Advanced Settings**
     * Keep default settings for **Version** and **Additional Features**.
     * **Instance Mapping**
         * Click **Add Mapping**.
@@ -279,15 +279,15 @@ Before creating the instance, you need to know where it will be mapped.
         * Paste your **Organization ID** and **Space ID** (copied from [Step 4.1 Identify your Organization and Space IDs](#41-identify-your-organization-and-space-ids)) into the **Environment Instance ID** and **Environment Group** fields.
         * Click Next Step.
 
-10. **Step 6: Data Lake: general**
+* **Step 6: Data Lake: general**
     *  Keep default settings for **Create Data Lake**.
     *  Click **Review and Create**.
 
-12. **Step 7: Review New Instances**
+* **Step 7: Review New Instances**
     * Verify all details, especially the Instance Mapping configuration.
     * Click **Create Instance**.
    
-13. **Step 8: Verify Instance Creation**
+* **Step 8: Verify Instance Creation**
     * Wait for the instance to be provisioned. This may take several minutes.
     * Once complete, you will see your instance (e.g., hanadb) listed in the All Instances view with a Running status (green indicator).
     * Confirm the Type shows SAP HANA Database and the instance is ready for use.
