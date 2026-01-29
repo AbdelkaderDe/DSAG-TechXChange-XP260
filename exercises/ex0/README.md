@@ -413,7 +413,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>
 
-  * if prompted for login: Choose Sign in with alternative identity provider.
+  * If prompted for login: Choose Sign in with alternative identity provider.
   * You’ll see a passcode page, copy the temporary authentication code generated in the **Passcode** field.
   <p align="center">
     <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
@@ -444,9 +444,9 @@ You can deploy the application using one of two methods: **via the UI** or **via
   </p>
 
 2. **Build MTA Project**
-  * Click the Explorer icon (left sidebar) if the project panel isn’t already visible.
-  * Locate and right-click on the **mta.yaml** file in your project root.
-  * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
+    * Click the Explorer icon (left sidebar) if the project panel isn’t already visible.
+    * Locate and right-click on the **mta.yaml** file in your project root.
+    * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
 
   <p align="center">
     <img src="images/BAS-build-mta-project-UI.png" alt="" width="900"/>
@@ -455,11 +455,11 @@ You can deploy the application using one of two methods: **via the UI** or **via
   </p>
 
 3. **Deploy the Application**
-  * In the Explorer view, find and expand the mta_archives folder.
-  * Right-click on the generated .mtar file.
-  * Select **Deploy MTA Archive**.
-  * If prompted, log in to your Cloud Foundry space.
-  * Wait for the deployment process to complete and check the output panel for confirmation.
+    * In the Explorer view, find and expand the mta_archives folder.
+    * Right-click on the generated .mtar file.
+    * Select **Deploy MTA Archive**.
+    * If prompted, log in to your Cloud Foundry space.
+    * Wait for the deployment process to complete and check the output panel for confirmation.
 
   <p align="center">
     <img src="images/BAS-deploy-mta-project-UI.png" alt="" width="900"/>
