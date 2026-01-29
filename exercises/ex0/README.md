@@ -326,7 +326,7 @@ By the end of this step, the Secure Incident Management application will be succ
       <b></b>
   </p>
   
-    * If prompted for login, select your Custom Identity Provider (IdP) and sign in with your admin user.
+2. If prompted for login, select your Custom Identity Provider (IdP) and sign in with your admin user.
 
   <p align="center">
       <img src="images/btp-subaccount-open-BAS-SSO.png" alt="" width="900"/>
@@ -334,10 +334,10 @@ By the end of this step, the Secure Incident Management application will be succ
       <b></b>
   </p>
     
-2. Click **Create Dev Space**.
-3. Enter the **Dev Space name: secure_incident_management**.
-4. Select **Full Stack Cloud Application** as the application type.
-5. Click **Create Dev Space**.
+3. Click **Create Dev Space**.
+4. Enter the **Dev Space name: secure_incident_management**.
+5. Select **Full Stack Cloud Application** as the application type.
+6. Click **Create Dev Space**.
 
   <p align="center">
     <img src="images/BAS-create-dev-space.png" alt="" width="900"/>
@@ -345,7 +345,7 @@ By the end of this step, the Secure Incident Management application will be succ
     <b></b>
   </p>
 
-6. Wait for the Dev Space **status** to change to **Running**, then click on the Dev Space name to open it.
+7. Wait for the Dev Space **status** to change to **Running**, then click on the Dev Space name to open it.
 <p align="center">
   <img src="images/btp-subaccount-open-BAS-dev-space-running.png" alt="" width="900"/>
   <br>
