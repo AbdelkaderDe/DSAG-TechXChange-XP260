@@ -164,7 +164,7 @@ At the conclusion of [Step 2: Set Up Subscriptions](#step-2-set-up-subscriptions
 This section details how to manage users and their access rights within your SAP BTP trial landscape, leveraging SAP Cloud Identity Services (Identity Authentication Service - IAS) as your identity provider.
 
 ### 3.1. Import Business Users into SAP Cloud Identity.
-  1. Download user data file [IAS-business-users.csv](./IAS-business-users.csv)
+  1. Download user data file [IAS-business-users.csv](/releases/download/v0.1.0-btp-trial-workshop/IAS-business-users.csv)
   2. Open your web browser and navigate to your IAS tenant's administration console. The URL typically looks like https://<your_tenant_id>.accounts.ondemand.com/admin.
   3. Enter your administrator credentials and log in.
   2. From the main Dashboard, click on the User Management tile.
