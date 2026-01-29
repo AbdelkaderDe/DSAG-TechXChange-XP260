@@ -36,9 +36,11 @@
      - [4.2. Create the SAP HANA Cloud Instance](#42-create-the-sap-hana-cloud-instance)
 - [Step 5. Launch SAP BAS, Import Project, and Deploy to Cloud Foundry](#step-5-launch-sap-bas-import-project-and-deploy-to-cloud-foundry)
      - [5.1. Create a Dev Space](#51-create-a-dev-space)
-     - [5.2. Download and Import the Project](#42-create-the-sap-hana-cloud-instance)
-     - [5.3. Deploy to Cloud Foundry](#42-create-the-sap-hana-cloud-instance)
-     - [5.4. Assign Role Collections](#42-create-the-sap-hana-cloud-instance)
+     - [5.2. Download and Import the Project](#52-download-and-import-the-project)
+     - [5.3. Import Project to BAS](#42-create-the-sap-hana-cloud-instance)
+     - [5.4. Prepare for Deployment (Run npm update)](#42-create-the-sap-hana-cloud-instance)
+     - [5.4. Deploy the Application to Cloud Foundry](#42-create-the-sap-hana-cloud-instance)
+     - [5.5. Assign Role Collections](#42-create-the-sap-hana-cloud-instance)
 - [Step 6. Set Up SAP Build Work Zone](#step-7-set-up-sap-build-work-zone)
 - [Step 7. Login to the application]()
 
@@ -356,19 +358,18 @@ By the end of this step, the Secure Incident Management application will be succ
 1. Download the project file secure-incident-management.tar from the following link:
   👉 [Download Secure Incident Management Project](https://github.com/AbdelkaderDe/DSAG-TechXChange-XP260/releases/download/v0.1.0-btp-trial-workshop/secure-incident-management.tar)
 2. Save the file locally on your machine. This archive will be imported into SAP Business Application Studio in the next step.
-
-### 5.3. Import Project to BAS
-1. In the BAS Explorer pane, click Import Project.
-2. Select the secure-incident-management.tar file from your local machine and import it.
+3. In the BAS Explorer pane, click Import Project.
+4. Select the secure-incident-management.tar file from your local machine and import it.
 <p align="center">
   <img src="images/BAS-import-project.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
-4. The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
-5. Bookmark your **SAP Business Application Studio** link.
+
+5.The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
+6. Bookmark your **SAP Business Application Studio** link.
    
-### 5.4. Prepare for Deployment (Run npm update)
+### 5.3. Prepare for Deployment (Run npm update)
 Before you build and deploy the application, it's crucial to ensure all project dependencies are up-to-date.
 
 1. **Open the Integrated Terminal:** If you haven't already, open the terminal by navigating to **Hamburger menu → Terminal → New Terminal**, or by right-clicking on the project name in the Project Explorer and selecting **Open in Integrated Terminal**.
@@ -386,10 +387,10 @@ npm update
 ```
 Wait for the command to complete. This process fetches and installs the latest compatible versions of your project's Node.js dependencies.
 
-### 5.5. Deploy the Application to Cloud Foundry
+### 5.4. Deploy the Application to Cloud Foundry
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
-#### 5.5.1. Option 1: Deploy via UI
+#### 5.4.1. Option 1: Deploy via UI
 **1. Login to Cloud Foundry:**
   * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
   <p align="center">
