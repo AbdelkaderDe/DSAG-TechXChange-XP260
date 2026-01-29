@@ -514,11 +514,10 @@ To demonstrate real-world access control, you'll test the application using dedi
 
 To assign the roles in the SAP BTP Cockpit:
 
-1. Navigate to your Subaccount and go to Security → Users.
-2. Assign the role collections to Bob, Alice, and David:
-3. Select the user. In the right-hand details frame, use the Assign Role Collection button:
-4. Assign bob.smith@acme.com and alice.jones@acme.com to the Incident Management Support role collection.
-5. Assign david.admin@company.com to the Incident Management Admin role collection.
+1. Navigate to your Subaccount and go to **Security → Users**.
+3. Select the user. In the right-hand details frame, use the Assign **Role Collection button**:
+4. Assign bob.smith@acme.com and alice.jones@acme.com to the **Incident Management Support** role collection.
+5. Assign david.admin@company.com to the **Incident Management Admin** role collection.
 
 
 
