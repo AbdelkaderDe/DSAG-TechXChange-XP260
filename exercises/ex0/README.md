@@ -253,25 +253,25 @@ Before creating the instance, you need to know where it will be mapped.
 3. If you are prompted for login, choose the **custom IDP** and login with your admin user.
 4. In the new tab, click **Create Instance**.
 
-5. Step 1: **Type:**
+* **Step 1: Type:**
     * Select **SAP HANA Cloud** in **Instance Type**
     * Select **Configure manually** from the **Instance Configuration** options.
     * Click **Next** Step.
 
-6. Step 2: **SAP HANA Database: General**
+* **Step 2: SAP HANA Database: General**
     * **Instance Name**: e.g., hanadb.
     * **Administrator Password:** Set a strong password for the DBADMIN user.
     * Click **Next** Step.
 
-7. Step 3: **SAP HANA Database: Sizes and Availability**
+* **Step 3: SAP HANA Database: Sizes and Availability**
     * Leave default trial sizing and availability settings unchanged.
     * **Next** Step.
 
-8. Step 4: **SAP HANA Database: Connections**
+* **Step 4: SAP HANA Database: Connections**
     * Under **Allowed Connections**, select **Allow all IP addresses**. This is required for trial and development access.
     * Click **Next** Step.
 
-9. Step 5: **SAP HANA Database: Advanced Settings**
+9. **Step 5: SAP HANA Database: Advanced Settings**
     * Keep default settings for **Version** and **Additional Features**.
     * **Instance Mapping**
         * Click **Add Mapping**.
@@ -279,15 +279,15 @@ Before creating the instance, you need to know where it will be mapped.
         * Paste your **Organization ID** and **Space ID** (copied from [Step 4.1 Identify your Organization and Space IDs](#41-identify-your-organization-and-space-ids)) into the **Environment Instance ID** and **Environment Group** fields.
         * Click Next Step.
 
-10. Step 6: **Data Lake: general**
+10. **Step 6: Data Lake: general**
     *  Keep default settings for **Create Data Lake**.
     *  Click **Review and Create**.
 
-12. Step 7: **Review New Instances**
+12. **Step 7: Review New Instances**
     * Verify all details, especially the Instance Mapping configuration.
     * Click **Create Instance**.
    
-13. Step 8: **Verify Instance Creation**
+13. **Step 8: Verify Instance Creation**
     * Wait for the instance to be provisioned. This may take several minutes.
     * Once complete, you will see your instance (e.g., hanadb) listed in the All Instances view with a Running status (green indicator).
     * Confirm the Type shows SAP HANA Database and the instance is ready for use.
