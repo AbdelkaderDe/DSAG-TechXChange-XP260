@@ -520,7 +520,7 @@ To assign the roles in the SAP BTP Cockpit:
 5. Assign david.admin@company.com to the **Incident Management Admin** role collection.
 
 
-## Launch SAP Build Work Zone
+## Step 6. Set Up SAP Build Work Zone
 
 1- Go back to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Click on the **Go to Application** icon next to the **SAP Build Work Zone, standard edition** subscription to open the SAP Build Work Zone Site. 
 
