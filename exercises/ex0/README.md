@@ -40,12 +40,11 @@
      - [5.3. Deploy the Application to Cloud Foundry](#53-deploy-the-application-to-cloud-foundry)
      - [5.4. Assign Role Collections to Business Users](#54-assign-role-collections-to-business-users)
 - [Step 6. Integrate Your Application with SAP Build Work Zone, Standard Edition](#step-6-integrate-your-application-with-sap-build-work-zone-standard-edition)
-     - [6.1. Update Content](#51-create-a-dev-space)
+     - [6.1. Update Content](https://github.com/AbdelkaderDe/DSAG-TechXChange-XP260/tree/main/exercises/ex0#51-update-content)
      - [6.2. Add Application to Content Explorer](#52-download-and-import-the-project)
      - [6.3. Create a Group](#53-deploy-the-application-to-cloud-foundry)
      - [6.4. Add Application to the Everyone Role](#54-assign-role-collections-to-business-users)
      - [6.5. Create a Site](#53-deploy-the-application-to-cloud-foundry)
-     - [6.6. Verify Access with Different Users](#54-assign-role-collections-to-business-users)
 - [Step 7. Login to the application]()
 
 ## Overview 
@@ -540,7 +539,7 @@ To assign role collections using the SAP BTP Cockpit:
 In this section, you'll configure SAP Build Work Zone to integrate your Incident Management application in a unified launchpad experience. 
 This involves updating content, organizing apps into groups, and assigning access permissions.
 
-### 5.1. Update Content
+### 6.1. Update Content
 
 First, ensure SAP Build Work Zone has the latest content from your HTML5 application.
 
@@ -556,7 +555,7 @@ First, ensure SAP Build Work Zone has the latest content from your HTML5 applica
   <b></b>
 </p>
 
-### 5.2. Add Application to Content Explorer
+### 6.2. Add Application to Content Explorer
 
 Now, make your application available for inclusion in the Work Zone content catalog.
 
@@ -567,7 +566,7 @@ Now, make your application available for inclusion in the Work Zone content cata
 
 ---
 
-### 5.3. Create a Group
+### 6.3. Create a Group
 
 Create a group to organize related applications together in the launchpad.
 
@@ -576,7 +575,7 @@ Create a group to organize related applications together in the launchpad.
 3. Assign the **Incident-Management** app to this group.
 4. Choose **Save**.
 
-### 5.4. Add Application to the Everyone Role
+### 6.4. Add Application to the Everyone Role
 
 Make the application accessible to all users by assigning it to the default Everyone role.
 
@@ -584,7 +583,7 @@ Make the application accessible to all users by assigning it to the default Ever
 2. Under **Assignment Status**, assign the **Incident-Management** app to the role.
 3. Choose **Save**.
 
-### 5.5. Create a Site
+### 6.5. Create a Site
 
 Build a dedicated launchpad site for your Incident Management application.
 
@@ -596,9 +595,7 @@ Build a dedicated launchpad site for your Incident Management application.
 
 The Incident Management application launchpad should now open.
 
----
-
-### 5.6. Verify Access with Different Users
+## Step 7. Login to the application 
 
 Sign out of the current session and test access with the designated test users to confirm role-based permissions are working correctly.
 
