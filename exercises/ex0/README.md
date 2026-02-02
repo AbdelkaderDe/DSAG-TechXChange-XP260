@@ -40,11 +40,12 @@
      - [5.3. Deploy the Application to Cloud Foundry](#53-deploy-the-application-to-cloud-foundry)
      - [5.4. Assign Role Collections to Business Users](#54-assign-role-collections-to-business-users)
 - [Step 6. Integrate Your Application with SAP Build Work Zone, Standard Edition](#step-6-integrate-your-application-with-sap-build-work-zone-standard-edition)
-     - [6.1. Update Content](https://github.com/AbdelkaderDe/DSAG-TechXChange-XP260/tree/main/exercises/ex0#51-update-content)
-     - [6.2. Add Application to Content Explorer](#52-download-and-import-the-project)
-     - [6.3. Create a Group](#53-deploy-the-application-to-cloud-foundry)
-     - [6.4. Add Application to the Everyone Role](#54-assign-role-collections-to-business-users)
-     - [6.5. Verify Access with Different Users]()
+     - [6.1. Update Content](#61-update-content)
+     - [6.2. Add Application to Content Explorer](#62-add-application-to-content-explorer)
+     - [6.3. Create a Group](#63-create-a-group)
+     - [6.4. Add Application to the Everyone Role](#64-add-application-to-the-everyone-role)
+     - [6.5. Create a Site](#65-create-a-site)
+     - [6.6. Verify Access with Different Users](#66-verify-access-with-different-users)
      
 ## Overview 
 
