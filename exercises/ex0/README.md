@@ -516,17 +516,17 @@ To test real-world access control patterns, you'll work with dedicated test acco
 
 | User | Role |
 |------|------|
-| `bob.support@company.com` | Support User |
-| `alice.support@company.com` | Support User |
-| `david.admin@company.com` | Admin User |
+| `bob.smith@acme.com` | Support User |
+| `alice.jones@acme.com` | Support User |
+| `david.miller@acme.com` | Admin User |
 
 To assign role collections using the SAP BTP Cockpit:
 
 1. Navigate to your subaccount and go to **Security → Users**.
 2. Select the target user.
 3. In the details panel on the right, click **Assign Role Collection**.
-4. Assign `bob.support@company.com` and `alice.support@company.com` to the **support (incident-management xxxtrial-dev)**** role collection.
-5. Assign `david.admin@company.com` to the  **admin (incident-management xxxtrial-dev)** role collection.
+4. Assign `bob.smith@acme.com` and `alice.jones@acme.com` to the **support (incident-management xxxtrial-dev)**** role collection.
+5. Assign `david.miller@acme.com` to the  **admin (incident-management xxxtrial-dev)** role collection.
 
 <p align="center">
   <img src="images/btp-assign-role-collections-business-users.png" alt="" width="900"/>
@@ -631,25 +631,35 @@ The Incident Management application launchpad should now open.
   1. In the left navigation menu, go to **Instances and Subscriptions** → **Applications**.
   2. Locate the **`incident-management-srv`** application.
   3. Check the **Status**:
-     - 🟢 **Running** → Proceed to Section 6.6
+     - 🟢 **Running** → Proceed to Section 6.6.2
      - 🔴 **Stopped** → Select the application → choose **Start**
          - Monitor the Status column closely, it will first change to "Starting" (yellow indicator), then to 🟢 **Running** after 2–5 minutes.
          - Do not proceed until it fully reaches Running, as the database needs time to initialize.
 
 #### 6.6.2. Check and Start the incident-management-srv Application
+  1. Navigate to your subaccount.
+  2. In the left navigation, go to **Cloud Foundry → spaces**.
+  3. Select your Space (e.g., dev or the space where the application was deployed).
+  4. In the Applications list, search for incident-management-srv.
+  5. Check the State or Status column:
+    🟢 Started (or Running) → The application is active and ready. Proceed to Step 4 for verification.
+    🔴 Stopped → The application is not running. click on the button **Start** to start it.
 
+#### 6.6.3. Verify Business User Access to the Incident Management Application
+  1. Goto to The Incident Management application launchpad tab.
+  2. When the **Incident Management tile** is displayed, **Sign Out** from your current IDP user admin and login to the application with **alice.jones@acme.comm** user. 
 
-
-Sign out of the current session and test access with the designated test users to confirm role-based permissions are working correctly.
+  3. Sign out of the current session from your IDP user admin and test access with the designated test users to confirm role-based permissions are working correctly.
 
 | User | Role | Password |
 |------|------|----------|
-| `alice.support@company.com` | Support | `your initial password` |
-| `bob.support@company.com` | Support | `your initial password` |
-| `david.admin@company.com` | Admin | `your initial password` |
+| `alice.jones@acme.com` | Support | `your initial password` |
+| `bob.smith@acme.com` | Support | `your initial password` |
+| `david.miller@acme.com` | Admin | `your initial password` |
 
-
-3- When the **Incident Management tile** is displayed, **Sign Out** from your current user **XP260-0xx@education.cloud.sap** and login to the application with the **alice.support@company.com** user. 
+<img width="86" height="19" alt="image" src="https://github.com/user-attachments/assets/e3828965-a721-489e-ab7b-4421e41a6a03" />
+<img width="198" height="19" alt="image" src="https://github.com/user-attachments/assets/0dae1a88-9926-43f2-b26b-9240c02fb378" />
+<img width="198" height="19" alt="image" src="https://github.com/user-attachments/assets/cd086c85-153d-4545-9fb2-6c87dc1463d4" />
 
 <p align="center">
   <img src="images/btp-subaccount-open-SAP-Build-Work-Zone-sign-out.png" alt="" width="900"/>
