@@ -529,7 +529,85 @@ To assign role collections using the SAP BTP Cockpit:
   <b></b>
 </p>
 
-## Step 6. Set Up SAP Build Work Zone
+## Step 6.  Integrate Your Application with SAP Build Work Zone, Standard Edition
+
+In this section, you'll configure SAP Build Work Zone to integrate your Incident Management application in a unified launchpad experience. 
+This involves updating content, organizing apps into groups, and assigning access permissions.
+
+### 5.1. Update Content
+
+First, ensure SAP Build Work Zone has the latest content from your HTML5 application.
+
+1. Open your subaccount and navigate to **Instances and Subscriptions**.
+2. Select **SAP Build Work Zone, standard edition**.
+3. When prompted for authentication, log in using your admin credentials from the Custom Identity Provider (IdP).
+4. In the left navigation menu, choose the **Channel Manager** icon.
+5. Choose **Fetch Updated Content** to sync the latest application metadata.
+
+<p align="center">
+  <img src="images/work-zone-content-manager.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+### 5.2. Add Application to Content Explorer
+
+Now, make your application available for inclusion in the Work Zone content catalog.
+
+1. In the left navigation menu, choose **Content Manager** → **Content Explorer**.
+2. Select the tile labeled **HTML5 Apps** with your subdomain name.
+3. In the items table, locate **incident-management** and select its checkbox.
+4. Choose **Add** to import the application into your content catalog.
+
+---
+
+### 5.3. Create a Group
+
+Create a group to organize related applications together in the launchpad.
+
+1. Return to **Content Manager** and choose **Create** → **Group**.
+2. In the **Group Title** field, enter: `Incident Management Group`
+3. Assign the **Incident-Management** app to this group.
+4. Choose **Save**.
+
+---
+
+### 5.4. Add Application to the Everyone Role
+
+Make the application accessible to all users by assigning it to the default Everyone role.
+
+1. In **Content Manager**, select the **Everyone** role and choose **Edit**.
+2. Under **Assignment Status**, assign the **Incident-Management** app to the role.
+3. Choose **Save**.
+
+---
+
+### 5.5. Create a Site
+
+Build a dedicated launchpad site for your Incident Management application.
+
+1. Navigate to **Site Directory** and choose **Create Site**.
+2. In the **Site Name** field, enter: `Incident Management Site`
+3. Choose **Create**.
+4. Return to the Site Directory and locate your new site.
+5. Choose **Go Site** to launch the launchpad.
+
+The Incident Management application launchpad should now open.
+
+---
+
+### 5.6. Verify Access with Different Users
+
+Sign out of the current session and test access with the designated test users to confirm role-based permissions are working correctly.
+
+| User | Role | Password |
+|------|------|----------|
+| `alice.support@company.com` | Support | `Teched@2025` |
+| `bob.support@company.com` | Support | `Teched@2025` |
+| `david.admin@company.com` | Admin | `Teched@2025` |
+
+> **Expected behavior**: Support users should see limited functionality based on the Incident Management Support role, while the admin user has full access.
+
 
 1- Go back to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Click on the **Go to Application** icon next to the **SAP Build Work Zone, standard edition** subscription to open the SAP Build Work Zone Site. 
 
