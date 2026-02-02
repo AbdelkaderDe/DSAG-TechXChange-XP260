@@ -615,36 +615,50 @@ Build a dedicated launchpad site for your Incident Management application.
 4. Return to the Site Directory and locate your new site.
 5. Choose **Go Site** to launch the launchpad.
 
-The Incident Management application launchpad should now open.
-
-### 6.6. Verify Access with Different Users
-
-Sign out of the current session and test access with the designated test users to confirm role-based permissions are working correctly.
-
-| User | Role | Password |
-|------|------|----------|
-| `alice.support@company.com` | Support | `Teched@2025` |
-| `bob.support@company.com` | Support | `Teched@2025` |
-| `david.admin@company.com` | Admin | `Teched@2025` |
-
-> **Expected behavior**: Support users should see limited functionality based on the Incident Management Support role, while the admin user has full access.
-
-
-1- Go back to **Services > Instances and Subscriptions** in the **SAP BTP cockpit**. Click on the **Go to Application** icon next to the **SAP Build Work Zone, standard edition** subscription to open the SAP Build Work Zone Site. 
-
-<p align="center">
-  <img src="images/btp-subaccount-open-SAP-Build-Work-Zone.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-2- Check if the **Incident Management** Site is present. Click on the **Go to site** icon. 
-
 <p align="center">
   <img src="images/btp-subaccount-open-SAP-Build-Work-Zone-Site.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
+
+The Incident Management application launchpad should now open.
+
+### 6.6. Verify Access with Different Users
+
+> ⚠️ Before opening the incident-management-application, ensure all backend services are running.
+
+#### 6.6.1. Check and Start SAP HANA Database
+1. Navigate to your subaccount.
+2. Go to **Instances and Subscriptions** → **Subscriptions**.
+3. Find and select **SAP HANA Cloud**.
+4. Choose **Go to Application** to open **SAP HANA Cloud Central**
+5. Check the **Status** column:
+   - 🟢 **Running** → Proceed to Step 2
+   - 🔴 **Stopped** → Select the instance → Click the three dots **(⋯)** menu icon → choose **Start**
+   -
+   -
+   - → Wait untill the status become 🟢 **Running**
+   - 
+
+#### Step 2: Check and Start the incident-management-srv Application
+
+1. In the left navigation menu, go to **Instances and Subscriptions** → **Applications**.
+2. Locate the **`incident-management-srv`** application.
+3. Check the **Status**:
+   - 🟢 **Running** → Proceed to Section 6.6
+   - 🔴 **Stopped** → Select the application → choose **Start**
+       - Monitor the Status column closely, it will first change to "Starting" (yellow indicator), then to 🟢 **Running** after 2–5 minutes.
+       - Do not proceed until it fully reaches Running, as the database needs time to initialize.
+
+
+Sign out of the current session and test access with the designated test users to confirm role-based permissions are working correctly.
+
+| User | Role | Password |
+|------|------|----------|
+| `alice.support@company.com` | Support | `your initial password` |
+| `bob.support@company.com` | Support | `your initial password` |
+| `david.admin@company.com` | Admin | `your initial password` |
+
 
 3- When the **Incident Management tile** is displayed, **Sign Out** from your current user **XP260-0xx@education.cloud.sap** and login to the application with the **alice.support@company.com** user. 
 
