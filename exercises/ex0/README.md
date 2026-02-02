@@ -628,27 +628,16 @@ The Incident Management application launchpad should now open.
 > ⚠️ Before opening the incident-management-application, ensure all backend services are running.
 
 #### 6.6.1. Check and Start SAP HANA Database
-1. Navigate to your subaccount.
-2. Go to **Instances and Subscriptions** → **Subscriptions**.
-3. Find and select **SAP HANA Cloud**.
-4. Choose **Go to Application** to open **SAP HANA Cloud Central**
-5. Check the **Status** column:
-   - 🟢 **Running** → Proceed to Step 2
-   - 🔴 **Stopped** → Select the instance → Click the three dots **(⋯)** menu icon → choose **Start**
-   -
-   -
-   - → Wait untill the status become 🟢 **Running**
-   - 
+  1. In the left navigation menu, go to **Instances and Subscriptions** → **Applications**.
+  2. Locate the **`incident-management-srv`** application.
+  3. Check the **Status**:
+     - 🟢 **Running** → Proceed to Section 6.6
+     - 🔴 **Stopped** → Select the application → choose **Start**
+         - Monitor the Status column closely, it will first change to "Starting" (yellow indicator), then to 🟢 **Running** after 2–5 minutes.
+         - Do not proceed until it fully reaches Running, as the database needs time to initialize.
 
-#### Step 2: Check and Start the incident-management-srv Application
+#### 6.6.2. Check and Start the incident-management-srv Application
 
-1. In the left navigation menu, go to **Instances and Subscriptions** → **Applications**.
-2. Locate the **`incident-management-srv`** application.
-3. Check the **Status**:
-   - 🟢 **Running** → Proceed to Section 6.6
-   - 🔴 **Stopped** → Select the application → choose **Start**
-       - Monitor the Status column closely, it will first change to "Starting" (yellow indicator), then to 🟢 **Running** after 2–5 minutes.
-       - Do not proceed until it fully reaches Running, as the database needs time to initialize.
 
 
 Sign out of the current session and test access with the designated test users to confirm role-based permissions are working correctly.
