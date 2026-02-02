@@ -594,6 +594,13 @@ Make the application accessible to all users by assigning it to the default Ever
 2. Under **Assignment Status**, assign the **Incident-Management** app to the role.
 3. Choose **Save**.
 
+<p align="center">
+  <img src="images/work-zone-content-explorer-everyone-role.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+
 ### 6.5. Create a Site
 
 Build a dedicated launchpad site for your Incident Management application.
