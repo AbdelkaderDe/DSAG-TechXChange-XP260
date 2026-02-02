@@ -646,10 +646,8 @@ The Incident Management application launchpad should now open.
     🔴 Stopped → The application is not running. click on the button **Start** to start it.
 
 #### 6.6.3. Verify Business User Access to the Incident Management Application
-  1. Goto to The Incident Management application launchpad tab.
-  2. When the **Incident Management tile** is displayed, **Sign Out** from your current IDP user admin and login to the application with **alice.jones@acme.comm** user. 
-
-  3. Sign out of the current session from your IDP user admin and test access with the designated test users to confirm role-based permissions are working correctly.
+  1. return to the **Incident Management application** launchpad tab.
+  2. When the **Incident Management tile** is displayed, **Sign Out** from your current IDP user admin and login to the application with the designated test users to confirm role-based permissions are working correctly
 
 | User | Role | Password |
 |------|------|----------|
@@ -657,17 +655,13 @@ The Incident Management application launchpad should now open.
 | `bob.smith@acme.com` | Support | `your initial password` |
 | `david.miller@acme.com` | Admin | `your initial password` |
 
-<img width="86" height="19" alt="image" src="https://github.com/user-attachments/assets/e3828965-a721-489e-ab7b-4421e41a6a03" />
-<img width="198" height="19" alt="image" src="https://github.com/user-attachments/assets/0dae1a88-9926-43f2-b26b-9240c02fb378" />
-<img width="198" height="19" alt="image" src="https://github.com/user-attachments/assets/cd086c85-153d-4545-9fb2-6c87dc1463d4" />
-
 <p align="center">
   <img src="images/btp-subaccount-open-SAP-Build-Work-Zone-sign-out.png" alt="" width="900"/>
   <br>
   <b></b>
 </p>
 
-4- Click on the tile to open the incident management application and **bookmark the URL**. 
+  3. Click on the tile to open the incident management application and **bookmark the URL**. 
 
 <p align="center">
   <img src="images/btp-subaccount-open-SAP-Build-Work-Zone-open-incident-management.png" alt="" width="900"/>
@@ -681,5 +675,5 @@ Now you are ready to start the exercises.
 
 ## Summary
 
-Now that you have made yourself familiar with the setup,
+Congratulations! You've successfully completed the environment setup and initial deployment for the Secure Incident Management application on SAP BTP.
 continue to - [Exercise 1 - Broken Access Control](../ex1/README.md)
