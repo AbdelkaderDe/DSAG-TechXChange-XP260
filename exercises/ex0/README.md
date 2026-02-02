@@ -578,6 +578,13 @@ Create a group to organize related applications together in the launchpad.
 2. In the **Group Title** field, enter: `Incident Management Group`
 3. Assign the **Incident-Management** app to this group.
 4. Choose **Save**.
+5. 
+
+<p align="center">
+  <img src="images/work-zone-content-explorer-group.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
 
 ### 6.4. Add Application to the Everyone Role
 
