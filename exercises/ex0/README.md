@@ -505,20 +505,29 @@ mbt build
 ```
 cf deploy mta_archives/incident-management_1.0.0.mtar
 ```
-### 5.4. Assign Collections Assignment
-To demonstrate real-world access control, you'll test the application using dedicated accounts with precisely scoped role collections.These users showcase how proper role assignments enforce least privilege in production:
+### 5.4. Assigning Role Collections
 
-  * bob.support@company.com (Support user)
-  * alice.support@company.com (Support user)
-  * david.admin@company.com (Admin user)
+To test real-world access control patterns, you'll work with dedicated test accounts that demonstrate proper role-based access control (RBAC). These users showcase how precise role assignments enforce the principle of least privilege in production environments:
 
-To assign the roles in the SAP BTP Cockpit:
+| User | Role |
+|------|------|
+| `bob.support@company.com` | Support User |
+| `alice.support@company.com` | Support User |
+| `david.admin@company.com` | Admin User |
 
-1. Navigate to your Subaccount and go to **Security → Users**.
-3. Select the user. In the right-hand details frame, use the Assign **Role Collection button**
-4. Assign bob.smith@acme.com and alice.jones@acme.com to the **Incident Management Support** role collection.
-5. Assign david.admin@company.com to the **Incident Management Admin** role collection.
+To assign role collections using the SAP BTP Cockpit:
 
+1. Navigate to your subaccount and go to **Security → Users**.
+2. Select the target user.
+3. In the details panel on the right, click **Assign Role Collection**.
+4. Assign `bob.support@company.com` and `alice.support@company.com` to the **support (incident-management xxxtrial-dev)**** role collection.
+5. Assign `david.admin@company.com` to the  **admin (incident-management xxxtrial-dev)** role collection.
+
+<p align="center">
+  <img src="images/btp-assign-role-collections-business-users.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
 
 ## Step 6. Set Up SAP Build Work Zone
 
