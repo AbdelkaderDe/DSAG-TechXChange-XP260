@@ -592,7 +592,7 @@ Create a group to organize related applications together in the launchpad.
 > - ✅ Whether the app appears in the launchpad
 > - ✅ Which users can see and launch the application
 > - This is a **visibility/launchpad permission**
-> Role collections (Support/Admin) control what users can do **inside** the application, while the Everyone role controls whether they can access it at all.
+> - Role collections (Support/Admin) control what users can do **inside** the application, while the Everyone role controls whether they can access it at all.
 
 1. In **Content Manager**, select the **Everyone** role and choose **Edit**.
 2. Under **Assignment Status**, assign the **Incident-Management** app to the role.
