@@ -44,9 +44,8 @@
      - [6.2. Add Application to Content Explorer](#52-download-and-import-the-project)
      - [6.3. Create a Group](#53-deploy-the-application-to-cloud-foundry)
      - [6.4. Add Application to the Everyone Role](#54-assign-role-collections-to-business-users)
-     - [6.5. Create a Site](#53-deploy-the-application-to-cloud-foundry)
-- [Step 7. Login to the application]()
-
+     - [6.5. Verify Access with Different Users]()
+     
 ## Overview 
 
 In these hands-on exercises, we will be using the Incident Management Application, which is designed as a reference application for the [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide). It showcases best practices for developing applications on SAP Business Technology Platform (SAP BTP).
@@ -564,8 +563,6 @@ Now, make your application available for inclusion in the Work Zone content cata
 3. In the items table, locate **incident-management** and select its checkbox.
 4. Choose **Add** to import the application into your content catalog.
 
----
-
 ### 6.3. Create a Group
 
 Create a group to organize related applications together in the launchpad.
@@ -595,7 +592,7 @@ Build a dedicated launchpad site for your Incident Management application.
 
 The Incident Management application launchpad should now open.
 
-## Step 7. Login to the application 
+### 6.6. Verify Access with Different Users
 
 Sign out of the current session and test access with the designated test users to confirm role-based permissions are working correctly.
 
