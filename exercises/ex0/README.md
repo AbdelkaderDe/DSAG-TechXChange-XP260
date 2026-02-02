@@ -38,7 +38,7 @@
      - [5.1. Create a Dev Space](#51-create-a-dev-space)
      - [5.2. Download and Import the Project](#52-download-and-import-the-project)
      - [5.3. Deploy the Application to Cloud Foundry](#53-deploy-the-application-to-cloud-foundry)
-     - [5.4. Assign Role Collections to Business Users](#step-6--integrate-your-application-with-sap-build-work-zone-standard-edition)
+     - [5.4. Integrate Your Application with SAP Build Work Zone, Standard Edition](#step-6--integrate-your-application-with-sap-build-work-zone-standard-edition)
 - [Step 6. Set Up SAP Build Work Zone](#step-6-set-up-sap-build-work-zone)
 - [Step 7. Login to the application]()
 
@@ -529,7 +529,7 @@ To assign role collections using the SAP BTP Cockpit:
   <b></b>
 </p>
 
-## Step 6.  Integrate Your Application with SAP Build Work Zone, Standard Edition
+## Step 6. Integrate Your Application with SAP Build Work Zone, Standard Edition
 
 In this section, you'll configure SAP Build Work Zone to integrate your Incident Management application in a unified launchpad experience. 
 This involves updating content, organizing apps into groups, and assigning access permissions.
