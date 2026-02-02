@@ -39,7 +39,7 @@
      - [5.2. Download and Import the Project](#52-download-and-import-the-project)
      - [5.3. Deploy the Application to Cloud Foundry](#53-deploy-the-application-to-cloud-foundry)
      - [5.4. Assign Role Collections to Business Users](#54-assign-role-collections-to-business-users)
-- [Step 6. Integrate Your Application with SAP Build Work Zone, Standard Edition](#step-6--integrate-your-application-with-sap-build-work-zone-standard-edition)
+- [Step 6. Integrate Your Application with SAP Build Work Zone, Standard Edition](#step-6-integrate-your-application-with-sap-build-work-zone-standard-edition)
 - [Step 7. Login to the application]()
 
 ## Overview 
