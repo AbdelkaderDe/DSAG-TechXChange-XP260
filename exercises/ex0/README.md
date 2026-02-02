@@ -564,6 +564,12 @@ Now, make your application available for inclusion in the Work Zone content cata
 3. In the items table, locate **incident-management** and select its checkbox.
 4. Choose **Add** to import the application into your content catalog.
 
+<p align="center">
+  <img src="images/work-zone-content-explorer-html5.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
 ### 6.3. Create a Group
 
 Create a group to organize related applications together in the launchpad.
