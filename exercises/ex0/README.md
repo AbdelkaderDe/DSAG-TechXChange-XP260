@@ -570,8 +570,6 @@ Create a group to organize related applications together in the launchpad.
 3. Assign the **Incident-Management** app to this group.
 4. Choose **Save**.
 
----
-
 ### 5.4. Add Application to the Everyone Role
 
 Make the application accessible to all users by assigning it to the default Everyone role.
@@ -579,8 +577,6 @@ Make the application accessible to all users by assigning it to the default Ever
 1. In **Content Manager**, select the **Everyone** role and choose **Edit**.
 2. Under **Assignment Status**, assign the **Incident-Management** app to the role.
 3. Choose **Save**.
-
----
 
 ### 5.5. Create a Site
 
