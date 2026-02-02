@@ -209,7 +209,7 @@ Repeat this process for each of the following users:
   * alice.jones@acme.com (Support user)
   * david.miller@acme.com (Admin user)
 
-To add your IAS admin user:
+To add your IAS admin user (Trial user email):
   * Repeat the steps above
   * Use the email address of your IAS admin account (e.g., admin@yourcompany.com)
   * Ensure the Identity Provider matches your custom IAS tenant.
