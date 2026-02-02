@@ -38,7 +38,7 @@
      - [5.1. Create a Dev Space](#51-create-a-dev-space)
      - [5.2. Download and Import the Project](#52-download-and-import-the-project)
      - [5.3. Deploy the Application to Cloud Foundry](#53-deploy-the-application-to-cloud-foundry)
-     - [5.4. Assign Role Collections](#54-assign-role-collections)
+     - [5.4. Assigning Role Collections to Business Users] (#54-assign-role-collections)
 - [Step 6. Set Up SAP Build Work Zone](#step-6-set-up-sap-build-work-zone)
 - [Step 7. Login to the application]()
 
@@ -505,7 +505,7 @@ mbt build
 ```
 cf deploy mta_archives/incident-management_1.0.0.mtar
 ```
-### 5.4. Assign Role Collections
+### 5.4. Assign Role Collections to Business Users
 
 To test real-world access control patterns, you'll work with dedicated test accounts that demonstrate proper role-based access control (RBAC). These users showcase how precise role assignments enforce the principle of least privilege in production environments:
 
