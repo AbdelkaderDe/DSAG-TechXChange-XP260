@@ -294,9 +294,9 @@ Before creating the instance, you need to know where it will be mapped.
    
 * **Step 8. Verify Instance Creation**
     * Wait for the instance to be provisioned. This may take several minutes.
-    * Once complete, you will see your instance (e.g., hanadb) listed in the All Instances view with a Running status (green indicator).
+    * Once complete, you will see your instance (e.g., hanadb) listed in the All Instances view with a 🟢 **Running** status (green indicator).
     * Confirm the Type shows SAP HANA Database and the instance is ready for use.
-   
+
   <p align="center">
     <img src="images/sap-hana-database-instance.png" alt="" width="900"/>
     <br>
@@ -614,7 +614,7 @@ The Incident Management application launchpad should now open.
   2. Locate the **`incident-management-srv`** application.
   3. Check the **Status**:
      - 🟢 **Running** → Proceed to Section 6.6.2
-     - 🔴 **Stopped** → Select the application → choose **Start**
+     - 🔴 **Stopped** → Select the database → choose **Start**
          - Monitor the Status column closely, it will first change to "Starting" (yellow indicator), then to 🟢 **Running** after 2–5 minutes.
          - Do not proceed until it fully reaches Running, as the database needs time to initialize.
 
