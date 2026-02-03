@@ -37,7 +37,7 @@
 - [Step 5. Launch SAP BAS, Import Project, and Deploy to Cloud Foundry](#step-5-launch-sap-bas-import-project-and-deploy-to-cloud-foundry)
      - [5.1. Create a Dev Space](#51-create-a-dev-space)
      - [5.2. Download and Import the Project](#52-download-and-import-the-project)
-     - [5.3. Deploy the Application to Cloud Foundry](#53-deploy-the-application-to-cloud-foundry)
+     - [5.3. Build and Deploy the Application to Cloud Foundry](#53-deploy-the-application-to-cloud-foundry)
      - [5.4. Assign Role Collections to Business Users](#54-assign-role-collections-to-business-users)
 - [Step 6. Integrate Your Application with SAP Build Work Zone, Standard Edition](#step-6-integrate-your-application-with-sap-build-work-zone-standard-edition)
      - [6.1. Update Content](#61-update-content)
@@ -372,7 +372,7 @@ By the end of this step, the Secure Incident Management application will be succ
 5. The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
 6. Bookmark your **SAP Business Application Studio** link.
    
-### 5.3. Deploy the Application to Cloud Foundry
+### 5.3. Build and Deploy the Application to Cloud Foundry
 Before you build and deploy the application, it's crucial to ensure all project dependencies are up-to-date.
 
 ### 5.3.1. Prepare for Deployment (Run npm update)
@@ -392,8 +392,43 @@ npm update
 ```
 Wait for the command to complete. This process fetches and installs the latest compatible versions of your project's Node.js dependencies.
 
-#### 5.3.2. Deploy to Cloud Foundry
+#### 5.3.2. Build MTA Project**
+You can build the MTA project using either the graphical UI or the command line.
+
+**Option 1: Using the UI**
+  * Click the Explorer icon (left sidebar) if the project panel isn’t already visible.
+  * Locate and right-click on the **mta.yaml** file in your project root.
+  * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
+
+<p align="center">
+  <img src="images/BAS-build-mta-project-UI.png" alt="" width="900"/>
+  <br>
+  <b></b>
+</p>
+
+**Option 2: Using the Command Line**
+  * Ensure your terminal is pointed to the correct directory:**secure-incident-management**
+  * Run the Cloud MTA Build Tool to generate the deployment archive:
+
+```
+mbt build
+```
+
+#### 5.3.3. Deploy to Cloud Foundry
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
+
+**3. Deploy the Application**
+  * In the Explorer view, find and expand the mta_archives folder.
+  * Right-click on the generated .mtar file.
+  * Select **Deploy MTA Archive**.
+  * If prompted, log in to your Cloud Foundry space.
+  * Wait for the deployment process to complete and check the output panel for confirmation.
+
+  <p align="center">
+    <img src="images/BAS-deploy-mta-project-UI.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
 
 ##### 5.3.2.1. Option 1: Deploy via UI
 **1. Login to Cloud Foundry:**
@@ -447,30 +482,6 @@ You can deploy the application using one of two methods: **via the UI** or **via
   <br>
   <b></b>
 </p>
-
-**2. Build MTA Project**
-  * Click the Explorer icon (left sidebar) if the project panel isn’t already visible.
-  * Locate and right-click on the **mta.yaml** file in your project root.
-  * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
-
-<p align="center">
-  <img src="images/BAS-build-mta-project-UI.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-**3. Deploy the Application**
-  * In the Explorer view, find and expand the mta_archives folder.
-  * Right-click on the generated .mtar file.
-  * Select **Deploy MTA Archive**.
-  * If prompted, log in to your Cloud Foundry space.
-  * Wait for the deployment process to complete and check the output panel for confirmation.
-
-  <p align="center">
-    <img src="images/BAS-deploy-mta-project-UI.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
 
 #### 5.3.2.2. Option 2. Deploy via Command Line
 
