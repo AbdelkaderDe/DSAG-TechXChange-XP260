@@ -431,57 +431,57 @@ You can deploy the application using one of two methods: **via the UI** or **via
   </p>
 
 **Option 2: Using the Command Line**
-**1. Login to Cloud Foundry:**
-  * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
+  * **Login to Cloud Foundry:**
+    * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
+    <p align="center">
+      <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
+      <br>
+      <b></b>
+    </p>
+    
+    * Type **CF: Login to Cloud Foundry** and press Enter.
+    <p align="center">
+      <img src="images/btp-subaccount-open-BAS-dev-UI-command-palette-cf-login.png" alt="" width="900"/>
+      <br>
+      <b></b>
+    </p>  
+
+  * In the CloudFoundry Sign In prompt, choose **SSO**, then click **Open a New Browser** to generate your **SSO Passcode**.
+  
   <p align="center">
-    <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
+    <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
+    <br>
+  </p>
+  
+  * If prompted for login: Choose **Sign in with alternative identity provider**.
+  
+  * You’ll see a passcode page — copy the temporary authentication code generated in the **Passcode** field.  <p align="center">
+      <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
+      <br>
+      <b></b>
+    </p>
+    
+  * Paste the **SSO Passcode** back into the SAP Business Application Studio and click on the **Sign In** button.
+  <p align="center">
+    <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-paste-code.png" alt="" width="900"/>
+    <br>
+  <b></b>
+  </p>
+  
+  * In section **Cloud Foundry Target**, select **Organization** and **Space** (for example, `dev`), then click on the **Apply** button.
+  <p align="center">
+    <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
   
-  * Type **CF: Login to Cloud Foundry** and press Enter.
+  *  Once connected, a notification message pops up in the status bar in the SAP Business Application Studio confirming that your Cloud Foundry organization and space have been set and are ready for use.
+  
   <p align="center">
-    <img src="images/btp-subaccount-open-BAS-dev-UI-command-palette-cf-login.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>  
-
-* In the CloudFoundry Sign In prompt, choose **SSO**, then click **Open a New Browser** to generate your **SSO Passcode**.
-
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
-  <br>
-</p>
-
-* If prompted for login: Choose **Sign in with alternative identity provider**.
-
-* You’ll see a passcode page — copy the temporary authentication code generated in the **Passcode** field.  <p align="center">
-    <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
+    <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
     <br>
     <b></b>
   </p>
-  
-* Paste the **SSO Passcode** back into the SAP Business Application Studio and click on the **Sign In** button.
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-paste-code.png" alt="" width="900"/>
-  <br>
-<b></b>
-</p>
-
-* In section **Cloud Foundry Target**, select **Organization** and **Space** (for example, `dev`), then click on the **Apply** button.
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-select-cf-target.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-*  Once connected, a notification message pops up in the status bar in the SAP Business Application Studio confirming that your Cloud Foundry organization and space have been set and are ready for use.
-
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-UI-login-message.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
 
 #### 5.3.2.2. Option 2. Deploy via Command Line
 
