@@ -421,33 +421,8 @@ You can deploy the application using one of two methods: **via the UI** or **via
   * In the Explorer view, find and expand the mta_archives folder.
   * Right-click on the generated .mtar file.
   * Select **Deploy MTA Archive**.
-  * If prompted, log in to your Cloud Foundry space.
-  * Wait for the deployment process to complete and check the output panel for confirmation.
+  * If prompted  CloudFoundry Sign In page, choose SSO, then click Open a New Browser to generate your SSO Passcode.
 
-  <p align="center">
-    <img src="images/BAS-deploy-mta-project-UI.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
-
-**Option 2: Using the Command Line**
-  * **Login to Cloud Foundry:**
-    * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
-    <p align="center">
-      <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
-      <br>
-      <b></b>
-    </p>
-    
-    * Type **CF: Login to Cloud Foundry** and press Enter.
-    <p align="center">
-      <img src="images/btp-subaccount-open-BAS-dev-UI-command-palette-cf-login.png" alt="" width="900"/>
-      <br>
-      <b></b>
-    </p>  
-
-  * In the CloudFoundry Sign In prompt, choose **SSO**, then click **Open a New Browser** to generate your **SSO Passcode**.
-  
   <p align="center">
     <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-signIn-target.png" alt="" width="900"/>
     <br>
@@ -482,6 +457,34 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <br>
     <b></b>
   </p>
+
+   
+  * Wait for the deployment process to complete and check the output panel for confirmation.
+
+  <p align="center">
+    <img src="images/BAS-deploy-mta-project-UI.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
+
+**Option 2: Using the Command Line**
+  * **Login to Cloud Foundry:**
+    * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
+    <p align="center">
+      <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
+      <br>
+      <b></b>
+    </p>
+    
+    * Type **CF: Login to Cloud Foundry** and press Enter.
+    <p align="center">
+      <img src="images/btp-subaccount-open-BAS-dev-UI-command-palette-cf-login.png" alt="" width="900"/>
+      <br>
+      <b></b>
+    </p>  
+
+  * In the CloudFoundry Sign In prompt, choose **SSO**, then click **Open a New Browser** to generate your **SSO Passcode**.
+  
 
 #### 5.3.2.2. Option 2. Deploy via Command Line
 
