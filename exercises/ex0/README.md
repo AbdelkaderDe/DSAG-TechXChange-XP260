@@ -398,7 +398,7 @@ You can build the MTA project using either the graphical UI or the command line.
 **Option 1: Using the UI**
   * Click the Explorer icon (left sidebar) if the project panel isn’t already visible.
   * Locate and right-click on the **mta.yaml** file in your project root.
-  * Select Build MTA Project from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
+  * Select **Build MTA Project** from the menu, Wait for the terminal to confirm the build is complete. A new folder named mta_archives will be created.
 
 <p align="center">
   <img src="images/BAS-build-mta-project-UI.png" alt="" width="900"/>
