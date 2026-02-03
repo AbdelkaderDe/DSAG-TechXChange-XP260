@@ -428,6 +428,8 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <br>
   </p>
   
+  * If prompted for login, select your **Sign in with alternative identity provider**.
+
   * You’ll see a passcode page — copy the temporary authentication code generated in the **Passcode** field.  <p align="center">
       <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
       <br>
