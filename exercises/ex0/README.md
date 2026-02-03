@@ -369,7 +369,7 @@ By the end of this step, the Secure Incident Management application will be succ
   <b></b>
 </p>
 
-5.The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
+5. The import is complete only when the project folder appears in the Project Explorer and its structure (such as mta.yaml) is fully loaded.
 6. Bookmark your **SAP Business Application Studio** link.
    
 ### 5.3. Deploy the Application to Cloud Foundry
