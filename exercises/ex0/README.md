@@ -417,7 +417,7 @@ mbt build
 ### 5.3.3. Deploy to Cloud Foundry
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
-**Option 1: Using the UI**
+**Option 1. Using the UI**
   * In the Explorer view, find and expand the mta_archives folder.
   * Right-click on the generated .mtar file.
   * Select **Deploy MTA Archive**.
@@ -459,63 +459,37 @@ You can deploy the application using one of two methods: **via the UI** or **via
    
   * Wait for the deployment process to complete and check the output panel for confirmation.
 
-**Option 2: Using the Command Line**
-  * **Login to Cloud Foundry:**
-    * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
-    <p align="center">
-      <img src="images/btp-subaccount-open-BAS-command-palette.png" alt="" width="900"/>
-      <br>
-      <b></b>
-    </p>
-    
-    * Type **CF: Login to Cloud Foundry** and press Enter.
-    <p align="center">
-      <img src="images/btp-subaccount-open-BAS-dev-UI-command-palette-cf-login.png" alt="" width="900"/>
-      <br>
-      <b></b>
-    </p>  
+**Option 2. Using the Command Line**
 
-  * In the CloudFoundry Sign In prompt, choose **SSO**, then click **Open a New Browser** to generate your **SSO Passcode**.
+  * Open Terminal
+     - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
+     - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
+     
+  * Run the following command to log in:
+    ```
+    cf login
+    ```
+  * When prompted enter:
+      * Email: Admin user email.
+      * Password: Admin user password
+      
+  * To verify the login, run
+    ```
+      cf target
+    ```
+  * You should see the current organization and space listed.
   
+  <p align="center">
+    <img src="images/btp-subaccount-open-BAS-dev-cf-target-message.png" alt="" width="900"/>
+    <br>
+    <b></b>
+  </p>
 
-#### 5.3.2.2. Option 2. Deploy via Command Line
-
-1. **Open Terminal**
-   - In the SAP Business Application Studio, go to **Terminal > New Terminal** from the top menu.
-   - A terminal window will open at the bottom of your workspace in your project directory **secure-incident-management**.
-   
-3. **Run the following command to log in:**
-  ```
-  cf login
-  ```
-3. When prompted enter:
-    * Email: Admin user email.
-    * Password: Admin user password
-    
-4.  To verify the login, run
-  ```
-    cf target
-  ```
-5- You should see the current organization and space listed.
-  
-<p align="center">
-  <img src="images/btp-subaccount-open-BAS-dev-cf-target-message.png" alt="" width="900"/>
-  <br>
-  <b></b>
-</p>
-
-6- **Build the Application**
-    * Ensure your terminal is pointed to the correct directory:**secure-incident-management**
-    * Run the Cloud MTA Build Tool to generate the deployment archive:
-
-```
-mbt build
-```
-
-7- **Deploy the Application**
+  * Deploy the Application
 ```
 cf deploy mta_archives/incident-management_1.0.0.mtar
 ```
+
 ### 5.4. Assign Role Collections to Business Users
 
 To test real-world access control patterns, you'll work with dedicated test accounts that demonstrate proper role-based access control (RBAC). These users showcase how precise role assignments enforce the principle of least privilege in production environments:
