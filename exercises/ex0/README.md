@@ -414,10 +414,10 @@ You can build the MTA project using either the graphical UI or the command line.
 mbt build
 ```
 
-#### 5.3.3. Deploy to Cloud Foundry
+### 5.3.3. Deploy to Cloud Foundry
 You can deploy the application using one of two methods: **via the UI** or **via the command line**.
 
-**3. Deploy the Application**
+**Option 1: Using the UI**
   * In the Explorer view, find and expand the mta_archives folder.
   * Right-click on the generated .mtar file.
   * Select **Deploy MTA Archive**.
@@ -430,7 +430,7 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <b></b>
   </p>
 
-##### 5.3.2.1. Option 1: Deploy via UI
+**Option 2: Using the Command Line**
 **1. Login to Cloud Foundry:**
   * Open the **Command Palette** (press **Ctrl+Shift+P** or select **View > Command Palette**) from the top menu.
   <p align="center">
