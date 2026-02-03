@@ -623,9 +623,12 @@ The Incident Management application launchpad should now open.
   2. In the left navigation, go to **Cloud Foundry → spaces**.
   3. Select your Space (e.g., dev or the space where the application was deployed).
   4. In the Applications list, search for incident-management-srv.
-  5. Check the State or Status column:
-    - 🟢 Started (or Running) → The application is active and ready. Proceed to Step 4 for verification.
-    - 🔴 Stopped → The application is not running. click on the button **Start** to start it.
+  5. In the **Applications** list, search for **incident-management-srv**.
+  2. Check the **State** or **Status** column:
+   - 🟢 **Started** (or **Running**)  
+     → The application is active and ready. Proceed to **Step 4** for verification.
+   - 🔴 **Stopped**  
+     → The application is not running. Click the **Start** button to start it.
 
 #### 6.6.3. Verify Business User Access to the Incident Management Application
   1. return to the **Incident Management application** launchpad tab.
