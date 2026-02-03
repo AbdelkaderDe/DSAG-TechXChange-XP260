@@ -428,8 +428,6 @@ You can deploy the application using one of two methods: **via the UI** or **via
     <br>
   </p>
   
-  * If prompted for login: Choose **Sign in with alternative identity provider**.
-  
   * You’ll see a passcode page — copy the temporary authentication code generated in the **Passcode** field.  <p align="center">
       <img src="images/btp-subaccount-open-BAS-dev-UI-command-cf-temp-code.png" alt="" width="900"/>
       <br>
@@ -460,12 +458,6 @@ You can deploy the application using one of two methods: **via the UI** or **via
 
    
   * Wait for the deployment process to complete and check the output panel for confirmation.
-
-  <p align="center">
-    <img src="images/BAS-deploy-mta-project-UI.png" alt="" width="900"/>
-    <br>
-    <b></b>
-  </p>
 
 **Option 2: Using the Command Line**
   * **Login to Cloud Foundry:**
