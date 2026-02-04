@@ -101,7 +101,8 @@ class ProcessorService extends cds.ApplicationService {
 
 ### 🪜 Step 1: Login as Alice (Support User) 
 - Access SAP Build Work Zone.
-- Login with alice.support@company.com. This user is set up from the previous exercise.
+- Login with alice.jones@acme.com
+- . This user is set up from the previous exercise.
 - Navigate to the Incident Management application.
 
 ### 🪜 Step 2: Exploit Closing High-Urgency Incident
@@ -116,7 +117,7 @@ class ProcessorService extends cds.ApplicationService {
 ### 🪜 Step 3: Login as Admin User
 
 - ▶️ Action:
-  - Log out and log in as david.admin@company.com (admin role).
+  - Log out and log in as david.miller@acme.com (admin role).
   - Try to open the incident management application (which will fail).
 - ✅ Result:
   - ❌ UI displays a blank loading screen (no error message).
@@ -246,7 +247,7 @@ cf deploy mta_archives/incident-management_1.0.0.mtar
 
 ### 🪜 Step 2: Login as Alice (Support User)
 - ▶️ Action:
-  - Access SAP Build Work Zone and log in with alice.support@company.com.
+  - Access SAP Build Work Zone and log in with alice.jones@acme.com.
   - Locate a high-urgency incident assigned to Alice or unassigned.
   - Confirm the urgency is set to "High" and the status is not closed.
   - Click "Edit" and try to set the status to "Closed" (status_code = 'C').
@@ -266,7 +267,7 @@ cf deploy mta_archives/incident-management_1.0.0.mtar
  
 ### 🪜 Step 4: Login as David (Admin User)
   - ▶️ Action:
-    - Log in with david.admin@company.com.
+    - Log in with david.miller@acme.com.
     - Locate a high-urgency open incident (assigned to anyone or unassigned).
     - Click "Edit", change status to "Closed", and save.
   - ✅ Result:
