@@ -472,12 +472,12 @@ You can deploy the application using one of two methods: **via the UI** or **via
      
   * Run the following command to log in:
     ```
-    cf login
+    cf login --sso
     ```
-  * When prompted enter:
-      * Email: Admin user email.
-      * Password: Admin user password
-      
+  * Click on provided URL to get a one-time passcode.
+  * If prompted for login, select your **Sign in with alternative identity provider**.
+  * Return to terminal and type/paste the code.
+
   * To verify the login, run
     ```
       cf target
