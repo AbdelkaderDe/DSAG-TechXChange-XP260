@@ -105,7 +105,7 @@ In this step, you will set up the required application subscriptions
   
 ### 2.1. Subscribe to SAP HANA Cloud (Trial)
   1. From your Trial Subaccount (Cockpit), look at the navigation menu on the left.
-  2. Click on **Service Marketplace**.
+  2. Click on **Services->Service Marketplace**.
   3. Search for **"SAP HANA Cloud"** and select it from the results.
   4. Click the three-dot menu **(...)** next to the service name, then choose Create.
   5. In the Create Subscription wizard:
