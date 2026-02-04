@@ -392,11 +392,14 @@ This section outlines the steps to confirm that the remediation for the Horizont
   ```  
 - Unless you already logged-in in the "Getting Started" section, login with the Cloud Foundry command line interface.
   ```
-  cf login 
+  cf login --sso
   ```
-  - Enter your credentials admin email and the corresponding password.
+  - Click on provided URL to get a one-time passcode.
+  - If prompted for login, select your **Sign in with alternative identity provider**.
+  - Return to terminal and type/paste the code.
   - As you are only assigned to one org and one space, these are selected automatically.
-- Start the build and deploy the new version. These steps may take a few minutes.  
+  - Start the build and deploy the new version. These steps may take a few minutes.
+   
   ```
   mbt build
   cf deploy mta_archives/incident-management_1.0.0.mtar
