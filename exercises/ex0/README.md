@@ -248,7 +248,7 @@ Before creating the instance, you need to know where it will be mapped.
     <b></b>
   </p>
 
-  6. Go to **Cloud Foundry > Spaces**, then click on your space (e.g., dev).
+  6. Go to **Cloud Foundry -> Spaces**, then click on your space (e.g., dev).
   7. Copy the Space ID from the URL:
       - Look at your browser's address bar. The URL format is:**../org/\<ORG-ID\>/space/\<SPACE-ID\>/applications**
       - Copy the alphanumeric string after **/space/** and before **/applications**, e.g,84304933-24e6-popo-950a-46105da935d0
