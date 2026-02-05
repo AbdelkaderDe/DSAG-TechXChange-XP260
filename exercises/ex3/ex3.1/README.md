@@ -214,7 +214,9 @@ To address the identified vulnerabilities and data privacy risks, this section i
 
 ### 🪜 Step 1: Add Audit Logging Dependency
 
-- ▶️ Action : Terminate the cds watch command. Then add the `@cap-js/audit-logging` plugin to your project.
+- ▶️ Action :
+  - Stop the current execution of cds watch in the integrated terminal with Ctrl-C. 
+  - Add the `@cap-js/audit-logging` plugin to your project.
 
 ```
 npm install @cap-js/audit-logging
