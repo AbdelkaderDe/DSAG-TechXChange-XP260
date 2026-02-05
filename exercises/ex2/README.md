@@ -151,6 +151,7 @@ Authorization: Basic {{username}}:{{password}}
 ### 🪜 Step 2: Exploit the SQL Injection Vulnerability
 - ▶️ Action:
   - Go to the integrated terminal. If you no longer have it open, right-click in the Explorer Pane on the project name to open the context menu. Then select the menu item "Open in Integrated Terminal".
+  - Ensure you are in the **secure-incident-management** directory
   - Run the following commands from the integrated terminal:
 
 ```
