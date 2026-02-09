@@ -65,9 +65,23 @@ This structure is designed to help you understand a vulnerability from an attack
 ## Known Issues
 No known issues.
 
-## How to obtain support
+## 🤝 How to Get Support
 
-Support for the content in this repository is available during the Workshop event for which this content has been designed.
+This repository content is designed for the DSAG-TechExchange workshop, where **live support** will be available from facilitators during the event.
+
+### During the Workshop
+
+Support is available directly from the instructors.
+
+### 🕐 Outside the Workshop
+
+- **Found a bug or have a question?**  
+  [Open an issue](https://github.com/SAP-samples/btp-secure-development/issues) in this repository.
+
+- **Looking for broader support?**  
+  [Ask a question in SAP Community](https://answers.sap.com/questions/ask.html).>
+
+  💡 **Tip:** When creating issues, please include details like your environment (Node.js version, OS), steps to reproduce the issue, and screenshots if applicable. This helps us provide faster, more accurate support!
 
 ## Contributing
 If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
