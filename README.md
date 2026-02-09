@@ -63,10 +63,10 @@ This structure is designed to help you understand a vulnerability from an attack
     - [Exercise 3.2 - Security Event Monitoring in SAP BTP Production Environment (Optional - requires production landscape)](exercises/ex3/ex3.2/README.md)
 - [Additional Resources](exercises/resources/README.md)
 ## Known Issues
-<!-- You may simply state "No known issues. -->
+No known issues.
 
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
+[Create an issue](https://github.com/SAP-samples/btp-secure-development/issues) in this repository if you find a bug or have questions about the content.
  
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
