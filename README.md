@@ -79,7 +79,7 @@ Support is available directly from the instructors.
   [Open an issue](https://github.com/SAP-samples/btp-secure-development/issues) in this repository.
 
 - **Looking for broader support?**  
-  [Ask a question in SAP Community](https://answers.sap.com/questions/ask.html).>
+  [Ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
   💡 **Tip:** When creating issues, please include details like your environment (Node.js version, OS), steps to reproduce the issue, and screenshots if applicable. This helps us provide faster, more accurate support!
 
