@@ -36,8 +36,6 @@ Please complete the following setup **before the workshop**:
 
 - **[Getting Started](exercises/ex0#getting-started)** – Set up your environment and initial deployment.
 
-> ⚠️ **Important:** Completing these steps in advance is essential. You'll get the most out of the DASG-TechExchange workshop if you're ready to dive into the exercises.
-
 > 💡 **Tip:** Some exercises require switching between user accounts. Use an **Incognito (Private)** browser window to avoid authentication conflicts.
 
 ## 💻Exercises
