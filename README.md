@@ -1,7 +1,7 @@
-# XP260 - Mastering Secure Application Development in SAP BTP: A Practical Workshop
-
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2025-XP260)](https://api.reuse.software/info/github.com/SAP-samples/teched2025-XP260)
-
+# XP260 - Developping More-Secure Solutions With SAP BTP: Proven techniques for the real world
+<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
+-->
 ## 📝Description
 
 This repository contains the material for the SAP TechEd 2025 session called "XP260 - Mastering Secure Application Development in SAP BTP: A Practical Workshop".  
@@ -55,17 +55,18 @@ This structure is designed to help you understand a vulnerability from an attack
 - [Exercise 2 - SQL Injection](exercises/ex2/README.md#exercise-2---sql-injection)
 - [Exercise 3 - Security Logging and Monitoring Failures](exercises/ex3/README.md)
     - [Exercise 3.1 - Audit Logging for Sensitive Data Access in Local Development](exercises/ex3/ex3.1/README.md)
-    - [Exercise 3.2 - Security Event Monitoring in SAP BTP Production Environment](exercises/ex3/ex3.2/README.md)
+    - [Exercise 3.2 - Security Event Monitoring in SAP BTP Production Environment (Optional - requires production landscape)](exercises/ex3/ex3.2/README.md)
 - [Additional Resources](exercises/resources/README.md)
-
-
-
-## Code of Conduct
-Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples/.github/blob/main/CODE_OF_CONDUCT.md).
+## Known Issues
+<!-- You may simply state "No known issues. -->
 
 ## How to obtain support
+[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
+ 
+For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
-Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
+## Contributing
+If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
 
 ## License
-Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+Copyright (c) 2026 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
