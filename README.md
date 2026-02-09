@@ -11,7 +11,7 @@ This repository contains the material for DSAG TechXChange 2026 called "XP260 - 
 Welcome to this hands-on workshop dedicated to embedding security into your SAP BTP applications. 
 In an era where data breaches and cyber threats are constant, building secure software is not an option - it's a requirement. This workshop is designed for developers working with the SAP Cloud Application Programming Model (CAP) and Node.js. 
 
-By completing the exercises, you will gain the practical skills to identify and mitigate common security risks as defined by the [OWASP Top 10 vulnerabilities](https://owasp.org/Top10/). 
+By completing the exercises, you will gain the practical skills to identify and mitigate common security risks as defined by the [OWASP Top 10 Vulnerabilities](https://owasp.org/Top10/). 
 
 <p align="center">
   <img src="img/top10-owasp.png" alt="Top 10 OWASP Vulnerabilities" width="900"/>
