@@ -66,9 +66,8 @@ This structure is designed to help you understand a vulnerability from an attack
 No known issues.
 
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/btp-secure-development/issues) in this repository if you find a bug or have questions about the content.
- 
-For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
+
+Support for the content in this repository is available during the Workshop event for which this content has been designed.
 
 ## Contributing
 If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
