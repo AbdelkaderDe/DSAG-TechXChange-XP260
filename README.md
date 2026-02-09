@@ -26,12 +26,39 @@ By completing the exercises, you will gain the practical skills to identify and 
 -	**Implement** SAP BTP's comprehensive, built-in security services to protect your data and business logic.
 -	**Validate** the effectiveness of security fixes through practical testing.
 
+### 📋 Requirements
+
+- Some experience with **Node.js** and **GitHub**
+
+## 🔧 Prerequisites
+
+Before the workshop, please complete the setup steps in:
+
+- **[Getting Started](exercises/ex0#getting-started)**
+
+> ⚠️ **Important:** Completing these steps in advance is essential to get the most out of the DASG-TechExchange workshop.
+
+> 💡 **Tip:** Some exercises require switching between user accounts. For the best experience, use an **Incognito (Private)** browser window to avoid authentication conflicts.
+
+## 🚀 Prerequisites
+
+Before the day of the workshop, please make sure you have completed all required setup steps.
+
+- **[Getting Started](exercises/ex0#getting-started)**  
+  Follow this guide to install the necessary tools and verify your environment.
+
+Completing these prerequisites in advance will ensure you can focus on the exercises during the DASG-TechExchange workshop.
+
 
 ## 📋 Requirements
 
 You already have some experience with Node.js and GitHub.
 
 💡In some of the exercises, you will be asked to switch from one user to another. This works more reliably if you use the Incognito mode of your browser. Without the Incognito mode, you may run into situations where you are authenticated automatically with the wrong user.
+
+Certain prerequisites must be fulfilled before the day of the Workshop in order to get the most from this DASG-TechExchange and be able to work through the exercises.
+
+The prerequisites are detailed in a separate prerequisites section : - [Getting Started](exercises/ex0#getting-started). Please ensure you have everything ready before attending the Workshop.
 
 ## 💻Exercises
 
@@ -48,7 +75,7 @@ Every exercise module is a self-contained lab focused on a specific vulnerabilit
 
 This structure is designed to help you understand a vulnerability from an attacker's perspective and a defender's, see how it can impact a CAP application, and learn actionable steps to mitigate it with SAP BTP best practices. 
 
-- [Getting Started](exercises/ex0#getting-started)
+
 - [Exercise 1 - Broken Access Control](exercises/ex1#exercise-1---broken-access-control)
     - [Exercise 1.1 - Horizontal Privilege Escalation](exercises/ex1/ex1.1/README.md#exercise-11---horizontal-privilege-escalation)
     - [Exercise 1.2 - Vertical Privilege Escalation](exercises/ex1/ex1.2/README.md#exercise-12---vertical-privilege-escalation)
