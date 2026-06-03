@@ -16,7 +16,7 @@ Vulnerability: [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top
 ## 📖 1. Overview
 
 This exercise demonstrates how outdated and vulnerable npm dependencies can silently expose a Node.js CAP application to known, publicly documented exploits — without any flaw in the application's own business logic.
-Unlike SQL Injection or Broken Access Control, supply chain vulnerabilities do not require the attacker to interact with your application endpoints. The exposure exists as soon as a vulnerable package is installed — in your local workspace, in your [CI/CD pipeline](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/what-is-sap-continuous-integration-and-delivery), or on the [Cloud Foundry runtime](https://help.sap.com/docs/btp/sap-business-technology-platform/development-in-cloud-foundry-environment). 
+Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilities do not require the attacker to interact with your application endpoints. The exposure exists as soon as a vulnerable package is installed — in your local workspace, in your [CI/CD pipeline](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/what-is-sap-continuous-integration-and-delivery), or on the [Cloud Foundry runtime](https://help.sap.com/docs/btp/sap-business-technology-platform/development-in-cloud-foundry-environment). 
 
 ### 📐 Business Rules
 - ❌ Applications must not include npm packages with known high or critical CVEs in any deployed artifact.
