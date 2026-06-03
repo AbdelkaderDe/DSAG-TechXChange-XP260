@@ -19,16 +19,16 @@ This exercise demonstrates how outdated and vulnerable npm dependencies can sile
 Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilities do not require the attacker to interact with your application endpoints. The exposure exists as soon as a vulnerable package is installed — in your local workspace, in your [CI/CD pipeline](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/what-is-sap-continuous-integration-and-delivery), or on the [Cloud Foundry runtime](https://help.sap.com/docs/btp/sap-business-technology-platform/development-in-cloud-foundry-environment). 
 
 ### 📐 Business Rules
-- ❌ Applications must not include npm packages with known high or critical CVEs in any deployed artifact.
+- ❌ Applications must not include npm packages with known high or critical CVEs (Common Vulnerabilities and Exposures) in any deployed artifact.
 
 - ⚠️ All direct and transitive dependencies must be continuously inventoried, reviewed, and kept up to date.
 
 - ⚠️ Unmaintained or compromised packages must be replaced or mitigated before any deployment to SAP BTP Cloud Foundry.
 
 ### ⚠️ Why This Matters
-  - **Business Impact:** A single outdated dependency can expose the entire CAP runtime to Prototype Pollution, Server-Side Request Forgery, authentication bypass, or Denial of Service — without exploiting a single line of your custom code.
+  - **Business Impact:** A single outdated dependency can expose the entire CAP runtime to Server-Side Request Forgery, authentication bypass, or Denial of Service — without exploiting a single line of your custom code.
   
-  - **Compliance Risk:** Violates A03:2025 – Software Supply Chain Failures and the SAP Security Baseline requirement for continuous dependency lifecycle management and Software Bill of Materials (SBOM) maintenance.
+  - **Compliance Risk:** Violates [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/) and the [SAP Security Baseline requirement for continuous dependency lifecycle management](https://help.sap.com/docs/btp/sap-btp-security-recommendations-c8a9bb59fe624f0981efa0eff2497d7d/sap-btp-security-recommendations) and [Software Bill of Materials (SBOM) maintenance](https://help.sap.com/docs/leanix/ea/software-bill-of-materials-sbom).
   
   - **Security Risk:** Vulnerable transitive packages — those not listed in package.json directly but present in package-lock.json and deployed to Cloud Foundry — are especially dangerous because they are invisible to developers who only inspect top-level dependencies.
 
