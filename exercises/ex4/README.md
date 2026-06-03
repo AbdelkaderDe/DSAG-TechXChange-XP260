@@ -44,23 +44,37 @@ Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilit
 
 - **Automate prevention** — Integrate npm audit as an automated build gate in the SAP BTP Continuous Integration & Delivery (CI/CD) pipeline to block vulnerable components from ever reaching production.
   
-In this exercise you will test the incident management application from the previous exercises locally in the development environment. Instead of building and deploying the application to SAP BTP, you will inspect the dependency tree, identify vulnerable packages with npm tooling, apply safe updates, and verify that the project no longer contains known vulnerable components.
 
 ## 🚨 2. Vulnerable Code
+
+We’ll build upon the same CAP secure incident management project from the previous exercises, but this time we focus on the vulnerable dependency set rather than vulnerable application logic.
+
+### What We're Adding
+
+- **`package.json`:** Direct dependencies pinned to vulnerable versions
+- **`package-lock.json`:** Resolved tree that may also include vulnerable transitive packages
 
 Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17.15`, but in real-world you’ll see this same risk as soon as _any_ dependency lags:
 
 ```json
+
 {
   "name": "incident-management",
   "version": "1.0.0",
   "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
-    "@cap-js/hana": "^2",
-    "@sap/cds": "^9",
-    "@sap/xssec": "^4.8.0",
-    "express": "^4",
-    "lodash": "4.17.15" // ⚠️ Demo risk – real CVEs for <4.17.21!
+    "@cap-js/hana": "^2.8.0",
+    "@sap/cds": "7.0.0",
+    "@sap/xssec": "^3.0.0",
+    "axios": "0.21.1",
+    "express": "4.17.1",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.15", // ⚠️ Demo risk – real CVEs for <4.17.21!
+    "minimist": "1.2.5",
+    "semver": "7.3.4"
   },
   "engines": {
     "node": ">=20"
@@ -71,9 +85,8 @@ Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17
     "@cap-js/sqlite": "^2",
     "@sap/cds-dk": "^9.1.1",
     "ui5-task-zipper": "^3.4.2"
-  }
-}
-```
+  },
+...
 
 **Why is this dangerous?**
 - `"lodash"` is a public CVE sink—prototype pollution, injection, etc.
