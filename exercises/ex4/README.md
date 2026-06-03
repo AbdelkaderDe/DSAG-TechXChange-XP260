@@ -15,9 +15,8 @@ Vulnerability: [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top
 
 ## 📖 1. Overview
 
-This exercise demonstrates how outdated and vulnerable npm dependencies can silently expose a Node.js CAP application to known, publicly documented exploits — without any flaw in the application's own business logic. In the incident management application from the previous exercises, the package.json file declares several dependencies using version ranges that resolve to releases carrying active CVEs. Because these packages are bundled into the application artifact and deployed to SAP BTP Cloud Foundry, every vulnerable component in the dependency tree becomes part of the production attack surface the moment npm install runs.
-
-Unlike SQL Injection or Broken Access Control, supply chain vulnerabilities do not require the attacker to interact with your application endpoints. The exposure exists as soon as a vulnerable package is installed — in your local workspace, in your CI/CD pipeline, or on the Cloud Foundry runtime. In this exercise you will test the application locally in the development environment. Instead of building and deploying to SAP BTP, you will use npm outdated and npm audit to inspect the dependency tree, identify vulnerable packages, apply targeted remediations, and verify that the project no longer ships known-vulnerable components.
+This exercise demonstrates how outdated and vulnerable npm dependencies can silently expose a Node.js CAP application to known, publicly documented exploits — without any flaw in the application's own business logic.
+Unlike SQL Injection or Broken Access Control, supply chain vulnerabilities do not require the attacker to interact with your application endpoints. The exposure exists as soon as a vulnerable package is installed — in your local workspace, in your [CI/CD pipeline](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/what-is-sap-continuous-integration-and-delivery), or on the [Cloud Foundry runtime](https://help.sap.com/docs/btp/sap-business-technology-platform/development-in-cloud-foundry-environment). 
 
 ### 📐 Business Rules
 - ❌ Applications must not include npm packages with known high or critical CVEs in any deployed artifact.
