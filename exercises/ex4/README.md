@@ -40,15 +40,11 @@ Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilit
 
 - **Remediate effectively** — Apply safe updates using npm audit fix, npm install @latest, and package.json overrides to handle transitive dependencies that cannot be updated directly.
 
-- **Verify the fix* *— Confirm a clean security posture by re-running npm audit and validating a successful cds watch startup with no known vulnerable components remaining.
+- **Verify the fix**— Confirm a clean security posture by re-running npm audit and validating a successful cds watch startup with no known vulnerable components remaining.
 
 - **Automate prevention** — Integrate npm audit as an automated build gate in the SAP BTP Continuous Integration & Delivery (CI/CD) pipeline to block vulnerable components from ever reaching production.
   
 In this exercise you will test the incident management application from the previous exercises locally in the development environment. Instead of building and deploying the application to SAP BTP, you will inspect the dependency tree, identify vulnerable packages with npm tooling, apply safe updates, and verify that the project no longer contains known vulnerable components.
-
-This lab is hands-on, using your real CAP project structure and pipelines.
-
----
 
 ## 🚨 2. Vulnerable Code
 
