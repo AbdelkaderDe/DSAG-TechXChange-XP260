@@ -1,4 +1,4 @@
-# Exercise 4 – Vulnerable and Outdated Components (A06:2021) in Incident Management Application
+# Exercise 4 – Software Supply Chain Failures
 
 Vulnerability: [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/)
 
