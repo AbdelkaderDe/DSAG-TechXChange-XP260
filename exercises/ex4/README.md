@@ -33,28 +33,18 @@ Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilit
 - **Security Risk:** Vulnerable transitive packages — those not listed in package.json directly but present in package-lock.json and deployed to Cloud Foundry — are especially dangerous because they are invisible to developers who only inspect top-level dependencies.
 
 ### 🎯 Key Learning Objectives
-- Understand how outdated npm packages introduce known CVEs into the deployed SAP BTP application artifact.
 
-- Use npm outdated to identify version gaps between installed packages and their latest safe releases.
+- **Understand the risk**— Learn how outdated npm packages silently introduce known CVEs into your deployed SAP BTP application artifact, and why keeping dependencies current is a critical line of defense against supply chain attacks.
 
-- Use npm audit to map each vulnerable package to its CVE ID, CVSS score, and real-world impact on the CAP service.
+- **Detect vulnerabilities** — Use npm tooling (npm outdated, npm audit) to inspect the dependency tree, pinpoint version gaps, identify vulnerable packages, and assess their CVE IDs, CVSS scores, and potential real-world impact on your CAP service.
 
-- Remediate vulnerabilities using npm audit fix, npm install <pkg>@latest, and package.json overrides for transitive dependencies.
+- **Remediate effectively** — Apply safe updates using npm audit fix, npm install @latest, and package.json overrides to handle transitive dependencies that cannot be updated directly.
 
-- Verify the remediated state by re-running npm audit and confirming a clean cds watch startup.
+- **Verify the fix* *— Confirm a clean security posture by re-running npm audit and validating a successful cds watch startup with no known vulnerable components remaining.
 
-- Integrate npm audit as an automated build gate in the SAP BTP Continuous Integration & Delivery pipeline to prevent vulnerable components from reaching production.
-
-
-
-This exercise demonstrates how outdated and vulnerable npm packages can expose a Node.js CAP application to known security flaws. 
-
-In the incident management application from the previous exercises, 
-the `package.json` file pins several dependencies to versions with publicly known CVEs. Because these packages are deployed together with the application, every vulnerable component becomes part of the production attack surface.
-
-In this exercise you will test the application locally in the development environment. Instead of building and deploying the application to SAP BTP, you will inspect the dependency tree, identify vulnerable packages with npm tooling, apply safe updates, and verify that the project no longer contains known vulnerable components.
-
-Vulnerable and outdated components are a top supply chain risk for all Node.js and SAP CAP apps. If both application and BTP service dependencies aren’t checked and updated continuously, attackers will exploit them—regardless of business logic security.
+- **Automate prevention** — Integrate npm audit as an automated build gate in the SAP BTP Continuous Integration & Delivery (CI/CD) pipeline to block vulnerable components from ever reaching production.
+  
+In this exercise you will test the incident management application from the previous exercises locally in the development environment. Instead of building and deploying the application to SAP BTP, you will inspect the dependency tree, identify vulnerable packages with npm tooling, apply safe updates, and verify that the project no longer contains known vulnerable components.
 
 This lab is hands-on, using your real CAP project structure and pipelines.
 
