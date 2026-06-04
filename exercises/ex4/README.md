@@ -30,8 +30,8 @@ Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilit
 
 - **Compliance Risk:** Violates [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/) and the [SAP Security Baseline requirement for continuous dependency lifecycle management](https://help.sap.com/docs/btp/sap-btp-security-recommendations-c8a9bb59fe624f0981efa0eff2497d7d/sap-btp-security-recommendations?version=Cloud).
 
-- **Security Risk:** Vulnerable transitive packages — those not listed in package.json directly but present in package-lock.json and deployed to Cloud Foundry — are especially dangerous because they are invisible to developers who only inspect top-level dependencies.
-
+- **Security Risk:** Vulnerable transitive dependencies in package-lock.json are invisible in top-level reviews — and still get deployed to Cloud Foundry.
+- 
 ### 🎯 Key Learning Objectives
 
 - **Understand the risk**— Learn how outdated npm packages silently introduce known CVEs into your deployed SAP BTP application artifact, and why keeping dependencies current is a critical line of defense against supply chain attacks.
