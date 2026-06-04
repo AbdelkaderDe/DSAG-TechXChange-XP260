@@ -76,7 +76,7 @@ Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17
   "devDependencies": {
     "@cap-js/cds-test": "^0.4.0",
     "@cap-js/cds-types": "^0.11.0",
-    "@cap-js/sqlite": "2.2.2",     // ⚠️ Demo risk – exact pin on compromised release – CVE-2026-46421 (CVSS 9.8) – preinstall hook steals CI/CD secrets!
+    "@cap-js/sqlite": "2.0.0",     // ⚠️ Demo risk – exact pin on compromised release – CVE-2026-46421 (CVSS 9.8) – preinstall hook steals CI/CD secrets!
     "@sap/cds-dk": "^9.1.1",       // ⚠️ Demo risk – pulls transitive js-yaml 4.0.0–4.1.0 – prototype pollution via merge() (SAP Note 3688976)!
     "ui5-task-zipper": "^3.4.2"
 
