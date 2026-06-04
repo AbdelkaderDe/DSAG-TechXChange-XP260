@@ -57,7 +57,6 @@ We’ll build upon the same [CAP secure incident management project from the pre
 Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17.15`, but in real-world you’ll see this same risk as soon as _any_ dependency lags:
 
 ```json
-
 {
   "name": "incident-management",
   "version": "1.0.0",
@@ -66,15 +65,10 @@ Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@cap-js/hana": "^2.8.0",
-    "@sap/cds": "7.0.0",
-    "@sap/xssec": "^3.0.0",
-    "axios": "0.21.1",
-    "express": "4.17.1",
-    "jsonwebtoken": "8.5.1",
-    "lodash": "4.17.15", // ⚠️ Demo risk – real CVEs for <4.17.21!
-    "minimist": "1.2.5",
-    "semver": "7.3.4"
+    "@cap-js/hana": "^2",
+    "@sap/cds": "8.0.0",           // ⚠️ Demo risk – exact pin on outdated CAP runtime – behind current supported release, security patches missed!
+    "@sap/xssec": "3.2.0",         // ⚠️ Demo risk – CVE-2023-49583 (CVSS 9.1) – exact pin below 3.6.0 – privilege escalation bypasses XSUAA token validation!
+    "express": "4.17.1"            // ⚠️ Demo risk – exact pin on vulnerable release – open redirect + path traversal, fix requires >=4.19.0 (GHSA-rv95-896h)!
   },
   "engines": {
     "node": ">=20"
@@ -82,11 +76,13 @@ Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17
   "devDependencies": {
     "@cap-js/cds-test": "^0.4.0",
     "@cap-js/cds-types": "^0.11.0",
-    "@cap-js/sqlite": "^2",
-    "@sap/cds-dk": "^9.1.1",
+    "@cap-js/sqlite": "2.2.2",     // ⚠️ Demo risk – exact pin on compromised release – CVE-2026-46421 (CVSS 9.8) – preinstall hook steals CI/CD secrets!
+    "@sap/cds-dk": "^9.1.1",       // ⚠️ Demo risk – pulls transitive js-yaml 4.0.0–4.1.0 – prototype pollution via merge() (SAP Note 3688976)!
     "ui5-task-zipper": "^3.4.2"
-  },
-...
+
+... other section objects
+
+```
 
 **Why is this dangerous?**
 - `"lodash"` is a public CVE sink—prototype pollution, injection, etc.
