@@ -19,7 +19,7 @@ This exercise demonstrates how outdated and vulnerable npm dependencies can sile
 Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilities do not require the attacker to interact with your application endpoints. The exposure exists as soon as a vulnerable package is installed — in your local workspace, in your [CI/CD pipeline](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/what-is-sap-continuous-integration-and-delivery), or on the [Cloud Foundry runtime](https://help.sap.com/docs/btp/sap-business-technology-platform/development-in-cloud-foundry-environment). 
 
 ### 📐 Business Rules
-- ❌ Applications must not include npm packages with known high or critical CVEs (Common Vulnerabilities and Exposures) in any deployed artifact.
+- ❌ Applications must not include [npm packages](https://www.npmjs.com/) with known high or critical CVEs (Common Vulnerabilities and Exposures) in any deployed artifact.
 
 - ⚠️ All direct and transitive dependencies must be continuously inventoried, reviewed, and kept up to date.
 
