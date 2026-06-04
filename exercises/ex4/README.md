@@ -47,7 +47,7 @@ Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilit
 
 ## 🚨 2. Vulnerable Code
 
-We’ll build upon the same [CAP secure incident management project from the previous exercises](.../tree/main#exercises), but this time we focus on the vulnerable dependency set rather than vulnerable application logic.
+We’ll build upon the same [CAP secure incident management project from the previous exercises](../../README.md#exercises), but this time we focus on the vulnerable dependency set rather than vulnerable application logic.
 
 ### What We're Adding
 
