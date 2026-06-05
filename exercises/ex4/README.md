@@ -52,12 +52,15 @@ We’ll build upon the same [CAP secure incident management project from the pre
 ### What We're Adding
 
 - **`package.json`:** Direct dependencies pinned to vulnerable versions
-- **`package-lock.json`:** Resolved tree that may also include vulnerable transitive packages
-
-Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17.15`, but in real-world you’ll see this same risk as soon as _any_ dependency lags:
 
 ```markdown
 {
+
+> [!WARNING]
+> The `package.json` below pins direct dependencies to known-vulnerable versions for
+> demonstration purposes. In production, identical risk arises from any dependency —
+> direct or transitive — that lags behind its patched release.
+
   "name": "incident-management",
   "version": "1.0.0",
   "description": "A simple CAP project.",
@@ -84,7 +87,11 @@ Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17
 
 ```
 
-**Why is this dangerous?**
+**Why This Is Vulnerable**
+The vulnerable state is not caused by a single bad package — it is the result of multiple dependency management decisions that collectively create an exploitable supply chain exposure  under  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/):
+
+
+
 - `"lodash"` is a public CVE sink—prototype pollution, injection, etc.
 - `"express"` and `"@sap/xssec"` have both had vulnerabilities historically.
 - No npm audit, SAP Application Vulnerability Report, or blocking gates.
