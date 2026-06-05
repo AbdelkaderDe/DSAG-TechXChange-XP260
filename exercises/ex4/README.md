@@ -49,9 +49,14 @@ Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilit
 
 We’ll build upon the same [CAP secure incident management project from the previous exercises](../../README.md#exercises), but this time we focus on the vulnerable dependency set rather than vulnerable application logic.
 
+⚠️ Note: Do not copy the code from the **Vulnerable Code** section into your project.
+
+💡 Reminder: Make sure you have opened SAP Business Application Studio (BAS) before starting this exercise. See [Exercise 0, Step 5](../../ex0/README.md#step-5-launch-sap-bas-import-project-and-deploy-to-cloud-foundry)
+
 ### What We're Adding
 
 - **`package.json`:** Direct dependencies pinned to vulnerable versions
+- - Copy the contents of [package_vulnerable.json](./package_vulnerable.json) into your project’s **package.json** file.
 
 ```markdown
 {
@@ -124,7 +129,6 @@ The vulnerable state is not caused by a single bad package — it is the result 
   - The Flaw: A catastrophic supply chain exploit triggered via a malicious preinstall script hook.
   
   - CAP Impact: Silently steals and exfiltrates your CI/CD secrets, XSUAA client credentials, and local SSH keys the exact millisecond npm install runs—long before any actual application code gets executed.
-
 
 
 ## 💥 3. Exploitation
