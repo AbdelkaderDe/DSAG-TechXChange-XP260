@@ -89,13 +89,17 @@ We’ll build upon the same [CAP secure incident management project from the pre
 ... other section objects
 
 ```
-- Open the **SAP BAS Terminal** (`Menu → Terminal → New Terminal`) and run :
 - Copy the contents of [package_vulnerable.json](./package_vulnerable.json) into your project’s **package.json** file.
-- Run the :
+- Open the **SAP BAS Terminal** (`Menu → Terminal → New Terminal`) at the project root and run:
 
 ```bash
+```bash
+# Step 1 — Remove the existing lock file to force a clean resolution
 rm -rf package-lock.json
+
+# Step 2 — Install with legacy peer resolution (required by the pinned vulnerable versions)
 npm install --legacy-peer-deps
+
 ```
 
 You should see the following output confirming the vulnerable packages are installed:
