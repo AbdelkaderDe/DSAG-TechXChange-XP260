@@ -99,7 +99,7 @@ The Silent Risk: Unlike the caret (^) range, tilde and exact pins cause **'npm i
 ```
 @sap/xssec versions:
   3.0.0  →  3.0.1  →  3.1.0  →  3.2.0  →  3.5.0  →  3.6.0 (CVE fix)
-              ↑ patch          ↑ minor             ↑ minor
+                ↑ patch           ↑ minor             ↑ minor
 
 ~3.0.0 allows:  ✅ 3.0.1   ❌ 3.1.0   ❌ 3.2.0   ❌ 3.5.0   ❌ 3.6.0
 ^3.0.0 allows:  ✅ 3.0.1   ✅ 3.1.0   ✅ 3.2.0   ✅ 3.5.0   ✅ 3.6.0
