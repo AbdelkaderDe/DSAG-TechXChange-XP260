@@ -56,7 +56,6 @@ We’ll build upon the same [CAP secure incident management project from the pre
 ### What We're Adding
 
 - **`package.json`:** Direct dependencies pinned to vulnerable versions
-- - Copy the contents of [package_vulnerable.json](./package_vulnerable.json) into your project’s **package.json** file.
 
 ```markdown
 {
@@ -90,6 +89,57 @@ We’ll build upon the same [CAP secure incident management project from the pre
 ... other section objects
 
 ```
+
+- Copy the contents of [package_vulnerable.json](./package_vulnerable.json) into your project’s **package.json** file.
+- Open the **SAP BAS Terminal** (`Menu → Terminal → New Terminal`) and run :
+
+```bash
+rm -rf package-lock.json
+npm install --legacy-peer-deps
+```
+You should see the following output confirming the vulnerable packages are installed:
+
+### ⚙️ Setup — Install Vulnerable Dependencies
+
+Open the **SAP BAS Terminal** (`Menu → Terminal → New Terminal`) and run:
+
+```bash
+rm -rf package-lock.json
+npm install --legacy-peer-deps
+```
+
+You should see the following output confirming the vulnerable packages are installed:
+
+```text
+up to date, audited 357 packages in 809ms
+
+42 packages are looking for funding
+  run `npm fund` for details
+
+15 vulnerabilities (4 low, 2 moderate, 6 high, 3 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+```
+
+> [!WARNING]
+> npm has detected **15 vulnerabilities across 357 installed packages**, including
+> **3 critical** and **6 high** severity findings — all introduced by the pinned
+> dependency versions in `package.json`. Do **not** run `npm audit fix --force` yet:
+> remediation is covered in the next sections.
+
+> [!NOTE]
+> `--legacy-peer-deps` is required because the pinned vulnerable versions conflict
+> with current peer dependency requirements. This flag is itself a security
+> anti-pattern in production — it silences peer resolution warnings that may indicate
+> deeper incompatibility risks.
+```
+
 
 **Why This Is Vulnerable**
 The vulnerable state is not caused by a single bad package — it is the result of multiple dependency that collectively create an exploitable supply chain exposure  under  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/):
