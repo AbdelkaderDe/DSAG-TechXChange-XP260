@@ -98,8 +98,7 @@ The vulnerable state is not caused by a single bad package — it is the result 
   
   - Missed Patches: * ~3.0.0 resolves only within 3.0.x and will never reach 3.6.0 where CVE-2023-49583 is fixed.
   - 4.17.1 is completely frozen below 4.19.0 where critical open redirect and path traversal fixes live.
-  
-  The Silent Risk: Unlike the caret (^) range, tilde and exact pins cause **'npm install'** to silently skip all minor-version releases—the middle number changes (e.g., 3.0.0 → 3.6.0)—where security fixes are most commonly shipped, without throwing any warnings.
+  - The Silent Risk: Unlike the caret (^) range, tilde and exact pins cause **'npm install'** to silently skip all minor-version releases—the middle number changes (e.g., 3.0.0 → 3.6.0)—where security fixes are most commonly shipped, without throwing any warnings.
   
   ```
   @sap/xssec versions:
