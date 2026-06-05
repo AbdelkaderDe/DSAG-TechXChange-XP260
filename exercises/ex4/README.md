@@ -89,19 +89,15 @@ We’ll build upon the same [CAP secure incident management project from the pre
 ... other section objects
 
 ```
-
-- Copy the contents of [package_vulnerable.json](./package_vulnerable.json) into your project’s **package.json** file.
 - Open the **SAP BAS Terminal** (`Menu → Terminal → New Terminal`) and run :
+- Copy the contents of [package_vulnerable.json](./package_vulnerable.json) into your project’s **package.json** file.
+- Run the :
 
 ```bash
 rm -rf package-lock.json
 npm install --legacy-peer-deps
 ```
 You should see the following output confirming the vulnerable packages are installed:
-
-### ⚙️ Setup — Install Vulnerable Dependencies
-
-Open the **SAP BAS Terminal** (`Menu → Terminal → New Terminal`) and run:
 
 ```bash
 rm -rf package-lock.json
@@ -135,9 +131,7 @@ Run `npm audit` for details.
 
 > [!NOTE]
 > `--legacy-peer-deps` is required because the pinned vulnerable versions conflict
-> with current peer dependency requirements. This flag is itself a security
-> anti-pattern in production — it silences peer resolution warnings that may indicate
-> deeper incompatibility risks.
+> with current peer dependency requirements. Using this flag in production is not recommended. It simply hides warning messages, meaning you might completely miss serious version conflicts that could break your application..
 
 **Why This Is Vulnerable**
 - The vulnerable state is not caused by a single bad package — it is the result of multiple dependency that collectively create an exploitable supply chain exposure  under  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/):
