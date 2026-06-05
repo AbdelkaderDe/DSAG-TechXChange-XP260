@@ -92,8 +92,7 @@ We’ll build upon the same [CAP secure incident management project from the pre
 - Copy the contents of [package_vulnerable.json](./package_vulnerable.json) into your project’s **package.json** file.
 - Open the **SAP BAS Terminal** (`Menu → Terminal → New Terminal`) at the project root and run:
 
-```bash
-```bash
+```
 # Step 1 — Remove the existing node_modules/ and package-lock.json to force a clean resolution
 rm -rf node_modules package-lock.json
 
