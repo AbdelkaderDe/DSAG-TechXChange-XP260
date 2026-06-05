@@ -96,6 +96,7 @@ The vulnerable state is not caused by a single bad package — it is the result 
 
 The Silent Risk: Unlike the caret (^) range, tilde and exact pins cause npm install to silently skip all minor-version releases—the middle number changes (e.g., 3.0.0 → 3.6.0)—where security fixes are most commonly shipped, without throwing any warnings.
 
+```
 @sap/xssec versions:
   3.0.0  →  3.0.1  →  3.1.0  →  3.2.0  →  3.5.0  →  3.6.0 (CVE fix)
               ↑ patch          ↑ minor             ↑ minor
@@ -103,6 +104,7 @@ The Silent Risk: Unlike the caret (^) range, tilde and exact pins cause npm inst
 ~3.0.0 allows:  ✅ 3.0.1   ❌ 3.1.0   ❌ 3.2.0   ❌ 3.5.0   ❌ 3.6.0
 ^3.0.0 allows:  ✅ 3.0.1   ✅ 3.1.0   ✅ 3.2.0   ✅ 3.5.0   ✅ 3.6.0
 
+```
 
 ## 💥 3. Exploitation
 
