@@ -97,12 +97,6 @@ We’ll build upon the same [CAP secure incident management project from the pre
 rm -rf package-lock.json
 npm install --legacy-peer-deps
 ```
-You should see the following output confirming the vulnerable packages are installed:
-
-```bash
-rm -rf package-lock.json
-npm install --legacy-peer-deps
-```
 
 You should see the following output confirming the vulnerable packages are installed:
 
