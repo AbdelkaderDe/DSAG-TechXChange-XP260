@@ -165,7 +165,7 @@ Run `npm audit` for details.
   
   - CAP Impact: Exposes the foundational routing layer that CAP relies on to serve all OData and REST endpoints on Cloud Foundry.
 
-- @cap-js/sqlite ~1.7.0 — CVE-2026-46421 (CVSS 9.8 – 🟡 Critical)
+- @cap-js/sqlite ~1.7.0 — CVE-2026-46421 (CVSS 9.8 – 🔴 Critical)
 
   - The Flaw: A catastrophic supply chain exploit triggered via a malicious preinstall script hook.
   
