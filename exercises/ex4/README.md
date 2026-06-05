@@ -94,8 +94,8 @@ We’ll build upon the same [CAP secure incident management project from the pre
 
 ```bash
 ```bash
-# Step 1 — Remove the existing lock file to force a clean resolution
-rm -rf package-lock.json
+# Step 1 — Remove the existing node_modules/ and package-lock.json to force a clean resolution
+rm -rf node_modules package-lock.json
 
 # Step 2 — Install with legacy peer resolution (required by the pinned vulnerable versions)
 npm install --legacy-peer-deps
