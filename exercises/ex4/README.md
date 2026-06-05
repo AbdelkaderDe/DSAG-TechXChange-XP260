@@ -178,7 +178,18 @@ Run `npm audit` for details.
   - CAP Impact: Silently steals and exfiltrates your CI/CD secrets, XSUAA client credentials, and local SSH keys the exact millisecond npm install runs—long before any actual application code gets executed.
  
 ❌ **Outdated platform libraries:** 
-@sap/cds ~7.9.5 is explicitly marked as deprecated and no longer supported by SAP — pinning to ~7.9.5 means every security patch, XSUAA compatibility fix, and hardening improvement shipped in the current ^9 release line will never be applied to this project. @cap-js/sqlite ~1.7.0 is pinned one full major version behind the current ^2 release line, and @sap/cds-dk ^9.1.1 silently pulls in js-yaml 4.0.0–4.1.0 as a transitive dependency carrying a prototype pollution vulnerability via merge() — a package never visible in package.json but present in package-lock.json and deployed to Cloud Foundry on every build.
+
+- @sap/cds ~7.9.5 (Deprecated & Unsupported)
+  - Explicitly marked as deprecated and no longer supported by SAP.
+  - Pinning to ~7.9.5 means critical security patches, XSUAA compatibility fixes, and hardening improvements shipped in the current ^9 release line will never be applied to this project.
+
+- @cap-js/sqlite ~1.7.0 (Outdated Major Version)
+  - Pinned one full major version behind the current ^2 release line.
+  - @sap/cds-dk ^9.1.1 (Hidden Transitive Dependency Risk)
+
+- Silently pulls in js-yaml (versions 4.0.0–4.1.0) as a dependency.
+  - Carries a prototype pollution vulnerability via the merge() function.
+  - The vulnerable package is never visible in package.json, but is present in package-lock.json and deployed to Cloud Foundry on every build.
 
 ## 💥 3. Exploitation
 
