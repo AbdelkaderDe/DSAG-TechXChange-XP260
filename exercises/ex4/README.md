@@ -56,7 +56,7 @@ We’ll build upon the same [CAP secure incident management project from the pre
 
 Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17.15`, but in real-world you’ll see this same risk as soon as _any_ dependency lags:
 
-```json
+```markdown
 {
   "name": "incident-management",
   "version": "1.0.0",
@@ -66,9 +66,9 @@ Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17
   "private": true,
   "dependencies": {
     "@cap-js/hana": "^2",
-    "@sap/cds": "~7.9.5",           // ⚠️ Demo risk – exact pin on outdated CAP runtime – behind current supported release, security patches missed!
-    "@sap/xssec": "~3.0.0",         // ⚠️ Demo risk – CVE-2023-49583 (CVSS 9.1) – exact pin below 3.6.0 – privilege escalation bypasses XSUAA token validation!
-    "express": "4.17.1"             // ⚠️ Demo risk – exact pin on vulnerable release – open redirect + path traversal, fix requires >=4.19.0 (GHSA-rv95-896h)!
+    "@sap/cds": "~7.9.5",      // ⚠️ Demo risk – exact pin on outdated CAP runtime – behind current supported release, security patches missed!
+    "@sap/xssec": "~3.0.0",    // ⚠️ Demo risk – CVE-2023-49583 (CVSS 9.1) – exact pin below 3.6.0 – privilege escalation bypasses XSUAA token validation!
+    "express": "4.17.1"        // ⚠️ Demo risk – exact pin on vulnerable release – open redirect + path traversal, fix requires >=4.19.0 (GHSA-rv95-896h)!
   },
   "engines": {
     "node": ">=20"
