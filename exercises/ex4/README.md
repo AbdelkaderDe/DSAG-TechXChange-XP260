@@ -129,7 +129,7 @@ Run `npm audit` for details.
 > dependency versions in `package.json`. Do **not** run `npm audit fix --force` yet:
 > remediation is covered in the next sections.
 
-> [!NOTE]
+> ⚠️ NOTE
 > `--legacy-peer-deps` is required because the pinned vulnerable versions conflict
 > with current peer dependency requirements. Using this flag in production is not recommended. It simply hides warning messages, meaning you might completely miss serious version conflicts that could break your application..
 
