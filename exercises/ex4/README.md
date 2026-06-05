@@ -107,19 +107,19 @@ The vulnerable state is not caused by a single bad package — it is the result 
   ```
 ❌ **Known vulnerable packages:**
 
-- @sap/xssec ~3.0.0 — CVE-2023-49583 (CVSS 9.1 – Critical)
+- @sap/xssec ~3.0.0 — CVE-2023-49583 (CVSS 9.1 – 🔴 Critical)
 
   - The Flaw: Allows unauthenticated attackers to completely bypass XSUAA JWT token validation and forge arbitrary permissions.
   
   - CAP Impact: Renders all @requires and @restrict security annotations in your CDS service definitions entirely useless in production.
 
-- express 4.17.1 — GHSA-rv95-896h (CVSS 6.1 – Medium)
+- express 4.17.1 — GHSA-rv95-896h (CVSS 6.1 – 🟡 Medium)
 
   - The Flaw: Introduces open redirect and path traversal vulnerabilities directly into the HTTP routing layer.
   
   - CAP Impact: Exposes the foundational routing layer that CAP relies on to serve all OData and REST endpoints on Cloud Foundry.
 
-- @cap-js/sqlite ~1.7.0 — CVE-2026-46421 (CVSS 9.8 – Critical)
+- @cap-js/sqlite ~1.7.0 — CVE-2026-46421 (CVSS 9.8 – 🟡 Critical)
 
   - The Flaw: A catastrophic supply chain exploit triggered via a malicious preinstall script hook.
   
