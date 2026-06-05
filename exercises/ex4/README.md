@@ -94,7 +94,7 @@ We’ll build upon the same [CAP secure incident management project from the pre
 
 ```
 # Step 1 — Remove the existing node_modules/ and package-lock.json to force a clean resolution
-# Both node_modules/ and package-lock.json must be deleted before installing the vulnerable baseline — otherwise npm resolves from the cached/locked state and never downloads the vulnerable packages.
+# Both node_modules/ and package-lock.json must be deleted before installing the vulnerable baseline — otherwise npm resolves from the cached/locked state and never downloads the vulnerable file packages.
 
 rm -rf node_modules package-lock.json
 
