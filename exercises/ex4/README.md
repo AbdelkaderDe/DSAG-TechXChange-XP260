@@ -89,13 +89,20 @@ We’ll build upon the same [CAP secure incident management project from the pre
 **Why This Is Vulnerable**
 The vulnerable state is not caused by a single bad package — it is the result of multiple dependency management decisions that collectively create an exploitable supply chain exposure  under  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/):
 
+❌ Exact version pinning (tilde ~): @sap/xssec ~3.0.0, @sap/cds ~7.9.5, @cap-js/sqlite ~1.7.0, and express 4.17.1 are all pinned using tilde ranges or exact versions that lock your project below known security fix boundaries:
 
+- Missed Patches: * ~3.0.0 resolves only within 3.0.x and will never reach 3.6.0 where CVE-2023-49583 is fixed.
+- 4.17.1 is completely frozen below 4.19.0 where critical open redirect and path traversal fixes live.
 
-- `"lodash"` is a public CVE sink—prototype pollution, injection, etc.
-- `"express"` and `"@sap/xssec"` have both had vulnerabilities historically.
-- No npm audit, SAP Application Vulnerability Report, or blocking gates.
+The Silent Risk: Unlike the caret (^) range, tilde and exact pins cause npm install to silently skip all minor-version releases—the middle number changes (e.g., 3.0.0 → 3.6.0)—where security fixes are most commonly shipped, without throwing any warnings.
 
----
+@sap/xssec versions:
+  3.0.0  →  3.0.1  →  3.1.0  →  3.2.0  →  3.5.0  →  3.6.0 (CVE fix)
+              ↑ patch          ↑ minor             ↑ minor
+
+~3.0.0 allows:  ✅ 3.0.1   ❌ 3.1.0   ❌ 3.2.0   ❌ 3.5.0   ❌ 3.6.0
+^3.0.0 allows:  ✅ 3.0.1   ✅ 3.1.0   ✅ 3.2.0   ✅ 3.5.0   ✅ 3.6.0
+
 
 ## 💥 3. Exploitation
 
