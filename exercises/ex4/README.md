@@ -66,9 +66,9 @@ Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17
   "private": true,
   "dependencies": {
     "@cap-js/hana": "^2",
-    "@sap/cds": "~7.9.5",      // ⚠️ Demo risk – exact pin on outdated CAP runtime – behind current supported release, security patches missed!
-    "@sap/xssec": "~3.0.0",    // ⚠️ Demo risk – CVE-2023-49583 (CVSS 9.1) – exact pin below 3.6.0 – privilege escalation bypasses XSUAA token validation!
-    "express": "4.17.1"        // ⚠️ Demo risk – exact pin on vulnerable release – open redirect + path traversal, fix requires >=4.19.0 (GHSA-rv95-896h)!
+    "@sap/cds": "~7.9.5",      // ⚠️ Demo risk – Security patches missed!, exact pin on outdated CAP runtime – behind current supported release, 
+    "@sap/xssec": "~3.0.0",    // ⚠️ Demo risk – Privilege escalation bypasses XSUAA token validation! CVE-2023-49583 (CVSS 9.1) – exact pin below 3.6.0 
+    "express": "4.17.1"        // ⚠️ Demo risk – Fix requires >=4.19.0,  exact pin on vulnerable release – open redirect + path traversal!
   },
   "engines": {
     "node": ">=20"
@@ -76,8 +76,8 @@ Below is your `package.json`. For demo, we add the known vulnerable `lodash@4.17
   "devDependencies": {
     "@cap-js/cds-test": "^0.4.0",
     "@cap-js/cds-types": "^0.11.0",
-    "@cap-js/sqlite": "~1.7.0",     // ⚠️ Demo risk – exact pin on compromised release – CVE-2026-46421 (CVSS 9.8) – preinstall hook steals CI/CD secrets!
-    "@sap/cds-dk": "^9.1.1",        // ⚠️ Demo risk – pulls transitive js-yaml 4.0.0–4.1.0 – prototype pollution via merge(). [GitHub Advisory GHSA-8j8c-7jfh-h6hx](https://github.com/advisories/GHSA-8j8c-7jfh-h6hx)
+    "@cap-js/sqlite": "~1.7.0",     // ⚠️ Demo risk – Preinstall hook steals CI/CD secrets! exact pin on compromised release – CVE-2026-46421 (CVSS 9.8).
+    "@sap/cds-dk": "^9.1.1",        // ⚠️ Demo risk – Prototype pollution via merge(). pulls transitive js-yaml 4.0.0–4.1.0
     "ui5-task-zipper": "^3.4.2"
 
 ... other section objects
