@@ -2,9 +2,6 @@
   "//1": "[!WARNING]",
   "//2": "The package.json below pins direct dependencies to known-vulnerable versions for demonstration purposes.",
   "//3": "In production, identical risk arises from any dependency — direct or transitive — that lags behind its patched release.",
-  
-  "name": "my-project",
-  "version": "1.0.0"
 }
 {
   "name": "incident-management",
