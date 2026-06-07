@@ -220,7 +220,7 @@ To address all issues (including breaking changes), run:
   - The Flaw: A catastrophic supply chain exploit triggered via a malicious preinstall script hook.
   - CAP Impact: Silently steals and exfiltrates your CI/CD secrets, XSUAA client credentials, and local SSH keys the exact millisecond npm install runs—long before any actual application code gets executed.
 
-  ❌ **The Hidden Supply Chain Risk:**
+❌ **The Hidden Supply Chain Risk:**
   To expose exactly how a hidden package entered your project tree, run the dependency lookup command:
 
   ```
