@@ -184,7 +184,10 @@ Run `npm audit` for details.
   - Carries a prototype pollution vulnerability via the merge() function.
   - The vulnerable package is never visible in package.json, but is present in package-lock.json and deployed to Cloud Foundry on every build.
 
-## 🔎 3.  Vulnerability Analysis
+## 🔎 3.  Detection & Impact Analysis
+Before applying any remediation, you must first understand what is vulnerable, why it matters, and what an attacker could realistically achieve in your SAP BTP environment. 
+Detection without impact analysis leads to prioritisation errors — patching a moderate [SSRF (Server-Side Request Forgery)](https://cwe.mitre.org/data/definitions/918.html) before a critical authentication bypass is the wrong order.
+
 
 **Step-by-step Attack**
 
