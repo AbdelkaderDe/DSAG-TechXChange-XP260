@@ -237,6 +237,16 @@ To address all issues (including breaking changes), run:
            └── 📦 request@2.88.2
                 └── 📦 form-data@2.3.3 [🔴 CRITICAL VULNERABILITY]                   
   ```
+⚠️ Critical Hardening Takeaway:
+
+- package.json Blind Spot: Relying solely on a manual review of direct dependencies is insufficient for robust repository hardening.
+
+- Hidden Attack Surface: Transitive dependencies create an unmonitored attack surface by bringing in secondary code that bypasses basic visual checks.
+
+- High-Value Targets: Malicious actors frequently exploit deeply nested utilities because they are rarely audited or updated by application developers.
+
+- Full Privilege Execution: At runtime, these hidden packages execute with the exact same system privileges on SAP BTP as your primary platform libraries.
+
 ⚠️ **Critical Hardening Takeaway**
 This is why relying solely on a manual review of package.json is insufficient for repository hardening. Transitive dependencies create a hidden attack surface.
 Malicious actors frequently target these deeply nested utilities because they are rarely audited or updated by application developers—yet during execution, they run with the exact same system privileges on SAP BTP as your primary platform libraries.
