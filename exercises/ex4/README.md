@@ -250,6 +250,7 @@ To address all issues (including breaking changes), run:
 Remediating  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/) requires a controlled, strategic approach. 
 Blindly executing broad fix commands can introduce breaking changes that disrupt your application's core business logic.
 
+
 To ensure complete stability, we will follow a structured three-phase remediation pipeline:
 
 - **Phase 1:**  Apply automated, semver-compatible patches — to safely eliminate  minor vulnerabilities automatically without breaking your existing code.
@@ -257,6 +258,45 @@ To ensure complete stability, we will follow a structured three-phase remediatio
 - **Phase 2:** Manually upgrade critical direct dependencies across major boundaries — to safely resolve severe architectural risks that automated tools block by default due to potential breaking changes.
 
 - **Phase 3:** Enforce selective overrides for deeply nested transitive threats — to force-harden invisible, sub-level vulnerabilities,  when upstream package maintainers haven't released a patch yet.
+
+[!WARNING]
+Do not run 'npm audit fix --force' yet. > This command forces npm to upgrade all packages simultaneously—including major version jumps—without giving you a chance to validate breaking changes. Follow the phased approach below to maintain full control over the upgrade process.
+
+### Phase 1 — Apply Semver-Compatible Patches
+Run 'npm audit fix' with the '--legacy-peer-deps flag'. This flag tells npm to temporarily bypass the upstream peer dependency mismatches caused by our outdated @sap/cds package baseline.
+
+```
+npm audit fix --legacy-peer-deps
+```
+Expected Output Summary:
+
+```
+up to date, audited 352 packages in 1s
+15 vulnerabilities (4 low, 3 moderate, 5 high, 3 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+```
+💡 The Takeaway: Phase 1 proves that automated patch tooling cannot save a repository locked down by rigid, unmaintained version boundaries. To fix these 15 vulnerabilities, we must move to Phase 2 and manually upgrade our direct boundaries.
+
+### Phase 2 — Manual Major-Version Upgrades
+To resolve major version mismatches and deprecations, we must transition to a manual remediation strategy, in this phase we resolves each critical and high vulnerability through explicit, targeted manual package upgrade 
+
+```
+npm install @sap/cds@latest @sap/cds-dk@latest @sap/xssec@latest @cap-js/sqlite@latest express@~4.22.2
+```
+Expected output 
+```
+up to date, audited 328 packages in 1s
+
+42 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+```
+
+
+
 
 
 ### a. Add Automated Checks (SAP-native + open source)
