@@ -139,17 +139,7 @@ Run `npm audit` for details.
   
   - Missed Patches: * ~3.0.0 resolves only within 3.0.x and will never reach 3.6.0 where CVE-2023-49583 is fixed.
   - 4.17.1 is completely frozen below 4.19.0 where critical open redirect and path traversal fixes live.
-  - The Silent Risk: Unlike the caret (^) range, tilde and exact pins cause **'npm install'** to silently skip all minor-version releases—the middle number changes (e.g., 3.0.0 → 3.6.0)—where security fixes are most commonly shipped, without throwing any warnings.
-  
-  ```
-  @sap/xssec versions:
-    3.0.0  →  3.0.1  →  3.1.0  →  3.2.0  →  3.5.0  →  3.6.0 (CVE fix)
-                  ↑ patch           ↑ minor             ↑ minor
-  
-  ~3.0.0 allows:  ✅ 3.0.1   ❌ 3.1.0   ❌ 3.2.0   ❌ 3.5.0   ❌ 3.6.0
-  ^3.0.0 allows:  ✅ 3.0.1   ✅ 3.1.0   ✅ 3.2.0   ✅ 3.5.0   ✅ 3.6.0
-  
-  ```
+
 ❌ **Known vulnerable packages:**
 
 - @sap/xssec ~3.0.0 — CVE-2023-49583 (CVSS 9.1 – 🔴 Critical)
@@ -208,9 +198,29 @@ Package            Current  Wanted  Latest  Location                        Depe
 express             4.17.3  4.17.3   5.2.1  node_modules/express            secure_incident_management
 
 ```
+
+❌ **Exact version pinning (tilde ~):
+ - Columns 'Current' equals 'Wanted' for every package. This is the fingerprint of tilde (~) or exact-pinned versions —
+ - ** @sap/xssec ~3.0.0, @sap/cds ~7.9.5, @cap-js/sqlite ~1.7.0, and express ~4.17.1 are all pinned using tilde ranges or exact versions that lock your project below known security fix boundaries:
+ 
+  ```
+  @sap/xssec versions:
+    3.0.0  →  3.0.1  →  3.1.0  →  3.2.0  →  3.5.0  →  3.6.0 (CVE fix)
+                  ↑ patch           ↑ minor             ↑ minor
+  
+  ~3.0.0 allows:  ✅ 3.0.1   ❌ 3.1.0   ❌ 3.2.0   ❌ 3.5.0   ❌ 3.6.0
+  ^3.0.0 allows:  ✅ 3.0.1   ✅ 3.1.0   ✅ 3.2.0   ✅ 3.5.0   ✅ 3.6.0
+
+- The Silent Risk: - Unlike the caret (^) range, tilde and exact pins cause **'npm install'** to silently skip all minor-version releases—the middle number changes (e.g., 3.0.0 → 3.6.0)—where security fixes are most commonly shipped, without throwing any warnings.
+ 
+ 
+ 
 ⚠️ NOTE
-- 'Current' equals 'Wanted' for every package. This is the fingerprint of tilde (~) or exact-pinned versions — 
 - **npm update** will produce zero changes. The security exposure lies entirely in the 'Current → Latest' gap, which you must close manually.
+
+
+  
+  ```
 
 
 4. **CI/CD and BTP let it ship:**  
