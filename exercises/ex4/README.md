@@ -132,48 +132,6 @@ Run `npm audit` for details.
 > `--legacy-peer-deps` is required because the pinned vulnerable versions conflict
 > with current peer dependency requirements. Using this flag in production is not recommended. It simply hides warning messages, meaning you might completely miss serious version conflicts that could break your application..
 
-**Why This Is Vulnerable**
-The vulnerable state is not caused by a single bad package — it is the result of multiple dependency that collectively create an exploitable supply chain exposure  under  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/):
-
-❌ **Exact version pinning (tilde ~):** @sap/xssec ~3.0.0, @sap/cds ~7.9.5, @cap-js/sqlite ~1.7.0, and express 4.17.1 are all pinned using tilde ranges or exact versions that lock your project below known security fix boundaries:
-  
-  - Missed Patches: * ~3.0.0 resolves only within 3.0.x and will never reach 3.6.0 where CVE-2023-49583 is fixed.
-  - 4.17.1 is completely frozen below 4.19.0 where critical open redirect and path traversal fixes live.
-
-❌ **Known vulnerable packages:**
-
-- @sap/xssec ~3.0.0 — CVE-2023-49583 (CVSS 9.1 – 🔴 Critical)
-
-  - The Flaw: Allows unauthenticated attackers to completely bypass XSUAA JWT token validation and forge arbitrary permissions.
-  
-  - CAP Impact: Renders all @requires and @restrict security annotations in your CDS service definitions entirely useless in production.
-
-- express 4.17.1 — GHSA-rv95-896h (CVSS 6.1 – 🟡 Medium)
-
-  - The Flaw: Introduces open redirect and path traversal vulnerabilities directly into the HTTP routing layer.
-  
-  - CAP Impact: Exposes the foundational routing layer that CAP relies on to serve all OData and REST endpoints on Cloud Foundry.
-
-- @cap-js/sqlite ~1.7.0 — CVE-2026-46421 (CVSS 9.8 – 🔴 Critical)
-
-  - The Flaw: A catastrophic supply chain exploit triggered via a malicious preinstall script hook.
-  
-  - CAP Impact: Silently steals and exfiltrates your CI/CD secrets, XSUAA client credentials, and local SSH keys the exact millisecond npm install runs—long before any actual application code gets executed.
- 
-❌ **Outdated platform libraries:** 
-
-- @sap/cds ~7.9.5 (Deprecated & Unsupported)
-  - Explicitly marked as deprecated and no longer supported by SAP.
-  - Pinning to ~7.9.5 means critical security patches, XSUAA compatibility fixes, and hardening improvements shipped in the current ^9 release line will never be applied to this project.
-
-- @cap-js/sqlite ~1.7.0 (Outdated Major Version)
-  - Pinned one full major version behind the current ^2 release line.
-  - @sap/cds-dk ^9.1.1 (Hidden Transitive Dependency Risk)
-
-- Silently pulls in js-yaml (versions 4.0.0–4.1.0) as a dependency.
-  - Carries a prototype pollution vulnerability via the merge() function.
-  - The vulnerable package is never visible in package.json, but is present in package-lock.json and deployed to Cloud Foundry on every build.
-
 ## 🔎 3.  Detection & Impact Analysis
 Before applying any remediation, you must first understand what is vulnerable, why it matters, and what an attacker could realistically achieve in your SAP BTP environment. 
 Detection without impact analysis leads to prioritisation errors — patching a moderate [SSRF (Server-Side Request Forgery)](https://cwe.mitre.org/data/definitions/918.html) before a critical authentication bypass is the wrong order.
@@ -268,10 +226,7 @@ To address all issues (including breaking changes), run:
   ```
   npm ls form-data
   ```
-  
-  In this project, the critical vulnerability in form-data is pulled into your environment through a deeply nested dependency chain: 
 
-  ```
   incident-management (Root)
  └── package.json
       ├── 📦 @cap-js/cds-test@0.4.1 (Direct Dependency)
@@ -282,9 +237,9 @@ To address all issues (including breaking changes), run:
            └── 📦 request@2.88.2
                 └── 📦 form-data@2.3.3 [🔴 CRITICAL VULNERABILITY]                   
   ```
-  
-
-
+⚠️ **Critical Hardening Takeaway**
+This is why relying solely on a manual review of package.json is insufficient for repository hardening. Transitive dependencies create a hidden attack surface.
+Malicious actors frequently target these deeply nested utilities because they are rarely audited or updated by application developers—yet during execution, they run with the exact same system privileges on SAP BTP as your primary platform libraries.
 
   
 ## 🛡️ 4. Remediation
