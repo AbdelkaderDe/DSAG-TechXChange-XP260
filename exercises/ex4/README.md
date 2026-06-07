@@ -188,29 +188,30 @@ Run `npm audit` for details.
 Before applying any remediation, you must first understand what is vulnerable, why it matters, and what an attacker could realistically achieve in your SAP BTP environment. 
 Detection without impact analysis leads to prioritisation errors — patching a moderate [SSRF (Server-Side Request Forgery)](https://cwe.mitre.org/data/definitions/918.html) before a critical authentication bypass is the wrong order.
 
+**Step 1 — Detect the Version Landscape**
+Run npm outdated to establish the gap between what is installed, what your package.json range version allows, and what the nmp registry currently offers:
 
-**Step-by-step Attack**
+'''
+npm outdated
+'''
+You should see the following output :
 
-1. **Find Unpatched Package:**  
-   Automated scans reveal the version from your app or BTP service instance.
-2. **Send Prototype Pollution Payload:**
+``` text
 
-    ```json
-    {
-      "title": "CVE exploit",
-      "details": { "__proto__": { "polluted": "yes" } }
-    }
-    ```
+secure_incident_management $ npm outdated
+Package            Current  Wanted  Latest  Location                        Depended by
+@cap-js/cds-test     0.4.1   0.4.1   1.0.1  node_modules/@cap-js/cds-test   secure_incident_management
+@cap-js/cds-types   0.11.0  0.11.0  0.17.0  node_modules/@cap-js/cds-types  secure_incident_management
+@cap-js/sqlite       1.7.8   1.7.8   2.4.0  node_modules/@cap-js/sqlite     secure_incident_management
+@sap/cds             7.9.5   7.9.5   9.9.1  node_modules/@sap/cds           secure_incident_management
+@sap/xssec          3.0.10  3.0.10  4.13.0  node_modules/@sap/xssec         secure_incident_management
+express             4.17.3  4.17.3   5.2.1  node_modules/express            secure_incident_management
 
-3. **App Code (unsafe merge):**
+```
+⚠️ NOTE
+- 'Current' equals 'Wanted' for every package. This is the fingerprint of tilde (~) or exact-pinned versions — 
+- **npm update** will produce zero changes. The security exposure lies entirely in the 'Current → Latest' gap, which you must close manually.
 
-    ```js
-    const _ = require('lodash')
-    let config = _.merge({}, req.data.details)
-    if (config.polluted) {
-      // Your prototype is compromised!
-    }
-    ```
 
 4. **CI/CD and BTP let it ship:**  
    Without blocking on vulnerabilities, exploit code arrives in prod.
