@@ -198,6 +198,7 @@ Package            Current  Wanted  Latest  Location                        Depe
 express             4.17.3  4.17.3   5.2.1  node_modules/express            secure_incident_management
 
 ```
+**Why This Is Vulnerable**
 
 ❌ **Exact version pinning (tilde ~):
  - Columns 'Current' equals 'Wanted' for every package. This is the fingerprint of tilde (~) or exact-pinned versions —
