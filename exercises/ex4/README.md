@@ -241,11 +241,9 @@ To address all issues (including breaking changes), run:
 
 - **package.json Blind Spot:** Relying solely on a manual review of direct dependencies is insufficient for robust repository hardening.
 
-- **Hidden Attack Surface:** Transitive dependencies create an unmonitored attack surface by bringing in secondary code that bypasses basic visual checks.
+- **Hidden Attack Surface:** Malicious actors frequently exploit deeply nested utilities because they are rarely audited or updated by application developers.
 
-- **High-Value Targets:** Malicious actors frequently exploit deeply nested utilities because they are rarely audited or updated by application developers.
-
-- **Full Privilege Execution:** At runtime, these hidden packages execute with the exact same system privileges on SAP BTP as your primary platform libraries.
+- **Full Privilege Execution:** At runtime, compromised hidden packages execute with the exact same system privileges on SAP BTP as your primary platform libraries.
 
   
 ## 🛡️ 4. Remediation
