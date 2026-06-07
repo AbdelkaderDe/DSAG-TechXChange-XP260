@@ -6,7 +6,7 @@ Vulnerability: [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top
 
 - [📖 1. Overview](#1-overview)
 - [🚨 2. Vulnerable Code](#2-vulnerable-code)
-- [🔎 3. Vulnerability Analysis](#3-exploitation) 
+- [🔎 3. Detection & Impact Analysis](#3-exploitation) 
 - [🛡️ 4. Remediation](#4-remediation)
 - [✅ 5. Verification](#5-verification)
 - [📌 6. Summary](#6-summary)
