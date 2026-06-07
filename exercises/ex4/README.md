@@ -136,7 +136,7 @@ Run `npm audit` for details.
 Before applying any remediation, you must first understand what is vulnerable, why it matters, and what an attacker could realistically achieve in your SAP BTP environment. 
 Detection without impact analysis leads to prioritisation errors — patching a moderate [SSRF (Server-Side Request Forgery)](https://cwe.mitre.org/data/definitions/918.html) before a critical authentication bypass is the wrong order.
 
-### Step 1 — Detect the Version Landscape**
+### Step 1 — Detect the Version Landscape
 Run npm outdated to establish the gap between what is installed, what your package.json range version allows, and what the nmp registry currently offers:
 
 '''
