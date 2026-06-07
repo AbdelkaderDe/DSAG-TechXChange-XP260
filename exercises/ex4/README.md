@@ -133,7 +133,7 @@ Run `npm audit` for details.
 > with current peer dependency requirements. Using this flag in production is not recommended. It simply hides warning messages, meaning you might completely miss serious version conflicts that could break your application..
 
 **Why This Is Vulnerable**
-- The vulnerable state is not caused by a single bad package — it is the result of multiple dependency that collectively create an exploitable supply chain exposure  under  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/):
+The vulnerable state is not caused by a single bad package — it is the result of multiple dependency that collectively create an exploitable supply chain exposure  under  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/):
 
 ❌ **Exact version pinning (tilde ~):** @sap/xssec ~3.0.0, @sap/cds ~7.9.5, @cap-js/sqlite ~1.7.0, and express 4.17.1 are all pinned using tilde ranges or exact versions that lock your project below known security fix boundaries:
   
