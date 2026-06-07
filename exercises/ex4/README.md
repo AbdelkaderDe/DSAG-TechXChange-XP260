@@ -214,18 +214,10 @@ express             4.17.3  4.17.3   5.2.1  node_modules/express            secu
   ```
 
 - The Silent Risk: - Unlike the caret (^) range, tilde and exact pins cause **'npm install'** to silently skip all minor-version releases—the middle number changes (e.g., 3.0.0 → 3.6.0)—where security fixes are most commonly shipped, without throwing any warnings.
-   
-⚠️ NOTE
+
 - **npm update** will produce zero changes. The security exposure lies entirely in the 'Current → Latest' gap, which you must close manually.
-
-
   
-  ```
-
-
-4. **CI/CD and BTP let it ship:**  
-   Without blocking on vulnerabilities, exploit code arrives in prod.
-
+  
 ---
 
 ## 🛡️ 4. Remediation
