@@ -247,6 +247,17 @@ To address all issues (including breaking changes), run:
 
   
 ## 🛡️ 4. Remediation
+Remediating  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/) requires a controlled, strategic approach. 
+Blindly executing broad fix commands can introduce breaking changes that disrupt your application's core business logic.
+
+To ensure complete stability, we will follow a structured three-phase remediation pipeline:
+
+- **Phase 1:**  Apply automated, semver-compatible patches — to safely eliminate  minor vulnerabilities automatically without breaking your existing code.
+
+- **Phase 2:** Manually upgrade critical direct dependencies across major boundaries — to safely resolve severe architectural risks that automated tools block by default due to potential breaking changes.
+
+- **Phase 3:** Enforce selective overrides for deeply nested transitive threats — to force-harden invisible, sub-level vulnerabilities,  when upstream package maintainers haven't released a patch yet.
+
 
 ### a. Add Automated Checks (SAP-native + open source)
 - **SAP Application Vulnerability Report:**  
