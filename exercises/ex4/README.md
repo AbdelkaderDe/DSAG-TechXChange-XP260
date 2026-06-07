@@ -125,7 +125,7 @@ Run `npm audit` for details.
 > [!WARNING]
 > npm has detected **15 vulnerabilities across 357 installed packages**, including
 > **3 critical** and **6 high** severity findings — all introduced by the pinned
-> dependency versions in `package.json`. Do **not** run `npm audit fix --force` yet:
+> dependency versions in `package.json`. Do **not** run `npm audit fix --force` yet, The --force flag tells npm: "Ignore all safety rules, ignore version compatibility, and just do whatever it takes to get rid of vulnerabilities.
 > remediation is covered in the next sections.
 
 > ⚠️ NOTE
