@@ -178,7 +178,7 @@ The vulnerable state is not caused by a single bad package — it is the result 
 Before applying any remediation, you must first understand what is vulnerable, why it matters, and what an attacker could realistically achieve in your SAP BTP environment. 
 Detection without impact analysis leads to prioritisation errors — patching a moderate [SSRF (Server-Side Request Forgery)](https://cwe.mitre.org/data/definitions/918.html) before a critical authentication bypass is the wrong order.
 
-**Step 1 — Detect the Version Landscape**
+### Step 1 — Detect the Version Landscape**
 Run npm outdated to establish the gap between what is installed, what your package.json range version allows, and what the nmp registry currently offers:
 
 '''
@@ -212,6 +212,80 @@ Because the 'Current' version equals the 'Wanted' version for every package, run
   ~3.0.0 allows:  ✅ 3.0.1   ❌ 3.1.0   ❌ 3.2.0   ❌ 3.5.0   ❌ 3.6.0
   ^3.0.0 allows:  ✅ 3.0.1   ✅ 3.1.0   ✅ 3.2.0   ✅ 3.5.0   ✅ 3.6.0
 ```
+
+### Step 2 – Audit for Known Vulnerabilities
+Run npm audit to cross-reference every installed package against the npm Advisory Database and produce a CVE-level vulnerability report:
+
+```
+npm audit
+```
+The output below is trimmed to the highest-severity entries — these are the vulnerabilities that require immediate remediation before the service can be safely deployed to SAP BTP Cloud Foundry:
+
+```
+$ npm audit
+
+# npm audit report
+
+@sap/xssec  <=3.5.0                                          [🔴 CRITICAL]
+Escalation of privileges — authentication bypass via XSUAA JWT validation flaw
+Depends on vulnerable versions of: jsonwebtoken, request, requestretry, debug
+→ fix: npm audit fix --force  (installs @sap/xssec@3.6.2, outside pinned range)
+
+form-data  <2.5.4                                            [🔴 CRITICAL]
+Unsafe random boundary function — transitive via request → requestretry → @sap/xssec
+→ fix: npm audit fix --force  (installs @sap/xssec@3.6.2, outside pinned range)
+
+@cap-js/sqlite  1.x                                          [🔴 CRITICAL]
+Supply chain compromise via malicious preinstall hook — exfiltrates CI/CD secrets,
+XSUAA credentials, and SSH keys at npm install time, before app code executes
+→ fix: npm audit fix --force  (installs @cap-js/sqlite@2.4.0, outside pinned range)
+
+... other vulnerabilities 
+
+3 critical vulnerabilities (+ 12 high/moderate/low — run npm audit for full report)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+```
+ ❌ **Known vulnerable packages:**
+
+- @sap/xssec ~3.0.0 — CVE-2023-49583 (CVSS 9.1 – 🔴 Critical)
+
+    - The Flaw: Allows unauthenticated attackers to completely bypass XSUAA JWT token validation and forge arbitrary permissions.
+    - CAP Impact: Renders all @requires and @restrict security annotations in your CDS service definitions entirely useless in production.
+
+- form-data <2.5.4 — Transitive via @sap/xssec (🔴 Critical)
+  - The Flaw: Utilizes an unsafe, predictable random boundary function for multi-part HTTP requests.
+  - CAP Impact: Compromises token transmission security inside the core authentication layer. (Note: This package will not appear in your package.json because it is a transitive dependency).
+
+- @cap-js/sqlite ~1.7.0 — CVE-2026-46421 (CVSS 9.8 – 🔴 Critical)
+  - The Flaw: A catastrophic supply chain exploit triggered via a malicious preinstall script hook.
+  - CAP Impact: Silently steals and exfiltrates your CI/CD secrets, XSUAA client credentials, and local SSH keys the exact millisecond npm install runs—long before any actual application code gets executed.
+
+  ❌ **The Hidden Supply Chain Risk:**
+  To expose exactly how a hidden package entered your project tree, run the dependency lookup command:
+
+  ```
+  npm ls form-data
+  ```
+  
+  In this project, the critical vulnerability in form-data is pulled into your environment through a deeply nested dependency chain: 
+
+  ```
+  incident-management (Root)
+ └── package.json
+      ├── 📦 @cap-js/cds-test@0.4.1 (Direct Dependency)
+      │    └── 📦 axios@1.17.0
+      │         └── 📦 form-data@4.0.5
+      │
+      └── 📦 @sap/xssec@3.0.10 (Direct Dependency)
+           └── 📦 request@2.88.2
+                └── 📦 form-data@2.3.3 [🔴 CRITICAL VULNERABILITY]                   
+  ```
+  
+
+
+
   
 ## 🛡️ 4. Remediation
 
