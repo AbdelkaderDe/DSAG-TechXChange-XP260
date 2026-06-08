@@ -262,8 +262,8 @@ To ensure complete stability, we will follow a structured three-phase remediatio
 [!WARNING]
 Do not run 'npm audit fix --force' yet. > This command forces npm to upgrade all packages simultaneously—including major version jumps—without giving you a chance to validate breaking changes. Follow the phased approach below to maintain full control over the upgrade process.
 
-### Phase 1 — Apply [Semver-Compatible](https://docs.npmjs.com/about-semantic-versioning) Patches
-Run 'npm audit fix' with the '--legacy-peer-deps flag'. This flag tells npm to temporarily bypass the upstream peer dependency mismatches caused by our outdated @sap/cds package baseline.
+### Phase 1 — Apply Semver-Compatible Patches
+Run the standard 'audit fix' command with the '--legacy-peer-deps' flag. This flag instructs npm to temporarily ignore the version mismatches in our existing package tree while it searches for safe, backward-compatible security updates.
 
 ```
 npm audit fix --legacy-peer-deps
@@ -277,7 +277,11 @@ up to date, audited 352 packages in 1s
 To address all issues (including breaking changes), run:
   npm audit fix --force
 ```
-💡 The Takeaway: Phase 1 proves that automated patch tooling cannot save a repository locked down by rigid, unmaintained version boundaries. To fix these 15 vulnerabilities, we must move to Phase 2 and manually upgrade our direct boundaries.
+💡 **Note:** 
+The automated tool executed successfully, but it did not modify our vulnerabilities. This is because 'npm audit fix' is strictly bound by [Semantic Versioning (SemVer)](https://docs.npmjs.com/about-semantic-versioning) rules. It is designed to only apply safe, minor patches that won't break your code.
+
+Because our core framework (@sap/cds) is locked into an outdated major version line (7.x), npm safely stops itself from upgrading to the modern, secure releases (8.x or 9.x).
+To fix these 15 vulnerabilities, we must move to Phase 2 and manually upgrade our direct boundaries.
 
 ### Phase 2 — Manual Major-Version Upgrades
 To resolve major version mismatches and deprecations, we must transition to a manual remediation strategy, in this phase we resolves each critical and high vulnerability through explicit, targeted manual package upgrade 
