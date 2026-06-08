@@ -306,9 +306,6 @@ found 0 vulnerabilities
 ```
 
 
-
-
-
 ## ✅ 5. Verification
 
 ### Manual
