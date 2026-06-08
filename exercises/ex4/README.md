@@ -122,15 +122,12 @@ To address all issues, run:
 Run `npm audit` for details.
 ```
 
-> [!WARNING]
-> npm has detected **15 vulnerabilities across 357 installed packages**, including
-> **3 critical** and **6 high** severity findings — all introduced by the pinned
-> dependency versions in `package.json`. Do **not** run `npm audit fix --force` yet, The --force flag tells npm: "Ignore all safety rules, ignore version compatibility, and just do whatever it takes to get rid of vulnerabilities.
-> remediation is covered in the next sections.
-
-> ⚠️ NOTE
-> `--legacy-peer-deps` is required because the pinned vulnerable versions conflict
-> with current peer dependency requirements. Using this flag in production is not recommended. It simply hides warning messages, meaning you might completely miss serious version conflicts that could break your application..
+> ⚠️ **NOTE**
+-  npm has detected **15 vulnerabilities across 357 installed packages**, including **3 critical** and **6 high** severity findings — all introduced by the pinned
+dependency versions in `package.json`. Do **not** run `npm audit fix --force` yet, The --force flag tells npm: "Ignore all safety rules, ignore version compatibility, and just do whatever it takes to get rid of vulnerabilities.
+remediation is covered in the next sections.
+-  `--legacy-peer-deps` is required because the pinned vulnerable versions conflict with current peer dependency requirements. Using this flag in production is not recommended. It simply hides warning messages, meaning you might completely miss serious version conflicts that could break your application.
+- If the **PROBLEMS** tab in SAP Business Application Studio still displays stale errors after Step 2, refresh the editor page to reload the language server and clear the panel.
 
 ## 🔎 3.  Detection & Impact Analysis
 Before applying any remediation, you must first understand what is vulnerable, why it matters, and what an attacker could realistically achieve in your SAP BTP environment. 
