@@ -262,7 +262,7 @@ To ensure complete stability, we will follow a structured three-phase remediatio
 [!WARNING]
 Do not run 'npm audit fix --force' yet. > This command forces npm to upgrade all packages simultaneously—including major version jumps—without giving you a chance to validate breaking changes. Follow the phased approach below to maintain full control over the upgrade process.
 
-### Phase 1 — Apply Semver-Compatible Patches
+### Phase 1 — Apply [Semver-Compatible](https://docs.npmjs.com/about-semantic-versioning) Patches
 Run 'npm audit fix' with the '--legacy-peer-deps flag'. This flag tells npm to temporarily bypass the upstream peer dependency mismatches caused by our outdated @sap/cds package baseline.
 
 ```
