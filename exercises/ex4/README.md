@@ -26,7 +26,7 @@ Unlike [SQL Injection]() or [Broken Access Control](), supply chain vulnerabilit
 - ⚠️ Unmaintained or compromised packages must be replaced or mitigated before any deployment to SAP BTP Cloud Foundry.
 
 ### ⚠️ Why This Matters
-- **Business Impact:** A single outdated dependency can expose the entire CAP runtime to Server-Side Request Forgery, authentication bypass, or Denial of Service — without exploiting a single line of your custom code.
+- **Business Impact:** A single outdated dependency can expose the entire CAP runtime to Server-Side Request Forgery, authentication bypass, or denial-of-service (DoS) — without exploiting a single line of your custom code.
 
 - **Compliance Risk:** Violates [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/) and the [SAP Security Baseline requirement for continuous dependency lifecycle management](https://help.sap.com/docs/btp/sap-btp-security-recommendations-c8a9bb59fe624f0981efa0eff2497d7d/sap-btp-security-recommendations?version=Cloud).
 
