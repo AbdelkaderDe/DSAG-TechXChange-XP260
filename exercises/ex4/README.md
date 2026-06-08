@@ -156,7 +156,7 @@ Package            Current  Wanted  Latest  Location                        Depe
 express             4.17.3  4.17.3   5.2.1  node_modules/express            secure_incident_management
 
 ```
-### ❌ **Why This Is Vulnerable**
+#### ❌ **Why This Is Vulnerable**
 
 - **The Fingerprint of Exact Pinning (Tilde ~):** Core modules—including @sap/xssec ~3.0.0, @sap/cds ~7.9.5, @cap-js/sqlite ~1.7.0, and express ~4.17.1—are locked below known security fix boundaries. 
 Because the 'Current' version equals the 'Wanted' version for every package, running npm update will produce zero changes. The security exposure lies entirely in the 'Current → Latest' gap, which you must close manually.
