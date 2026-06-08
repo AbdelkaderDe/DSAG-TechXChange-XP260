@@ -278,16 +278,19 @@ To address all issues (including breaking changes), run:
   npm audit fix --force
 ```
 💡 **Note:** 
-The automated tool executed successfully, but it did not modify our vulnerabilities. This is because 'npm audit fix' is strictly bound by [Semantic Versioning (SemVer)](https://docs.npmjs.com/about-semantic-versioning) rules. It is designed to only apply safe, minor patches that won't break your code.
+- **Successful Execution, No Changes:** The tool ran perfectly, but the project's vulnerability counts remain completely unchanged.
 
-Because our core framework (@sap/cds) is locked into an outdated major version line (7.x), npm safely stops itself from upgrading to the modern, secure releases (8.x or 9.x).
-To fix these 15 vulnerabilities, we must move to Phase 2 and manually upgrade our direct boundaries.
+- **Strict SemVer Compliance:** This occurs because 'npm audit fix' is bound by [Semantic Versioning (SemVer) rules](https://docs.npmjs.com/about-semantic-versioning). It is designed to only apply safe, backward-compatible minor patches that are guaranteed not to break your existing application code.
+
+- ** Major Version Bottleneck:** Our core framework (@sap/cds) is locked into an outdated major version lifecycle (7.x). Moving to modern, secure releases (8.x or 9.x) involves breaking architectural changes, which the automated tool safely blocks.
+
+- **The Path Forward:** To resolve these 15 stubborn vulnerabilities, we must advance to Phase 2 and manually upgrade our direct dependency boundaries.
 
 ### Phase 2 — Manual Major-Version Upgrades
 To resolve major version mismatches and deprecations, we must transition to a manual remediation strategy, in this phase we resolves each critical and high vulnerability through explicit, targeted manual package upgrade 
 
 ```
-npm install @sap/cds@latest @sap/cds-dk@latest @sap/xssec@latest @cap-js/sqlite@latest express@~4.22.2
+npm install @sap/cds@latest @sap/cds-dk@latest @sap/xssec@latest @cap-js/sqlite@latest express@latest
 ```
 Expected output 
 ```
@@ -298,51 +301,6 @@ up to date, audited 328 packages in 1s
 
 found 0 vulnerabilities
 ```
-
-
-
-
-
-### a. Add Automated Checks (SAP-native + open source)
-- **SAP Application Vulnerability Report:**  
-  https://help.sap.com/docs/application-vulnerability-report
-
-- **npm audit**, etc:
-    ```sh
-    npm install
-    npm audit --audit-level=high
-    npm outdated
-    ```
-
-#### SAP CI/CD YAML Example:
-```yaml
-steps:
-  - script: npm ci
-  - script: npm audit --audit-level=high
-  - script: npm outdated --long || exit 1
-```
-
-### b. Patch All Vulnerable Components
-
-```sh
-npm install lodash@4.17.21 --save
-```
-- Review (`express`, `@sap/xssec`, dev-deps) as well before commit.
-
-### c. Platform Service Check
-
-- In SAP BTP Cockpit:  
-    - Check for deprecated/broken service instances (`hana`, `xsuaa`)
-- Rerun Application Vulnerability Report after any deployment.
-
-### d. SBOM/Compliance
-
-- Generate SBOM as part of build:
-    ```sh
-    npx sbom > sbom.json
-    ```
-
----
 
 ## ✅ 5. Verification
 
