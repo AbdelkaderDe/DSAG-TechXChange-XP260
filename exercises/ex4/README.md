@@ -57,9 +57,9 @@ We’ll build upon the same [CAP secure incident management project from the pre
 
 - **`package.json`:** Direct dependencies pinned to vulnerable versions
 
-- > [!WARNING]
-> The `package.json` below pins direct dependencies to known-vulnerable versions for demonstration purposes.
-> In production, identical risk arises from any dependency — direct or transitive — that lags behind its patched release. 
+- > ⚠️ **WARNING**
+  > The `package.json` below pins direct dependencies to known-vulnerable versions for demonstration purposes.
+  > In production, identical risk arises from any dependency — direct or transitive — that lags behind its patched release. 
 
 ```markdown
 {
