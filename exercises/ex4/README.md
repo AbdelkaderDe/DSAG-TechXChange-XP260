@@ -248,13 +248,11 @@ Remediating  [A03:2025 - Software Supply Chain Failures](https://owasp.org/Top10
 Blindly executing broad fix commands can introduce breaking changes that disrupt your application's core business logic.
 
 
-To ensure complete stability, we will follow a structured three-phase remediation pipeline:
+To ensure complete stability, we will follow a structured two-phase remediation pipeline:
 
 - **Phase 1:**  Apply automated, semver-compatible patches — to safely eliminate  minor vulnerabilities automatically without breaking your existing code.
 
 - **Phase 2:** Manually upgrade critical direct dependencies across major boundaries — to safely resolve severe architectural risks that automated tools block by default due to potential breaking changes.
-
-- **Phase 3:** Enforce selective overrides for deeply nested transitive threats — to force-harden invisible, sub-level vulnerabilities,  when upstream package maintainers haven't released a patch yet.
 
 [!WARNING]
 Do not run 'npm audit fix --force' yet. > This command forces npm to upgrade all packages simultaneously—including major version jumps—without giving you a chance to validate breaking changes. Follow the phased approach below to maintain full control over the upgrade process.
