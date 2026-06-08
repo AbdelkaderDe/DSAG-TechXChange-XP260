@@ -252,7 +252,7 @@ To ensure complete stability, we will follow a structured two-phase remediation 
 
 - **Phase 1:**  Apply automated, semver-compatible patches — to safely eliminate  minor vulnerabilities automatically without breaking your existing code.
 
-- **Phase 2:** Manually upgrade critical direct dependencies across major boundaries — to safely resolve severe architectural risks that automated tools block by default due to potential breaking changes.
+- **Phase 2:**  Upgrade packages to Major-Version — to safely resolve severe architectural risks that automated tools block by default due to potential breaking changes.
 
 [!WARNING]
 Do not run 'npm audit fix --force' yet. > This command forces npm to upgrade all packages simultaneously—including major version jumps—without giving you a chance to validate breaking changes. Follow the phased approach below to maintain full control over the upgrade process.
@@ -281,12 +281,20 @@ To address all issues (including breaking changes), run:
 
 - **The Path Forward:** To resolve these 15 stubborn vulnerabilities, we must advance to Phase 2 and manually upgrade our direct dependency boundaries.
 
-### Phase 2 — Manual Major-Version Upgrades
+### Phase 2 — Comprehensive Major-Version Upgrades
+in this pahsee, We use **
 To resolve major version mismatches and deprecations, we must transition to a manual remediation strategy, in this phase we resolves each critical and high vulnerability through explicit, targeted manual package upgrade 
 
 ```
-npm install @sap/cds@latest @sap/cds-dk@latest @sap/xssec@latest @cap-js/sqlite@latest express@latest
+# Step 1. use 'npm-check-updates` to force rewrite package.json with the absolute latest versions, bypassing semver blocks.
+npx npm-check-updates -u
+
+# Step 2. Wipe the old tree and lockfile, then fetch the newly targeted versions
+rm -rf node_modules package-lock.json
+npm install
+
 ```
+
 Expected output 
 ```
 up to date, audited 328 packages in 1s
@@ -296,6 +304,10 @@ up to date, audited 328 packages in 1s
 
 found 0 vulnerabilities
 ```
+
+
+
+
 
 ## ✅ 5. Verification
 
