@@ -282,7 +282,7 @@ To address all issues (including breaking changes), run:
 
 - **Strict SemVer Compliance:** This occurs because 'npm audit fix' is bound by [Semantic Versioning (SemVer) rules](https://docs.npmjs.com/about-semantic-versioning). It is designed to only apply safe, backward-compatible minor patches that are guaranteed not to break your existing application code.
 
-- ** Major Version Bottleneck:** Our core framework (@sap/cds) is locked into an outdated major version lifecycle (7.x). Moving to modern, secure releases (8.x or 9.x) involves breaking architectural changes, which the automated tool safely blocks.
+- **Major Version Bottleneck:** Our core framework (@sap/cds) is locked into an outdated major version lifecycle (7.x). Moving to modern, secure releases (8.x or 9.x) involves breaking architectural changes, which the automated tool safely blocks.
 
 - **The Path Forward:** To resolve these 15 stubborn vulnerabilities, we must advance to Phase 2 and manually upgrade our direct dependency boundaries.
 
